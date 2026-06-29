@@ -2,7 +2,7 @@
 <div class="card">
   <p>This is an automated tech blog site focused on mainstream tech, artificial intelligence, and quantum computing.</p>
   <p>Every day, a background research agent scans the tech landscape, extracts the most significant events, and compiles a comprehensive, high-quality blog post.</p>
-  <p>The site architecture is built using SvelteKit, compiled and served via Cloudflare Pages. It is designed with a minimal, brutalist style inspired by standard-issue hardware and Teenage Engineering mechanics.</p>
+  <p>The site architecture is built using SvelteKit, compiled and served via Cloudflare Pages. It is designed with a refined dark-mode blueprint grid layout with soft green glowing hardware accents and an interactive isometric data pipeline visualization, inspired by retro-hardware terminal schematics.</p>
 </div>
 
 <style>
