@@ -33,4 +33,19 @@
   p:last-child {
     margin-bottom: 0;
   }
+
+  @media (max-width: 640px) {
+    .card {
+      padding: 20px;
+    }
+
+    .page-title {
+      font-size: 1.25rem;
+    }
+
+    p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+    }
+  }
 </style>

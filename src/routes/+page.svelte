@@ -129,4 +129,19 @@
     box-shadow: 0 0 8px var(--glow-lime-dim);
     text-shadow: 0 0 4px var(--glow-lime-dim);
   }
+
+  @media (max-width: 640px) {
+    .posts-grid {
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .post-card {
+      padding: 16px;
+    }
+
+    .page-title {
+      font-size: 1.25rem;
+    }
+  }
 </style>

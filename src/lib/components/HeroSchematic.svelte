@@ -238,4 +238,44 @@
     50% { opacity: 1; }
     100% { opacity: 0.3; }
   }
+
+  @media (max-width: 640px) {
+    .schematic-panel {
+      padding: 10px;
+    }
+
+    .panel-header {
+      flex-direction: column;
+      gap: 5px;
+      align-items: flex-start;
+    }
+
+    .viewport {
+      height: 180px;
+    }
+
+    .isometric-grid {
+      transform: rotateX(55deg) rotateZ(-30deg) scale(0.6);
+      transform-origin: center;
+    }
+
+    .isometric-grid:hover {
+      transform: rotateX(50deg) rotateZ(-25deg) scale(0.62);
+    }
+  }
+
+  @media (max-width: 480px) {
+    .viewport {
+      height: 140px;
+    }
+
+    .isometric-grid {
+      transform: rotateX(55deg) rotateZ(-30deg) scale(0.48);
+      transform-origin: center;
+    }
+
+    .isometric-grid:hover {
+      transform: rotateX(50deg) rotateZ(-25deg) scale(0.5);
+    }
+  }
 </style>

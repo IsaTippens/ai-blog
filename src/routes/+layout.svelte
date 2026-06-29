@@ -104,4 +104,37 @@
     text-align: center;
     letter-spacing: 0.5px;
   }
+
+  @media (max-width: 640px) {
+    .app-container {
+      padding: 20px 15px;
+      gap: 20px;
+    }
+
+    .header {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      align-items: center;
+      text-align: center;
+      padding-bottom: 15px;
+    }
+
+    .logo a {
+      font-size: 1rem;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    .nav a {
+      margin-left: 5px;
+      margin-right: 5px;
+      font-size: 0.8rem;
+      padding: 6px 10px;
+    }
+  }
 </style>

@@ -128,4 +128,33 @@
   .post-body :global(a:hover) {
     text-shadow: 0 0 6px var(--glow-lime-dim);
   }
+
+  @media (max-width: 640px) {
+    .blog-post {
+      padding: 20px;
+    }
+
+    .post-header {
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+    }
+
+    .post-title {
+      font-size: 1.5rem;
+    }
+
+    .post-meta {
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .post-body {
+      font-size: 1rem;
+    }
+
+    .post-body :global(pre) {
+      padding: 10px;
+      font-size: 0.8rem;
+    }
+  }
 </style>
