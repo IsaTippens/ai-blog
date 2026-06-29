@@ -4,7 +4,12 @@
 </script>
 
 <div class="navigation-row">
-  <a href="/" class="back-link">← RETURN_TO_INDEX</a>
+  <a href="/" class="back-link">
+    <svg class="back-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 8H13M4 8L8 4M4 8L8 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span>RETURN_TO_INDEX</span>
+  </a>
 </div>
 
 <article class="blog-post">
@@ -29,66 +34,98 @@
   }
 
   .back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
     text-decoration: none;
+    font-family: var(--font-mono);
     font-weight: bold;
-    font-size: 0.9rem;
-    border: 1px solid #121212;
-    padding: 6px 12px;
-    background-color: #ffffff;
-    box-shadow: 2px 2px 0px 0px #000;
+    font-size: 0.85rem;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 8px 16px;
+    background-color: var(--bg-surface);
+    color: var(--text-main);
+    transition: all 0.25s ease;
   }
 
   .back-link:hover {
-    background-color: #121212;
-    color: #f6f6f6;
+    background-color: var(--bg-surface);
+    color: var(--glow-lime);
+    border-color: var(--glow-lime);
+    box-shadow: 0 0 10px var(--glow-lime-dim);
+  }
+
+  .back-icon {
+    transition: transform 0.25s ease;
+  }
+
+  .back-link:hover .back-icon {
+    transform: translateX(-3px);
   }
 
   .blog-post {
-    border: 2px solid #121212;
-    background-color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: var(--bg-surface);
     padding: 40px;
-    box-shadow: 6px 6px 0px 0px #000;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
   }
 
   .post-header {
-    border-bottom: 2px dashed #121212;
+    border-bottom: 1px dashed var(--text-meta);
     padding-bottom: 20px;
     margin-bottom: 30px;
   }
 
   .post-meta {
-    font-size: 0.85rem;
-    font-weight: bold;
-    color: #666;
-    margin-bottom: 10px;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--text-meta);
+    margin-bottom: 12px;
     display: flex;
-    gap: 10px;
+    gap: 15px;
   }
 
   .post-title {
-    font-size: 2.2rem;
+    font-family: var(--font-mono);
+    font-size: 2rem;
+    color: var(--text-main);
     line-height: 1.2;
     margin: 0;
   }
 
   .post-body {
-    font-family: Arial, Helvetica, sans-serif; /* Cleaner reading font for actual paragraph content */
-    font-size: 1.1rem;
-    line-height: 1.7;
-    color: #1a1a1a;
+    font-family: var(--font-sans);
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--text-main);
   }
 
   .post-body :global(h2), .post-body :global(h3) {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: var(--font-mono);
     font-weight: bold;
-    color: #121212;
-    border-bottom: 1px solid #e8e8e8;
-    padding-bottom: 5px;
-    margin-top: 2rem;
+    color: var(--text-main);
+    border-bottom: 1px dashed var(--text-meta);
+    padding-bottom: 8px;
+    margin-top: 2.5rem;
+    margin-bottom: 1.2rem;
   }
 
   .post-body :global(pre) {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 0.95rem;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    margin: 1.5rem 0;
+  }
+
+  .post-body :global(p) {
+    margin-bottom: 1.5rem;
+  }
+
+  .post-body :global(a) {
+    color: var(--glow-lime);
+    text-decoration: underline;
+  }
+
+  .post-body :global(a:hover) {
+    text-shadow: 0 0 6px var(--glow-lime-dim);
   }
 </style>

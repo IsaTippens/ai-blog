@@ -40,6 +40,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No new posts or updates found. Repository is up to date."
           else
-            git commit -m "chore: sync blog posts from Google Drive [skip ci]"
+            git commit -m "chore: sync blog posts from Google Drive"
             git push origin main
           fi

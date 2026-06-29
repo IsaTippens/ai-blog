@@ -1,10 +1,12 @@
 <script>
+  import HeroSchematic from '$lib/components/HeroSchematic.svelte';
   export let data;
   const { posts } = data;
 </script>
 
-<h1>LATEST_SYSTEM_POSTS</h1>
+<HeroSchematic />
 
+<h1 class="page-title">LATEST_SYSTEM_POSTS</h1>
 {#if posts.length === 0}
   <div class="empty-state">
     <p>NO POSTS FOUND IN ROOT_DIR [/posts/].</p>
@@ -31,60 +33,78 @@
 {/if}
 
 <style>
+  .page-title {
+    font-family: var(--font-mono);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--text-main);
+    border-left: 3px solid var(--glow-lime);
+    padding-left: 10px;
+  }
+
   .empty-state {
-    border: 2px dashed #121212;
+    border: 1px dashed var(--text-meta);
     padding: 40px;
     text-align: center;
-    background-color: #ffffff;
+    background-color: var(--bg-surface);
+    color: var(--text-meta);
+    font-family: var(--font-mono);
   }
 
   .posts-grid {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 24px;
   }
 
   .post-card {
-    border: 2px solid #121212;
-    background-color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background-color: var(--bg-surface);
     padding: 24px;
-    box-shadow: 4px 4px 0px 0px #000;
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
   }
 
   .post-card:hover {
-    transform: translate(-2px, -2px);
-    box-shadow: 6px 6px 0px 0px #000;
+    border-color: var(--glow-lime);
+    box-shadow: 0 0 15px var(--glow-lime-dim);
+    transform: translateY(-3px);
   }
 
   .post-header {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
   }
 
   .post-date {
-    font-size: 0.85rem;
-    font-weight: bold;
-    color: #666;
+    font-size: 0.8rem;
+    font-family: var(--font-mono);
+    color: var(--text-meta);
   }
 
   .post-title {
-    margin: 5px 0 0 0;
-    font-size: 1.4rem;
+    margin: 8px 0 0 0;
+    font-size: 1.25rem;
+    line-height: 1.3;
   }
 
   .post-title a {
     text-decoration: none;
-    color: #121212;
+    color: var(--text-main);
+    transition: color 0.2s ease;
   }
 
-  .post-title a:hover {
-    text-decoration: underline;
+  .post-card:hover .post-title a {
+    color: var(--glow-lime);
   }
 
   .post-summary {
-    color: #333;
-    font-size: 0.95rem;
-    margin-bottom: 15px;
+    color: #b0b0b0;
+    font-size: 0.9rem;
+    margin-top: 0;
+    margin-bottom: 20px;
+    flex-grow: 1;
   }
 
   .tag-container {
@@ -94,10 +114,19 @@
   }
 
   .tag {
-    font-size: 0.75rem;
-    background-color: #121212;
-    color: #f6f6f6;
-    padding: 2px 6px;
-    font-weight: bold;
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    color: var(--text-meta);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background-color: transparent;
+    padding: 3px 8px;
+    transition: all 0.2s ease;
+  }
+
+  .tag:hover {
+    color: var(--glow-lime);
+    border-color: var(--glow-lime);
+    box-shadow: 0 0 8px var(--glow-lime-dim);
+    text-shadow: 0 0 4px var(--glow-lime-dim);
   }
 </style>
