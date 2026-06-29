@@ -18,12 +18,12 @@
           <h2 class="post-title">
             <a href="/blog/{post.slug || post.title.toLowerCase().replace(/ /g, '-')}">{post.title}</a>
           </h2>
-        </p>
+        </header>
         <p class="post-summary">{post.summary}</p>
         <div class="tag-container">
           {#each post.categories as cat}
             <span class="tag">#{cat.toUpperCase()}</span>
-          {/import}
+          {/each}
         </div>
       </article>
     {/each}
