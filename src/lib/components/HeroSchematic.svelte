@@ -119,6 +119,7 @@
   }
 
   .isometric-grid {
+    position: absolute;
     width: 600px;
     height: 320px;
     transform: rotateX(55deg) rotateZ(-30deg) scale(0.95);

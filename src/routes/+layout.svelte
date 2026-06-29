@@ -40,6 +40,8 @@
 
   .app-container {
     max-width: 1000px;
+    width: 100%;
+    min-width: 0;
     margin: 0 auto;
     padding: 40px 20px;
     display: grid;
@@ -93,6 +95,8 @@
 
   .main-content {
     margin-bottom: 40px;
+    width: 100%;
+    min-width: 0;
   }
 
   .footer {
