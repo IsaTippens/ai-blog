@@ -1,11 +1,11 @@
-import matter from 'gray-matter';
+import { parseFrontMatter } from '$lib/parser.js';
 
 export async function load() {
   const postFiles = import.meta.glob('../../posts/*.md', { eager: true, query: '?raw' });
 
   const posts = Object.entries(postFiles).map(([path, file]) => {
     const slug = path.split('/').pop().replace('.md', '');
-    const { data } = matter(file.default);
+    const { data } = parseFrontMatter(file.default);
 
     return {
       slug,

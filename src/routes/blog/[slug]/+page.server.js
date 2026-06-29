@@ -1,4 +1,4 @@
-import matter from 'gray-matter';
+import { parseFrontMatter } from '$lib/parser.js';
 import { marked } from 'marked';
 import { error } from '@sveltejs/kit';
 
@@ -14,7 +14,7 @@ export async function load({ params }) {
   }
 
   const file = postFiles[postKey];
-  const { data, content } = matter(file.default);
+  const { data, content } = parseFrontMatter(file.default);
   const htmlContent = marked(content);
 
   return {
