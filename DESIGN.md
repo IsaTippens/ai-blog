@@ -144,7 +144,7 @@ Browser surfaces carry the palette: text selection is Console Black on Phosphor 
 ### Hierarchy
 - **Display** (700, `clamp(1.5rem, 1.1rem + 1.4vw, 2.1rem)`, 1.15): the article's single `<h1>`, uppercase, balanced wrap, max 24em.
 - **Headline** (700, 1.5rem, 1.3): page titles (`LATEST_SYSTEM_POSTS`, `ABOUT SYSTEM_OUT`), always paired with a 3px Phosphor Lime left bar. Drops to 1.25rem at ≤640px.
-- **Title** (700, 1.25rem, 1.3): post-card titles on the index. In-article section heads (`h2`) are mono uppercase at 1.15rem; story heads (`h3`) are mono 600 at 1.05rem in the case they were written in, because long uppercase headlines read slowly.
+- **Title** (700, 1.2rem, 1.3): post-card titles on the index, mono in the case they were written in, balanced wrap. In-article section heads (`h2`) are mono uppercase at 1.15rem; story heads (`h3`) are mono 600 at 1.05rem in written case. Uppercase is for short labels and section heads; long headlines in all caps read slowly.
 - **Body** (400, 1.0625rem, 1.7): article prose, capped at 68ch. 1rem at ≤640px. The standfirst under the title is 1.125rem in Readout Dim; card summaries are 0.9rem.
 - **Label** (400–700, 0.7–0.9rem, mono): nav (0.9rem bold), dates and meta (0.8rem), readout rows and outline entries (0.72–0.78rem), tags (0.7rem, uppercase, `#` prefix), footer (0.75rem, 0.5px tracking).
 
@@ -213,6 +213,10 @@ Square by default. Panels, cards, buttons, tags, and nav links have 0 radius. Th
 - **Destination tag:** every external link ends with its domain in mono 0.72em Silkscreen Gray, preceded by a drawn 10px out-arrow. It is not underlined.
 - **Hover:** text, underline, and domain turn full Phosphor Lime.
 
+### Tables and images in posts
+- **Tables:** sit in an inset module (Console Black, 0.15 hairline) that scrolls horizontally and is keyboard-focusable. The table keeps a 34rem minimum so narrow screens scroll it instead of crushing the columns, and faint lime edge shades show while more columns are off-screen. Header cells are mono 0.72rem uppercase Silkscreen Gray over a dashed rule; body cells are Inter 0.9rem with hairline row dividers.
+- **Images:** never exceed the reading column (`max-width: 100%`, natural aspect ratio). They get a 0.15 hairline frame and load lazily. Images embedded in synced posts are written to `static/post-media/<slug>/<hash>-<w>x<h>.<ext>`; the size in the filename becomes `width`/`height`, so each image reserves its space before it loads.
+
 ### Run readout (signature component)
 The article's provenance plate, inset under the title. A bar reads `SYSTEM_OUT // DAILY RECON DIGEST` with a `HOW_THIS_IS_MADE` link to `/about#pipeline`. Below it is a two-column definition list of mono label/value rows (8.5rem label column): `AUTHOR` (full width, with a lime-outlined `AI-GENERATED` tag), `MODEL`, `HUMAN_EDITS`, `DIGEST_DATE`, `FILED`, `SOURCES`, `READ_TIME`, `CHANNELS`. Rows render only from real data: frontmatter fields or counts computed from the post. It collapses to one column at ≤640px.
 
@@ -225,6 +229,7 @@ A dashed rule, a `// END_OF_DIGEST` line that restates the AI authorship and sou
 
 ### Pipeline Schematic (signature component)
 An isometric SVG diagram of the agent pipeline (`01_CRAWLER.EXE` → `02_PARSER.SYS` → `03_STATIC.GEN`) inside a framed panel with a mono header (`SYS_PIPELINE // DATA_FLOW_DIAGRAM`), a lime `STATUS` readout, and a footer console line. The viewport is near-black (#090909), tilted with `rotateX(55deg) rotateZ(-30deg)`, and overlaid with a faint lime grid. Flow lines are dashed lime and crawl at a 15s linear loop. Hovering a node fills its header strip lime and prints an `AGENT_RUNNING:` line with a pulsing `>` prompt.
+With reduced motion, the flow lines and prompt hold still and state changes cut instead of fading. Hovering is a shortcut only: tapping, focusing, or pressing Enter on a node shows the same readout.
 
 ## Do's and Don'ts
 

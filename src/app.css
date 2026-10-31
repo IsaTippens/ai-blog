@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;700;800&display=swap');
-
 :root {
   --bg-base: #111111;
   --bg-surface: #1E1E1E;
@@ -7,9 +5,18 @@
   --text-meta: #888888;
   --glow-lime: #39FF14;
   --glow-lime-dim: rgba(57, 255, 20, 0.3);
+  --phosphor-underline: rgba(57, 255, 20, 0.45);
+  --phosphor-edge: rgba(57, 255, 20, 0.12);
+  --phosphor-faint: rgba(57, 255, 20, 0.05);
   --text-dim: #B0B0B0;
+  --grid-dot: #2A2A2A;
+  --viewport-black: #090909;
+  --node-plate: #222222;
+  --node-plate-active: #161A14;
+  --hairline-faint: rgba(255, 255, 255, 0.05);
   --hairline: rgba(255, 255, 255, 0.1);
   --hairline-strong: rgba(255, 255, 255, 0.15);
+  --shadow-settle: 0 4px 20px rgba(0, 0, 0, 0.3);
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
   --font-sans: 'Inter', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
@@ -48,7 +55,7 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--bg-base);
-  background-image: radial-gradient(circle, #2a2a2a 1px, transparent 1px);
+  background-image: radial-gradient(circle, var(--grid-dot) 1px, transparent 1px);
   background-size: 24px 24px;
   color: var(--text-main);
   font-family: var(--font-sans);
@@ -105,7 +112,7 @@ code {
   font-family: var(--font-mono);
   font-size: 0.9em;
   border-radius: 3px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--hairline);
 }
 
 pre code {

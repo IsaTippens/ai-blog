@@ -48,11 +48,23 @@ function domainOf(href) {
 const SOURCE_ARROW =
   '<svg class="src-arrow" width="10" height="10" viewBox="0 0 10 10" aria-hidden="true"><path d="M3 2h5v5M8 2L2.5 7.5" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="square"/></svg>';
 
+function escapeAttr(value) {
+  return String(value).replace(/&(?!(?:[a-z]+|#\d+);)/gi, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+}
+
+/** Width/height encoded in synced media filenames (`<hash>-<w>x<h>.<ext>`, see scripts/post_media.py). */
+function mediaSize(href) {
+  const match = /-(\d+)x(\d+)\.\w+$/.exec(href);
+  return match ? { width: Number(match[1]), height: Number(match[2]) } : null;
+}
+
 /**
  * Render a post body.
  * - Drops the leading `# SYSTEM_OUT: DAILY RECON DIGEST` heading: the page owns the only <h1>.
  * - Gives h2/h3 stable ids and returns them as an outline.
  * - Tags each external link with its destination domain.
+ * - Wraps tables in a keyboard-scrollable region and loads images lazily; the page CSS keeps
+ *   both inside the reading column.
  */
 export function renderPost(content) {
   const marked = new Marked();
@@ -65,6 +77,7 @@ export function renderPost(content) {
   const outline = [];
   const usedIds = new Set();
   const sources = [];
+  let tableCount = 0;
 
   marked.use({
     renderer: {
@@ -94,6 +107,23 @@ export function renderPost(content) {
         sources.push(domain);
         const titleAttr = title ? ` title="${title}"` : '';
         return `<a href="${safeHref}"${titleAttr} class="src-link">${text}<span class="src-domain">${SOURCE_ARROW}${domain}</span></a>`;
+      },
+      table(header, body) {
+        tableCount += 1;
+        return `<div class="table-scroll" role="region" tabindex="0" aria-label="Table ${tableCount}, scrolls horizontally"><table>\n<thead>\n${header}</thead>\n${body ? `<tbody>${body}</tbody>` : ''}</table></div>\n`;
+      },
+      image(href, title, text) {
+        let src;
+        try {
+          src = encodeURI(href).replace(/%25/g, '%').replace(/"/g, '%22');
+        } catch {
+          return false;
+        }
+        const alt = escapeAttr(text);
+        const titleAttr = title ? ` title="${escapeAttr(title)}"` : '';
+        const size = href.startsWith('/post-media/') ? mediaSize(href) : null;
+        const sizeAttr = size ? ` width="${size.width}" height="${size.height}"` : '';
+        return `<img src="${src}" alt="${alt}"${titleAttr}${sizeAttr} loading="lazy" decoding="async">`;
       }
     }
   });

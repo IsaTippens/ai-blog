@@ -4,6 +4,11 @@
   const { posts } = data;
 </script>
 
+<svelte:head>
+  <title>TECH_LOG // SYSTEM_OUT · Daily AI, quantum, security and fintech digest</title>
+  <meta name="description" content="A daily digest of AI, quantum computing, cybersecurity and fintech, researched and written by an AI agent with no human edits." />
+</svelte:head>
+
 <HeroSchematic />
 
 <h1 class="page-title">LATEST_SYSTEM_POSTS</h1>
@@ -58,7 +63,7 @@
   }
 
   .post-card {
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid var(--hairline);
     background-color: var(--bg-surface);
     padding: 24px;
     display: flex;
@@ -85,8 +90,10 @@
 
   .post-title {
     margin: 8px 0 0 0;
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     line-height: 1.3;
+    text-transform: none;
+    text-wrap: balance;
   }
 
   .post-title a {
@@ -100,7 +107,7 @@
   }
 
   .post-summary {
-    color: #b0b0b0;
+    color: var(--text-dim);
     font-size: 0.9rem;
     margin-top: 0;
     margin-bottom: 20px;
@@ -117,10 +124,10 @@
     font-family: var(--font-mono);
     font-size: 0.7rem;
     color: var(--text-meta);
-    border: 1px solid rgba(255, 255, 255, 0.15);
+    border: 1px solid var(--hairline-strong);
     background-color: transparent;
     padding: 3px 8px;
-    transition: all 0.2s ease;
+    transition: color 0.2s var(--ease), border-color 0.2s var(--ease), box-shadow 0.2s var(--ease);
   }
 
   .tag:hover {
@@ -128,6 +135,14 @@
     border-color: var(--glow-lime);
     box-shadow: 0 0 8px var(--glow-lime-dim);
     text-shadow: 0 0 4px var(--glow-lime-dim);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .post-card,
+    .post-card:hover {
+      transition: none;
+      transform: none;
+    }
   }
 
   @media (max-width: 640px) {

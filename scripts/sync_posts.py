@@ -8,6 +8,8 @@ from google.oauth2 import service_account
 from googleapiclient.discovery import build
 from googleapiclient.http import MediaIoBaseDownload
 
+from post_media import extract_embedded_images
+
 FOLDER_ID = "1Tyxz30DHCj0LDw6tK4kYJkOFB2ca2OzL"
 POSTS_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "posts")
 GOOGLE_DOC_MIME = "application/vnd.google-apps.document"
@@ -162,6 +164,13 @@ def main():
 
         if file_info.get("createdTime"):
             content = stamp_filed(content, file_info["createdTime"])
+
+        try:
+            content = extract_embedded_images(os.path.splitext(name)[0], content)
+        except Exception as e:
+            print(f"ERROR: Failed to extract embedded images from {name}: {e}")
+            failed.append(name)
+            continue
 
         with open(os.path.join(POSTS_DIR, name), "w", encoding="utf-8", newline="\n") as f:
             f.write(content)

@@ -514,6 +514,8 @@
   /* ── Prose ───────────────────────────────────── */
   .post-body {
     max-width: 68ch;
+    min-width: 0;
+    overflow-wrap: break-word;
     font-family: var(--font-sans);
     font-size: 1.0625rem;
     line-height: 1.7;
@@ -583,11 +585,76 @@
     border-color: var(--hairline-strong);
   }
 
+  .post-body :global(:not(pre) > code) {
+    overflow-wrap: anywhere;
+  }
+
+  /* Images never exceed the column; their intrinsic ratio is kept. */
+  .post-body :global(img) {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1.75rem 0;
+    border: 1px solid var(--hairline-strong);
+    background-color: var(--bg-base);
+  }
+
+  /* Wide tables scroll inside an inset module instead of spilling past the panel.
+     Edge shades appear only while there is more table to scroll to. */
+  .post-body :global(.table-scroll) {
+    margin: 1.75rem 0;
+    overflow-x: auto;
+    border: 1px solid var(--hairline-strong);
+    background:
+      linear-gradient(to right, var(--bg-base) 40%, transparent) left / 32px 100% no-repeat local,
+      linear-gradient(to left, var(--bg-base) 40%, transparent) right / 32px 100% no-repeat local,
+      linear-gradient(to right, var(--phosphor-edge), transparent) left / 12px 100% no-repeat scroll,
+      linear-gradient(to left, var(--phosphor-edge), transparent) right / 12px 100% no-repeat scroll,
+      var(--bg-base);
+    scrollbar-width: thin;
+    scrollbar-color: var(--hairline-strong) transparent;
+  }
+
+  .post-body :global(table) {
+    width: 100%;
+    min-width: 34rem;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .post-body :global(th),
+  .post-body :global(td) {
+    padding: 10px 14px;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  .post-body :global(th) {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 700;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: var(--text-meta);
+    border-bottom: 1px dashed var(--text-meta);
+    white-space: normal;
+  }
+
+  .post-body :global(tbody tr:last-child td) {
+    border-bottom: 0;
+  }
+
+  .post-body :global(td code) {
+    font-size: 0.85em;
+  }
+
   .post-body :global(a) {
     color: var(--text-main);
     text-decoration: underline;
     text-decoration-thickness: 1px;
-    text-decoration-color: rgba(57, 255, 20, 0.45);
+    text-decoration-color: var(--phosphor-underline);
     text-underline-offset: 0.22em;
     transition: color 0.2s var(--ease), text-decoration-color 0.2s var(--ease);
   }

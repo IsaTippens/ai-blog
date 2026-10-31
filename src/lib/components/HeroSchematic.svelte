@@ -3,6 +3,19 @@
   function selectNode(node) {
     activeNode = node;
   }
+  // Hover is only a shortcut: tap, click, focus and Enter/Space all show the node readout.
+  function onNodeKey(event, node) {
+    if (event.key === 'Enter' || event.key === ' ') {
+      event.preventDefault();
+      selectNode(node);
+    }
+  }
+  function onPointerEnter(event, node) {
+    if (event.pointerType === 'mouse') selectNode(node);
+  }
+  function onPointerLeave(event) {
+    if (event.pointerType === 'mouse') selectNode(null);
+  }
 </script>
 
 <div class="schematic-panel">
@@ -14,7 +27,7 @@
     <div class="isometric-grid">
       <svg viewBox="0 0 600 320" class="schematic-svg">
         <!-- Grid pattern inside SVG for technical blueprint look -->
-        <g stroke="rgba(57, 255, 20, 0.05)" stroke-width="1">
+        <g style="stroke: var(--phosphor-faint)" stroke-width="1">
           {#each Array(13) as _, i}
             <line x1={i * 50} y1="0" x2={i * 50} y2="320" />
           {/each}
@@ -28,9 +41,10 @@
         <path class="flow-line flow-active" d="M 370 160 H 395 V 250 H 420" />
         
         <!-- Crawler Node -->
-        <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-        <!-- svelte-ignore a11y-no-static-element-interactions -->
-        <g class="node" on:mouseover={() => selectNode('CRAWLER')} on:mouseout={() => selectNode(null)} role="button" tabindex="0">
+        <g class="node" class:is-active={activeNode === 'CRAWLER'} role="button" tabindex="0" aria-pressed={activeNode === 'CRAWLER'} aria-label="01_CRAWLER.EXE, input RSS_FEEDS"
+          on:pointerenter={(e) => onPointerEnter(e, 'CRAWLER')} on:pointerleave={onPointerLeave}
+          on:click={() => selectNode('CRAWLER')} on:keydown={(e) => onNodeKey(e, 'CRAWLER')}
+          on:focus={() => selectNode('CRAWLER')} on:blur={() => selectNode(null)}>
           <!-- Outer border -->
           <rect x="40" y="40" width="140" height="60" rx="2" class="node-rect" />
           <!-- Header block -->
@@ -40,9 +54,10 @@
         </g>
 
         <!-- Parser Node -->
-        <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-        <!-- svelte-ignore a11y-no-static-element-interactions -->
-        <g class="node" on:mouseover={() => selectNode('PARSER')} on:mouseout={() => selectNode(null)} role="button" tabindex="0">
+        <g class="node" class:is-active={activeNode === 'PARSER'} role="button" tabindex="0" aria-pressed={activeNode === 'PARSER'} aria-label="02_PARSER.SYS, process LLM_PARSE"
+          on:pointerenter={(e) => onPointerEnter(e, 'PARSER')} on:pointerleave={onPointerLeave}
+          on:click={() => selectNode('PARSER')} on:keydown={(e) => onNodeKey(e, 'PARSER')}
+          on:focus={() => selectNode('PARSER')} on:blur={() => selectNode(null)}>
           <rect x="230" y="130" width="140" height="60" rx="2" class="node-rect" />
           <rect x="230" y="130" width="140" height="20" rx="2" class="node-header" />
           <text x="238" y="144" class="node-title">02_PARSER.SYS</text>
@@ -50,9 +65,10 @@
         </g>
 
         <!-- Static Gen Node -->
-        <!-- svelte-ignore a11y-mouse-events-have-key-events -->
-        <!-- svelte-ignore a11y-no-static-element-interactions -->
-        <g class="node" on:mouseover={() => selectNode('STATIC_GEN')} on:mouseout={() => selectNode(null)} role="button" tabindex="0">
+        <g class="node" class:is-active={activeNode === 'STATIC_GEN'} role="button" tabindex="0" aria-pressed={activeNode === 'STATIC_GEN'} aria-label="03_STATIC.GEN, output SVELTEKIT"
+          on:pointerenter={(e) => onPointerEnter(e, 'STATIC_GEN')} on:pointerleave={onPointerLeave}
+          on:click={() => selectNode('STATIC_GEN')} on:keydown={(e) => onNodeKey(e, 'STATIC_GEN')}
+          on:focus={() => selectNode('STATIC_GEN')} on:blur={() => selectNode(null)}>
           <rect x="420" y="220" width="140" height="60" rx="2" class="node-rect" />
           <rect x="420" y="220" width="140" height="20" rx="2" class="node-header" />
           <text x="428" y="234" class="node-title">03_STATIC.GEN</text>
@@ -61,7 +77,7 @@
       </svg>
     </div>
   </div>
-  <div class="panel-footer">
+  <div class="panel-footer" aria-live="polite">
     <div class="active-node-info">
       {#if activeNode === 'CRAWLER'}
         <span class="pulse">></span> AGENT_RUNNING: Scanning web APIs & tech news portals...
@@ -110,8 +126,8 @@
     height: 260px;
     position: relative;
     overflow: hidden;
-    background: #090909;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: var(--viewport-black);
+    border: 1px solid var(--hairline-faint);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -124,7 +140,7 @@
     height: 320px;
     transform: rotateX(55deg) rotateZ(-30deg) scale(0.95);
     transform-style: preserve-3d;
-    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.5s var(--ease);
   }
 
   .isometric-grid:hover {
@@ -163,39 +179,41 @@
 
   .node {
     cursor: pointer;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .node-rect {
     fill: var(--bg-base);
     stroke: var(--text-meta);
     stroke-width: 1.5;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: stroke 0.25s var(--ease), fill 0.25s var(--ease), filter 0.25s var(--ease);
   }
 
   .node-header {
-    fill: #222;
+    fill: var(--node-plate);
     stroke: var(--text-meta);
     stroke-width: 1.5;
-    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: stroke 0.25s var(--ease), fill 0.25s var(--ease);
   }
 
-  .node:hover .node-rect {
+  .node.is-active .node-rect {
     stroke: var(--glow-lime);
-    fill: #161a14;
+    fill: var(--node-plate-active);
     filter: drop-shadow(0 0 6px var(--glow-lime-dim));
   }
 
-  .node:hover .node-header {
+  .node.is-active .node-header {
     fill: var(--glow-lime);
     stroke: var(--glow-lime);
   }
 
-  .node:hover .node-title {
-    fill: #000;
+  .node.is-active .node-title {
+    fill: var(--bg-base);
     font-weight: bold;
   }
 
-  .node:hover .node-body {
+  .node.is-active .node-body {
     fill: var(--text-main);
   }
 
@@ -277,6 +295,26 @@
 
     .isometric-grid:hover {
       transform: rotateX(50deg) rotateZ(-25deg) scale(0.5);
+    }
+  }
+
+  /* Motion is decoration here: with reduced motion the diagram holds still and state changes cut. */
+  @media (prefers-reduced-motion: reduce) {
+    .flow-active,
+    .pulse {
+      animation: none;
+    }
+
+    .pulse {
+      opacity: 1;
+    }
+
+    .isometric-grid,
+    .node-rect,
+    .node-header,
+    .node-title,
+    .node-body {
+      transition: none;
     }
   }
 </style>
