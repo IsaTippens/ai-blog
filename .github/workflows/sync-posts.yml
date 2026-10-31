@@ -31,6 +31,8 @@ jobs:
           python scripts/sync_posts.py
 
       - name: Commit and Push Changes
+        # Push whatever synced even if some posts failed; the failed sync step still fails the job.
+        if: ${{ !cancelled() }}
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
