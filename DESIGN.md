@@ -157,7 +157,7 @@ Browser surfaces carry the palette: text selection is Console Black on Phosphor 
 
 A single centered column, max 1000px wide, with 40px/20px outer padding (20px/15px at ≤640px). The shell is a three-row grid (header, main, footer) at a minimum of 100vh with a 30px gap. The header and footer are separated from content by 1px dashed Silkscreen Gray rules.
 
-The index renders post cards in an auto-fit grid (`minmax(300px, 1fr)`, 24px gap), which collapses to one column with a 16px gap at ≤640px. The article page is one full-width panel with 40px padding (20px on mobile). The isometric schematic sits above the index list in a fixed-height viewport (260px, then 180px at ≤640px, then 140px at ≤480px).
+The index renders post cards in an auto-fit grid (`minmax(300px, 1fr)`, 24px gap), which collapses to one column with a 16px gap at ≤640px. It shows 12 posts per page (fills one, two, or three columns evenly): page 1 at `/` with the schematic and `LATEST_SYSTEM_POSTS`, older pages at `/page/N` titled `ARCHIVED_SYSTEM_POSTS` with a mono `[newest] → [oldest]` date span under the title and no schematic. The article page is one full-width panel with 40px padding (20px on mobile). The isometric schematic sits above the index list in a fixed-height viewport (260px, then 180px at ≤640px, then 140px at ≤480px).
 
 Spacing follows an informal 8/12/16/24/40 rhythm. Breakpoints are 640px and 480px.
 
@@ -203,6 +203,13 @@ Square by default. Panels, cards, buttons, tags, and nav links have 0 radius. Th
 - **Shape:** square, 1px `rgba(255,255,255,0.15)` border, Panel Graphite fill, 8px 16px padding.
 - **Content:** a 16px arrow icon plus a mono 0.85rem bold label (`RETURN_TO_INDEX`).
 - **Hover:** lime text, border, and halo; the arrow nudges 3px left.
+
+### Pagination
+Closes the index under a 1px dashed rule.
+- **Steps:** `NEWER` (left, arrow left) and `OLDER` (right, arrow right) in the back-link style, 44px tall; the arrow nudges 3px outward on hover. At the ends the step stays in place, disabled: Silkscreen Gray text, dashed 0.1 hairline, no fill.
+- **Page strip:** zero-padded mono 0.85rem numbers in 44px squares between the steps, showing first, last, and the current page with its neighbours; longer gaps collapse to `…`. Idle numbers are Readout Dim with no border; hover wakes them lime with a small halo. The current page is lime text and a lime border on Console Black, no halo.
+- **Readout:** a centered mono 0.75rem Silkscreen Gray line, `PAGE 05 / 10 // POSTS 49–60 OF 117`.
+- **Mobile (≤640px):** the strip takes its own row above the two steps, which split the width; ellipses narrow to 20px so seven slots fit at 320px.
 
 ### Code
 - **Inline:** Phosphor Lime mono on Panel Graphite with a 3px radius and a hairline border.

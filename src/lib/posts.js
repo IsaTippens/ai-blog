@@ -4,6 +4,7 @@ import { parseFrontMatter } from '$lib/parser.js';
 const postFiles = import.meta.glob('../../posts/*.md', { eager: true, query: '?raw' });
 
 const WORDS_PER_MINUTE = 230;
+export const POSTS_PER_PAGE = 12;
 
 /** Every post's frontmatter, newest first. */
 export function listPosts() {
@@ -20,6 +21,21 @@ export function listPosts() {
   });
   posts.sort((a, b) => b.date.localeCompare(a.date) || a.slug.localeCompare(b.slug));
   return posts;
+}
+
+/** One index page (1-based), newest first, or undefined when the page doesn't exist. Page 1 always exists. */
+export function pagePosts(page) {
+  const all = listPosts();
+  const pageCount = Math.max(1, Math.ceil(all.length / POSTS_PER_PAGE));
+  if (!Number.isInteger(page) || page < 1 || page > pageCount) return undefined;
+  const start = (page - 1) * POSTS_PER_PAGE;
+  return {
+    posts: all.slice(start, start + POSTS_PER_PAGE),
+    page,
+    pageCount,
+    total: all.length,
+    start
+  };
 }
 
 /** Raw file for a slug, or undefined. */

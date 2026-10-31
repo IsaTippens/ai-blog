@@ -26,7 +26,7 @@ TECH_LOG // SYSTEM_OUT is a fully automated tech blog. Every day a background re
 
 - Posts are written by the research agent, saved as Markdown in a Google Drive folder, and pulled into `posts/` by `scripts/sync_posts.py`, run hourly by `.github/workflows/sync-posts.yml`, which commits to `main`.
 - Cloudflare Pages builds and serves the site on push.
-- Readers move between the index (`/`, newest posts with date, title, summary, category tags), individual posts (`/blog/[slug]`), and `/about`.
+- Readers move between the index (`/`, newest 12 posts with date, title, summary, category tags; older pages at `/page/N`), individual posts (`/blog/[slug]`), and `/about`.
 
 ## Capabilities and Constraints
 

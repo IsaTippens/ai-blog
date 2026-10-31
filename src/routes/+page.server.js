@@ -1,5 +1,5 @@
-import { listPosts } from '$lib/posts.js';
+import { pagePosts } from '$lib/posts.js';
 
 export function load() {
-  return { posts: listPosts() };
+  return pagePosts(1);
 }
