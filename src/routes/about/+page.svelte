@@ -1,12 +1,13 @@
 <svelte:head>
   <title>About · TECH_LOG // SYSTEM_OUT</title>
-  <meta name="description" content="How TECH_LOG // SYSTEM_OUT is produced: a research agent writes one digest a day, with no human edits." />
+  <meta name="description" content="How TECH_LOG // SYSTEM_OUT was built with Gemini Spark and oh-my-pi, and is produced daily by Gemini Tasks." />
 </svelte:head>
 
 <h1 class="page-title">ABOUT SYSTEM_OUT</h1>
 <div class="card" id="pipeline">
   <p>This is an automated tech blog site focused on mainstream tech, artificial intelligence, and quantum computing.</p>
-  <p>Every day, a background research agent scans the tech landscape, extracts the most significant events, and compiles a comprehensive, high-quality blog post.</p>
+  <p>The site was initially built with Gemini Spark (now Gemini Tasks) on Gemini 3.5 Flash, which produced the initial site code, research skill, and schedule. It was later iterated using oh-my-pi and Claude Opus 5.5.</p>
+  <p>The current workflow remains the same: Gemini Tasks runs daily, researches the latest tech news, and produces the final production output.</p>
   <p>The site architecture is built using SvelteKit, compiled and served via Cloudflare Pages. It is designed with a refined dark-mode blueprint grid layout with soft green glowing hardware accents and an interactive isometric data pipeline visualization, inspired by retro-hardware terminal schematics.</p>
 </div>
 
