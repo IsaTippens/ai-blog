@@ -2,6 +2,8 @@
   import '../app.css';
 </script>
 
+<a href="#main" class="skip-link">SKIP_TO_CONTENT</a>
+
 <div class="app-container">
   <header class="header">
     <div class="logo">
@@ -20,7 +22,7 @@
     </nav>
   </header>
 
-  <main class="main-content">
+  <main class="main-content" id="main" tabindex="-1">
     <slot />
   </main>
 
@@ -36,6 +38,23 @@
     font-family: var(--font-sans);
     margin: 0;
     padding: 0;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: 16px;
+    top: -100px;
+    z-index: 10;
+    padding: 10px 16px;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--bg-base);
+    background-color: var(--glow-lime);
+  }
+
+  .skip-link:focus {
+    top: 16px;
   }
 
   .app-container {
@@ -94,6 +113,7 @@
   }
 
   .main-content {
+    outline: none;
     margin-bottom: 40px;
     width: 100%;
     min-width: 0;
@@ -135,10 +155,13 @@
     }
 
     .nav a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
       margin-left: 5px;
       margin-right: 5px;
       font-size: 0.8rem;
-      padding: 6px 10px;
+      padding: 0 12px;
     }
   }
 </style>

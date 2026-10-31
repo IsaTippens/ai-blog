@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-31T00:00:00Z",
+  "title": "Design System: TECH_LOG // SYSTEM_OUT",
+  "extensions": {
+    "colorMeta": {
+      "console-black": { "role": "neutral", "displayName": "Console Black", "canonical": "#111111", "tonalRamp": ["#0B0B0B", "#252525", "#424242", "#616161", "#828282", "#A5A5A5", "#C9C9C9", "#EEEEEE"] },
+      "panel-graphite": { "role": "neutral", "displayName": "Panel Graphite", "canonical": "#1E1E1E", "tonalRamp": ["#0B0B0B", "#252525", "#424242", "#616161", "#828282", "#A5A5A5", "#C9C9C9", "#EEEEEE"] },
+      "grid-dot": { "role": "neutral", "displayName": "Grid Dot", "canonical": "#2A2A2A", "tonalRamp": ["#0B0B0B", "#252525", "#424242", "#616161", "#828282", "#A5A5A5", "#C9C9C9", "#EEEEEE"] },
+      "readout-white": { "role": "neutral", "displayName": "Readout White", "canonical": "#E0E0E0", "tonalRamp": ["#0B0B0B", "#252525", "#424242", "#616161", "#828282", "#A5A5A5", "#C9C9C9", "#EEEEEE"] },
+      "readout-dim": { "role": "neutral", "displayName": "Readout Dim", "canonical": "#B0B0B0", "tonalRamp": ["#0B0B0B", "#252525", "#424242", "#616161", "#828282", "#A5A5A5", "#C9C9C9", "#EEEEEE"] },
+      "silkscreen-gray": { "role": "neutral", "displayName": "Silkscreen Gray", "canonical": "#888888", "tonalRamp": ["#0B0B0B", "#252525", "#424242", "#616161", "#828282", "#A5A5A5", "#C9C9C9", "#EEEEEE"] },
+      "phosphor-lime": { "role": "primary", "displayName": "Phosphor Lime", "canonical": "#39FF14", "tonalRamp": ["#011000", "#042F01", "#0B5102", "#157604", "#00A200", "#10C800", "#50EE3C", "#7CFF69"] },
+      "phosphor-haze": { "role": "primary", "displayName": "Phosphor Haze", "canonical": "rgba(57, 255, 20, 0.3)" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "The article's single h1, uppercase mono, balanced wrap." },
+      "headline": { "displayName": "Headline", "purpose": "Page titles with a 3px Phosphor Lime left bar." },
+      "title": { "displayName": "Title", "purpose": "Post-card titles; in-article h2 is mono uppercase, h3 story heads are mono in written case." },
+      "body": { "displayName": "Body", "purpose": "Article prose in Inter at 1.7 leading, capped at 68ch." },
+      "label": { "displayName": "Label", "purpose": "Nav, dates, meta, tags, footer; mono silkscreen." }
+    },
+    "shadows": [
+      { "name": "panel-settle", "value": "0 4px 20px rgba(0, 0, 0, 0.3)", "purpose": "Resting shadow under Panel Graphite surfaces." },
+      { "name": "phosphor-halo-sm", "value": "0 0 10px rgba(57, 255, 20, 0.3)", "purpose": "Hover on nav links, tags, back link." },
+      { "name": "phosphor-halo-card", "value": "0 0 15px rgba(57, 255, 20, 0.3)", "purpose": "Hover on post cards, with translateY(-3px)." },
+      { "name": "phosphor-text-glow", "value": "0 0 6px rgba(57, 255, 20, 0.3)", "purpose": "Text-shadow on lime text in an active or live state." }
+    ],
+    "motion": [
+      { "name": "ease-standard", "value": "0.25s cubic-bezier(0.4, 0, 0.2, 1)", "purpose": "Default for hover and state transitions." },
+      { "name": "flow-dash", "value": "15s linear infinite", "purpose": "Schematic flow lines crawling along the pipeline." },
+      { "name": "pulse-glow", "value": "1.5s infinite", "purpose": "Pulsing > prompt in the schematic console line." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "xs", "value": "480px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Nav Link",
+      "kind": "nav",
+      "refersTo": "nav-link",
+      "description": "Header navigation label that lights up under the cursor.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\" class=\"ds-nav-link\">INDEX</a><a href=\"#\" class=\"ds-nav-link\">ABOUT</a></nav>",
+      "css": ".ds-nav { display: flex; gap: 20px; } .ds-nav-link { color: #E0E0E0; font-family: 'JetBrains Mono', monospace; font-size: 0.9rem; font-weight: 700; text-decoration: none; border: 1px solid transparent; padding: 6px 12px; transition: all 0.25s ease; } .ds-nav-link:hover, .ds-nav-link:focus-visible { color: #39FF14; text-shadow: 0 0 8px rgba(57, 255, 20, 0.3); border-color: #39FF14; box-shadow: 0 0 10px rgba(57, 255, 20, 0.3); outline: none; }"
+    },
+    {
+      "name": "Back Link",
+      "kind": "button",
+      "refersTo": "back-link",
+      "description": "Square console button with an arrow; returns to the index.",
+      "html": "<a href=\"#\" class=\"ds-back-link\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M4 8H13M4 8L8 4M4 8L8 12\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg><span>RETURN_TO_INDEX</span></a>",
+      "css": ".ds-back-link { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-family: 'JetBrains Mono', monospace; font-weight: 700; font-size: 0.85rem; border: 1px solid rgba(255, 255, 255, 0.15); padding: 8px 16px; background: #1E1E1E; color: #E0E0E0; transition: all 0.25s ease; } .ds-back-link svg { transition: transform 0.25s ease; } .ds-back-link:hover, .ds-back-link:focus-visible { color: #39FF14; border-color: #39FF14; box-shadow: 0 0 10px rgba(57, 255, 20, 0.3); outline: none; } .ds-back-link:hover svg { transform: translateX(-3px); }"
+    },
+    {
+      "name": "Tag",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Mono category chip with # prefix.",
+      "html": "<span class=\"ds-tag\">#QUANTUM</span>",
+      "css": ".ds-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #888888; border: 1px solid rgba(255, 255, 255, 0.15); background: transparent; padding: 3px 8px; transition: all 0.2s ease; } .ds-tag:hover { color: #39FF14; border-color: #39FF14; box-shadow: 0 0 8px rgba(57, 255, 20, 0.3); text-shadow: 0 0 4px rgba(57, 255, 20, 0.3); }"
+    },
+    {
+      "name": "Post Card",
+      "kind": "card",
+      "refersTo": "post-card",
+      "description": "Index entry: bracketed date, mono title, summary, tags; wakes on hover.",
+      "html": "<article class=\"ds-card\"><span class=\"ds-card-date\">[2026-08-11]</span><h2 class=\"ds-card-title\"><a href=\"#\">META MUSE GLIMMER, OPENAI GPT-5.6-CYBER, AND QCI FAB ACQUISITION</a></h2><p class=\"ds-card-summary\">Meta open-sources Muse Glimmer, OpenAI ships a defensive cyber model, and QCi buys a fab.</p><span class=\"ds-tag\">#AI</span></article>",
+      "css": ".ds-card { border: 1px solid rgba(255, 255, 255, 0.1); background: #1E1E1E; padding: 24px; max-width: 360px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease; } .ds-card:hover, .ds-card:focus-within { border-color: #39FF14; box-shadow: 0 0 15px rgba(57, 255, 20, 0.3); transform: translateY(-3px); } .ds-card-date { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: #888888; } .ds-card-title { margin: 8px 0 12px; font-family: 'JetBrains Mono', monospace; font-size: 1.25rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.02em; text-transform: uppercase; } .ds-card-title a { color: #E0E0E0; text-decoration: none; transition: color 0.2s ease; } .ds-card:hover .ds-card-title a { color: #39FF14; } .ds-card-summary { color: #B0B0B0; font-family: Inter, sans-serif; font-size: 0.9rem; line-height: 1.6; margin: 0 0 20px; } .ds-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #888888; border: 1px solid rgba(255, 255, 255, 0.15); padding: 3px 8px; }"
+    },
+    {
+      "name": "Page Title",
+      "kind": "custom",
+      "refersTo": "headline",
+      "description": "Mono page heading with Phosphor Lime left bar.",
+      "html": "<h1 class=\"ds-page-title\">LATEST_SYSTEM_POSTS</h1>",
+      "css": ".ds-page-title { font-family: 'JetBrains Mono', monospace; font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em; text-transform: uppercase; color: #E0E0E0; border-left: 3px solid #39FF14; padding-left: 10px; margin: 0; }"
+    },
+    {
+      "name": "Run Readout",
+      "kind": "custom",
+      "refersTo": "panel-graphite",
+      "description": "Inset provenance plate under the article title; rows render only from real data.",
+      "html": "<section class=\"ds-readout\"><div class=\"ds-readout-bar\"><span>SYSTEM_OUT // DAILY RECON DIGEST</span><a href=\"#\">HOW_THIS_IS_MADE</a></div><dl class=\"ds-readout-grid\"><div class=\"ds-row ds-row-full\"><dt>AUTHOR</dt><dd>RESEARCH_AGENT <span class=\"ds-note\">AI-GENERATED</span></dd></div><div class=\"ds-row\"><dt>HUMAN_EDITS</dt><dd>NONE</dd></div><div class=\"ds-row\"><dt>DIGEST_DATE</dt><dd>2026-08-11</dd></div><div class=\"ds-row\"><dt>SOURCES</dt><dd>10 LINKED · 10 DOMAINS</dd></div><div class=\"ds-row\"><dt>READ_TIME</dt><dd>~3 MIN</dd></div></dl></section>",
+      "css": ".ds-readout { border: 1px solid rgba(255, 255, 255, 0.15); background: #111111; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; max-width: 720px; } .ds-readout-bar { display: flex; justify-content: space-between; gap: 16px; padding: 8px 14px; border-bottom: 1px dashed rgba(255, 255, 255, 0.15); font-weight: 700; color: #E0E0E0; } .ds-readout-bar a { font-weight: 400; color: #888888; text-decoration: underline; text-decoration-color: rgba(57, 255, 20, 0.3); text-underline-offset: 3px; } .ds-readout-bar a:hover, .ds-readout-bar a:focus-visible { color: #39FF14; text-decoration-color: currentColor; } .ds-readout-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin: 0; padding: 6px 0; } .ds-row { display: grid; grid-template-columns: 8.5rem 1fr; gap: 8px; padding: 5px 14px; } .ds-row-full { grid-column: 1 / -1; } .ds-row dt { color: #888888; } .ds-row dd { margin: 0; color: #E0E0E0; font-variant-numeric: tabular-nums; } .ds-note { margin-left: 6px; padding: 1px 6px; color: #39FF14; border: 1px solid rgba(57, 255, 20, 0.3); }"
+    },
+    {
+      "name": "Inline Code",
+      "kind": "custom",
+      "refersTo": "code-inline",
+      "description": "Lime mono code on graphite; the only rounded element.",
+      "html": "<p class=\"ds-prose\">Return <code class=\"ds-code\">{ status: \"ACTIVE\" }</code> from load.</p>",
+      "css": ".ds-prose { color: #E0E0E0; font-family: Inter, sans-serif; line-height: 1.75; } .ds-code { background: #1E1E1E; color: #39FF14; padding: 2px 6px; font-family: 'JetBrains Mono', monospace; font-size: 0.9em; border-radius: 3px; border: 1px solid rgba(255, 255, 255, 0.1); }"
+    },
+    {
+      "name": "Schematic Panel Frame",
+      "kind": "custom",
+      "refersTo": "schematic-panel",
+      "description": "Framed console panel with mono header, live status readout, and prompt footer.",
+      "html": "<div class=\"ds-panel\"><div class=\"ds-panel-head\"><span class=\"ds-panel-title\">SYS_PIPELINE // DATA_FLOW_DIAGRAM</span><span class=\"ds-panel-status\">STATUS: MONITOR_ACTIVE</span></div><div class=\"ds-panel-view\"></div><div class=\"ds-panel-foot\"><span class=\"ds-pulse\">&gt;</span> PIPELINE STATUS: ACTIVE // AWAITING NODE SELECTION_</div></div>",
+      "css": ".ds-panel { border: 1px solid #888888; background: #1E1E1E; padding: 15px; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: #888888; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); } .ds-panel-head { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px dashed #888888; padding-bottom: 8px; margin-bottom: 15px; } .ds-panel-title { font-weight: 700; color: #E0E0E0; } .ds-panel-status { color: #39FF14; text-shadow: 0 0 6px rgba(57, 255, 20, 0.3); } .ds-panel-view { height: 120px; background: #090909; border: 1px solid rgba(255, 255, 255, 0.05); } .ds-panel-foot { margin-top: 15px; border-top: 1px dashed #888888; padding-top: 10px; } .ds-pulse { color: #39FF14; animation: ds-pulse 1.5s infinite; } @keyframes ds-pulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Night-Shift Console",
+    "overview": "An operator's terminal left running overnight. While you slept, the agent filed its report, and the console shows it as soft readout text on graphite panels over a dark drafting board. The single phosphor-lime accent marks where something is live or where your hand is. The mood is technical, nocturnal, and precise, with a deliberate retro-hardware wink: SNAKE_CASE labels, `//` separators, `.EXE`/`.SYS` node names, and a pipeline schematic tilted into isometric space.\n\nDensity is moderate. Structure speaks in monospace uppercase and prose speaks in a quiet sans. Panels are square and sit on a 24px dot grid, separated by hairline borders and dashed rules like silkscreen on a circuit board. Nothing is rounded beyond a hairline on inline code. Depth comes from tone, not lift: a panel is lighter than the board it sits on, and it wakes up with a lime border and glow only when touched.\n\nThe playfulness lives in labels and the schematic, never in effects. This system rejects hacker-movie cliché: no Matrix rain, no scanlines, no glitch distortion, and no wall-to-wall green-on-black.",
+    "keyCharacteristics": [
+      "One accent, Phosphor Lime, used as a signal for links, hover, focus, and live status.",
+      "Monospace uppercase for structure (headings, labels, nav, meta) and Inter for reading.",
+      "Square corners, 1px hairline borders, dashed dividers.",
+      "Tonal panels on a dotted console-black board.",
+      "Retro-hardware copy voice in labels (`RETURN_TO_INDEX`, `SYS_PIPELINE // DATA_FLOW_DIAGRAM`)."
+    ],
+    "rules": [
+      { "name": "The One Phosphor Rule", "body": "Phosphor Lime is the only hue in the system. No second accent, no gradients, and no lime fills behind body text.", "section": "colors" },
+      { "name": "The Signal, Not Paint Rule", "body": "Lime marks something live or interactive. Inactive structure stays in grays.", "section": "colors" },
+      { "name": "The Silkscreen Rule", "body": "Every structural string (headings, nav, labels, meta, tags) is monospace. Inter appears only in running prose.", "section": "typography" },
+      { "name": "The Machine Label Rule", "body": "Interface labels use the console's dialect: uppercase SNAKE_CASE and `//` separators. Prose stays plain English.", "section": "typography" },
+      { "name": "The Wake-on-Touch Rule", "body": "Panels are quiet at rest. The lime border and halo appear only in response to interaction or live status.", "section": "elevation" },
+      { "name": "The Inset Module Rule", "body": "Instrument-like modules inside a panel (the run readout, the compact outline, the digest links) drop back to Console Black with a 0.15 hairline and no shadow. They read as recessed into the panel, never raised above it.", "section": "elevation" }
+    ],
+    "dos": [
+      "**Do** keep Phosphor Lime (#39FF14) as the single accent and reserve it for links, interaction, and live status.",
+      "**Do** set structure in JetBrains Mono and prose in Inter at 1.7 leading, capped at 68ch.",
+      "**Do** derive provenance from real data (frontmatter or counts from the post) and say plainly on every post that an AI agent wrote it.",
+      "**Do** keep corners square; the only radius is the 3px on inline code.",
+      "**Do** separate regions with 1px dashed Silkscreen Gray rules and edge panels with translucent white hairlines.",
+      "**Do** keep panels quiet at rest and let them wake with a lime border and halo on hover and focus.",
+      "**Do** write interface labels in the console dialect (`SNAKE_CASE`, `//`, `[YYYY-MM-DD]`)."
+    ],
+    "donts": [
+      "**Don't** use hacker-movie cliché: no Matrix rain, scanlines, glitch effects, or green-on-black overload.",
+      "**Don't** introduce a second accent hue, gradients, or rounded corners.",
+      "**Don't** apply the phosphor glow to elements at rest that aren't the logo or a live status.",
+      "**Don't** set long-form prose in monospace."
+    ]
+  }
+}

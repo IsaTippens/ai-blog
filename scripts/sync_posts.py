@@ -29,7 +29,7 @@ def list_posts(service):
     while True:
         results = service.files().list(
             q=query,
-            fields="nextPageToken, files(id, name, mimeType, modifiedTime)",
+            fields="nextPageToken, files(id, name, mimeType, modifiedTime, createdTime)",
             pageSize=1000,
             pageToken=page_token,
         ).execute()
@@ -102,6 +102,17 @@ def fetch_content(service, file_info):
     )
 
 
+def stamp_filed(content, created_time):
+    """Record when the agent filed the post to Drive as `filed:`, unless the post already says."""
+    lines = content.split("\n")
+    start = next(i for i, line in enumerate(lines) if line.strip() == "---")
+    end = next((i for i in range(start + 1, len(lines)) if lines[i].strip() == "---"), None)
+    if end is None or any(line.startswith("filed:") for line in lines[start + 1:end]):
+        return content
+    lines.insert(end, f'filed: "{created_time}"')
+    return "\n".join(lines)
+
+
 def main():
     creds_json = os.environ.get("GDRIVE_SERVICE_ACCOUNT_JSON")
     if not creds_json:
@@ -148,6 +159,9 @@ def main():
             print(f"ERROR: {name} has no frontmatter after download; skipping. Starts with: {content[:150]!r}")
             failed.append(name)
             continue
+
+        if file_info.get("createdTime"):
+            content = stamp_filed(content, file_info["createdTime"])
 
         with open(os.path.join(POSTS_DIR, name), "w", encoding="utf-8", newline="\n") as f:
             f.write(content)

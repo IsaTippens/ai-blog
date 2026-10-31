@@ -1,29 +1,36 @@
-import { parseFrontMatter } from '$lib/parser.js';
-import { marked } from 'marked';
 import { error } from '@sveltejs/kit';
+import { listPosts, readPost, renderPost } from '$lib/posts.js';
 
-export async function load({ params }) {
+export function load({ params }) {
   const { slug } = params;
-  const postFiles = import.meta.glob('../../../../posts/*.md', { eager: true, query: '?raw' });
-
-  // Find key that ends with /posts/${slug}.md
-  const postKey = Object.keys(postFiles).find(key => key.endsWith(`/posts/${slug}.md`));
-
-  if (!postKey) {
-    throw error(404, `Post [${slug}] not found`);
+  const file = readPost(slug);
+  if (!file) {
+    throw error(404, `No digest is filed under "${slug}".`);
   }
 
-  const file = postFiles[postKey];
-  const { data, content } = parseFrontMatter(file.default);
-  const htmlContent = marked(content);
+  const { data, content } = file;
+  const { html, outline, stats } = renderPost(content);
+
+  const posts = listPosts();
+  const index = posts.findIndex((p) => p.slug === slug);
+  const pick = (p) => (p ? { slug: p.slug, title: p.title, date: p.date } : null);
 
   return {
     post: {
+      slug,
       title: data.title || slug,
       date: data.date || '',
       summary: data.summary || '',
       categories: data.categories || [],
-      html: htmlContent
-    }
+      // Optional pipeline fields; rendered only when the sync or the agent supplies them.
+      filed: data.filed || '',
+      agent: data.agent || '',
+      model: data.model || '',
+      html,
+      outline,
+      stats
+    },
+    newer: pick(posts[index - 1]),
+    older: pick(posts[index + 1])
   };
 }
