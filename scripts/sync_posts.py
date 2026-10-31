@@ -1,6 +1,7 @@
 import io
 import json
 import os
+import re
 import sys
 
 from google.oauth2 import service_account
@@ -10,6 +11,14 @@ from googleapiclient.http import MediaIoBaseDownload
 FOLDER_ID = "1Tyxz30DHCj0LDw6tK4kYJkOFB2ca2OzL"
 POSTS_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "posts")
 GOOGLE_DOC_MIME = "application/vnd.google-apps.document"
+
+# When Drive converts an uploaded .md into a Google Doc, the frontmatter's `---` fences become
+# horizontal rules and its lines are merged into one paragraph. The plain-text export still
+# holds the quoted values verbatim, so the fields can be recovered from that paragraph.
+MERGED_FRONTMATTER_RE = re.compile(
+    r'title:\s*(".*?")\s+date:\s*(".*?")\s+summary:\s*(".*?")\s+categories:\s*(\[.*?\])', re.S
+)
+HORIZONTAL_RULE_RE = re.compile(r"^\s*(?:-{3,}|\*{3,}|_{3,})\s*$")
 
 
 def list_posts(service):
@@ -40,27 +49,57 @@ def latest_per_name(files):
     return list(latest.values())
 
 
-def fetch_content(service, file_info):
-    """Return the file's markdown as text.
-
-    Uploaded .md files are binary blobs and are downloaded as-is. Files converted to
-    native Google Docs cannot be downloaded with get_media; they are exported as plain
-    text, which preserves the markdown source (frontmatter, #, *, _) literally.
-    """
-    if file_info["mimeType"] == GOOGLE_DOC_MIME:
-        request = service.files().export_media(fileId=file_info["id"], mimeType="text/plain")
-    else:
-        request = service.files().get_media(fileId=file_info["id"])
-
+def download(service, request):
     fh = io.BytesIO()
     downloader = MediaIoBaseDownload(fh, request)
     done = False
     while not done:
         _, done = downloader.next_chunk()
+    # Docs exports prepend a BOM and use CRLF line endings.
+    return fh.getvalue().decode("utf-8-sig").replace("\r\n", "\n")
 
-    # Docs plain-text export prepends a BOM and uses CRLF line endings.
-    text = fh.getvalue().decode("utf-8-sig")
-    return text.replace("\r\n", "\n")
+
+def export_doc(service, file_id, mime_type):
+    return download(service, service.files().export_media(fileId=file_id, mimeType=mime_type))
+
+
+def strip_converted_frontmatter(markdown):
+    """Drop the mangled frontmatter (rule, merged field paragraph, rule) from a Docs markdown export."""
+    lines = markdown.split("\n")
+    start = next((i for i, line in enumerate(lines) if "title" in line and "categories" in line), None)
+    if start is None:
+        raise ValueError("frontmatter paragraph not found in markdown export")
+    rest = lines[start + 1:]
+    while rest and (not rest[0].strip() or HORIZONTAL_RULE_RE.match(rest[0])):
+        rest.pop(0)
+    return "\n".join(rest)
+
+
+def fetch_content(service, file_info):
+    """Return the file's markdown as text.
+
+    - Uploaded .md files are binary blobs and are downloaded as-is.
+    - Google Docs whose body is raw markdown text are exported as plain text, which keeps
+      the source (frontmatter, #, *, _) literally.
+    - Google Docs converted from markdown have their frontmatter rebuilt from the plain-text
+      export and their body taken from the markdown export, which restores the formatting.
+    """
+    if file_info["mimeType"] != GOOGLE_DOC_MIME:
+        return download(service, service.files().get_media(fileId=file_info["id"]))
+
+    plain = export_doc(service, file_info["id"], "text/plain")
+    if plain.lstrip().startswith("---"):
+        return plain
+
+    match = MERGED_FRONTMATTER_RE.search(plain)
+    if not match:
+        return plain  # Rejected by the frontmatter check in main().
+
+    title, date, summary, categories = match.groups()
+    body = strip_converted_frontmatter(export_doc(service, file_info["id"], "text/markdown"))
+    return (
+        f"---\ntitle: {title}\ndate: {date}\nsummary: {summary}\ncategories: {categories}\n---\n\n{body}"
+    )
 
 
 def main():
