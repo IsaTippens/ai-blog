@@ -37,17 +37,21 @@
   <div class="posts-grid">
     {#each posts as post}
       <article class="post-card">
-        <header class="post-header">
-          <span class="post-date">[{post.date}]</span>
-          <h2 class="post-title" data-vt-title={post.slug}>
-            <a href="/blog/{post.slug || post.title.toLowerCase().replace(/ /g, '-')}">{post.title}</a>
-          </h2>
-        </header>
-        <p class="post-summary">{post.summary}</p>
-        <div class="tag-container">
-          {#each post.categories as cat}
-            <span class="tag">#{cat.toUpperCase()}</span>
-          {/each}
+        <div class="card-plate">
+          <div class="card-face">
+            <header class="post-header">
+              <span class="post-date">[{post.date}]</span>
+              <h2 class="post-title" data-vt-title={post.slug}>
+                <a href="/blog/{post.slug || post.title.toLowerCase().replace(/ /g, '-')}">{post.title}</a>
+              </h2>
+            </header>
+            <p class="post-summary">{post.summary}</p>
+            <div class="tag-container">
+              {#each post.categories as cat}
+                <span class="tag">#{cat.toUpperCase()}</span>
+              {/each}
+            </div>
+          </div>
         </div>
       </article>
     {/each}
@@ -86,28 +90,81 @@
     font-family: var(--font-mono);
   }
 
+  /* ── Ribbon of slanted cards ───────────────────
+     Each row is one band cut at a shared angle. Every card but the last in a row reaches
+     --slant past its column, so its right cut runs parallel to the next card's left cut with a
+     constant --cut gap. The outer ends of a row stay straight so the band sits on the page grid. */
   .posts-grid {
+    --slant: 36px;
+    --cut: 10px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    column-gap: var(--cut);
+    row-gap: 28px;
   }
 
   .post-card {
-    border: 1px solid var(--hairline);
-    background-color: var(--bg-surface);
-    padding: 24px;
+    --left: var(--slant);
+    --right: var(--slant);
+    --top: 0px;
+    --bottom: 0px;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: border-color var(--decay) var(--ease-decay), box-shadow var(--decay) var(--ease-decay),
-      transform 0.25s var(--ease);
+    min-width: 0;
+    margin-right: calc(-1 * var(--slant));
+    /* The box overhangs into the cut gap; only the clipped plate takes the pointer. */
+    pointer-events: none;
+    transition: filter var(--decay) var(--ease-decay);
   }
 
-  .post-card:hover {
-    border-color: var(--glow-lime);
-    box-shadow: 0 0 15px var(--glow-lime-dim);
-    transform: translateY(-3px);
-    transition-duration: var(--ignite), var(--ignite), 0.25s;
+  .post-card:nth-child(3n + 1) {
+    --left: 0px;
+  }
+
+  .post-card:nth-child(3n),
+  .post-card:last-child {
+    --right: 0px;
+    margin-right: 0;
+  }
+
+  /* The plate is the border colour; the face sits 1px inside it. Both share one cut shape. */
+  .card-plate,
+  .card-face {
+    clip-path: polygon(
+      var(--left) var(--top),
+      100% 0,
+      calc(100% - var(--right)) calc(100% - var(--bottom)),
+      0 100%
+    );
+  }
+
+  .card-plate {
+    display: flex;
+    flex: 1;
+    padding: 1px;
+    pointer-events: auto;
+    background-color: var(--hairline-strong);
+    transition: background-color var(--decay) var(--ease-decay);
+  }
+
+  .card-face {
+    position: relative;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: calc(22px + var(--top)) calc(18px + var(--right)) calc(22px + var(--bottom)) calc(18px + var(--left));
+    background-color: var(--bg-surface);
+  }
+
+  .post-card:hover,
+  .post-card:focus-within {
+    filter: drop-shadow(0 0 10px var(--glow-lime-dim));
+    transition-duration: var(--ignite);
+  }
+
+  .post-card:hover .card-plate,
+  .post-card:focus-within .card-plate {
+    background-color: var(--glow-lime);
+    transition-duration: var(--ignite);
   }
 
   .post-header {
@@ -134,7 +191,19 @@
     transition: color var(--decay) var(--ease-decay);
   }
 
-  .post-card:hover .post-title a {
+  /* The whole face is the link target; the lit plate is its focus indicator. */
+  .post-title a::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+
+  .post-title a:focus-visible {
+    outline: none;
+  }
+
+  .post-card:hover .post-title a,
+  .post-card:focus-within .post-title a {
     color: var(--glow-lime);
     transition-duration: var(--ignite);
   }
@@ -158,35 +227,60 @@
     font-size: 0.7rem;
     color: var(--text-meta);
     border: 1px solid var(--hairline-strong);
-    background-color: transparent;
     padding: 3px 8px;
-    transition: color var(--decay) var(--ease-decay), border-color var(--decay) var(--ease-decay),
-      box-shadow var(--decay) var(--ease-decay), text-shadow var(--decay) var(--ease-decay);
   }
 
-  .tag:hover {
-    color: var(--glow-lime);
-    border-color: var(--glow-lime);
-    box-shadow: 0 0 8px var(--glow-lime-dim);
-    text-shadow: 0 0 4px var(--glow-lime-dim);
-    transition-duration: var(--ignite);
-  }
+  @media (max-width: 899px) {
+    .posts-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 
-  /* Reduced motion keeps the glow (it is state) but drops the lift. */
-  @media (prefers-reduced-motion: reduce) {
-    .post-card:hover {
-      transform: none;
+    .post-card:nth-child(n) {
+      --left: var(--slant);
+      --right: var(--slant);
+      margin-right: calc(-1 * var(--slant));
+    }
+
+    .post-card:nth-child(2n + 1) {
+      --left: 0px;
+    }
+
+    .post-card:nth-child(2n),
+    .post-card:last-child {
+      --right: 0px;
+      margin-right: 0;
     }
   }
 
+  /* One column: the band runs down the page and the cuts become the cards' tops and bottoms. */
   @media (max-width: 640px) {
     .posts-grid {
-      grid-template-columns: 1fr;
-      gap: 16px;
+      --slant: 18px;
+      grid-template-columns: minmax(0, 1fr);
+      row-gap: var(--cut);
     }
 
-    .post-card {
-      padding: 16px;
+    .post-card:nth-child(n) {
+      --left: 0px;
+      --right: 0px;
+      --top: var(--slant);
+      --bottom: var(--slant);
+      margin-right: 0;
+      margin-bottom: calc(-1 * var(--slant));
+    }
+
+    .post-card:first-child {
+      --top: 0px;
+    }
+
+    .post-card:last-child {
+      --bottom: 0px;
+      margin-bottom: 0;
+    }
+
+    .card-face {
+      padding-left: 16px;
+      padding-right: 16px;
     }
 
     .page-title {

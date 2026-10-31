@@ -7,6 +7,9 @@
       "console-black": { "role": "neutral", "displayName": "Console Black", "canonical": "#111111", "tonalRamp": ["#0B0B0B", "#252525", "#424242", "#616161", "#828282", "#A5A5A5", "#C9C9C9", "#EEEEEE"] },
       "panel-graphite": { "role": "neutral", "displayName": "Panel Graphite", "canonical": "#1E1E1E", "tonalRamp": ["#0B0B0B", "#252525", "#424242", "#616161", "#828282", "#A5A5A5", "#C9C9C9", "#EEEEEE"] },
       "grid-dot": { "role": "neutral", "displayName": "Grid Dot", "canonical": "#2A2A2A", "tonalRamp": ["#0B0B0B", "#252525", "#424242", "#616161", "#828282", "#A5A5A5", "#C9C9C9", "#EEEEEE"] },
+      "graticule": { "role": "neutral", "displayName": "Graticule", "canonical": "#1C1C1C", "tonalRamp": ["#0B0B0B", "#252525", "#424242", "#616161", "#828282", "#A5A5A5", "#C9C9C9", "#EEEEEE"] },
+      "graticule-axis": { "role": "neutral", "displayName": "Graticule Axis", "canonical": "#2C2C2C", "tonalRamp": ["#0B0B0B", "#252525", "#424242", "#616161", "#828282", "#A5A5A5", "#C9C9C9", "#EEEEEE"] },
+      "screen-vignette": { "role": "neutral", "displayName": "Screen Vignette", "canonical": "rgba(0, 0, 0, 0.6)" },
       "readout-white": { "role": "neutral", "displayName": "Readout White", "canonical": "#E0E0E0", "tonalRamp": ["#0B0B0B", "#252525", "#424242", "#616161", "#828282", "#A5A5A5", "#C9C9C9", "#EEEEEE"] },
       "readout-dim": { "role": "neutral", "displayName": "Readout Dim", "canonical": "#B0B0B0", "tonalRamp": ["#0B0B0B", "#252525", "#424242", "#616161", "#828282", "#A5A5A5", "#C9C9C9", "#EEEEEE"] },
       "silkscreen-gray": { "role": "neutral", "displayName": "Silkscreen Gray", "canonical": "#888888", "tonalRamp": ["#0B0B0B", "#252525", "#424242", "#616161", "#828282", "#A5A5A5", "#C9C9C9", "#EEEEEE"] },
@@ -62,17 +65,17 @@
       "name": "Tag",
       "kind": "chip",
       "refersTo": "tag",
-      "description": "Mono category chip with # prefix.",
+      "description": "Mono category chip with # prefix; static, not a link.",
       "html": "<span class=\"ds-tag\">#QUANTUM</span>",
-      "css": ".ds-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #888888; border: 1px solid rgba(255, 255, 255, 0.15); background: transparent; padding: 3px 8px; transition: all 0.2s ease; } .ds-tag:hover { color: #39FF14; border-color: #39FF14; box-shadow: 0 0 8px rgba(57, 255, 20, 0.3); text-shadow: 0 0 4px rgba(57, 255, 20, 0.3); }"
+      "css": ".ds-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #888888; border: 1px solid rgba(255, 255, 255, 0.15); background: transparent; padding: 3px 8px; }"
     },
     {
       "name": "Post Card",
       "kind": "card",
       "refersTo": "post-card",
-      "description": "Index entry: bracketed date, mono title, summary, tags; wakes on hover.",
-      "html": "<article class=\"ds-card\"><span class=\"ds-card-date\">[2026-08-11]</span><h2 class=\"ds-card-title\"><a href=\"#\">META MUSE GLIMMER, OPENAI GPT-5.6-CYBER, AND QCI FAB ACQUISITION</a></h2><p class=\"ds-card-summary\">Meta open-sources Muse Glimmer, OpenAI ships a defensive cyber model, and QCi buys a fab.</p><span class=\"ds-tag\">#AI</span></article>",
-      "css": ".ds-card { border: 1px solid rgba(255, 255, 255, 0.1); background: #1E1E1E; padding: 24px; max-width: 360px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease; } .ds-card:hover, .ds-card:focus-within { border-color: #39FF14; box-shadow: 0 0 15px rgba(57, 255, 20, 0.3); transform: translateY(-3px); } .ds-card-date { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: #888888; } .ds-card-title { margin: 8px 0 12px; font-family: 'JetBrains Mono', monospace; font-size: 1.25rem; font-weight: 700; line-height: 1.3; letter-spacing: -0.02em; text-transform: uppercase; } .ds-card-title a { color: #E0E0E0; text-decoration: none; transition: color 0.2s ease; } .ds-card:hover .ds-card-title a { color: #39FF14; } .ds-card-summary { color: #B0B0B0; font-family: Inter, sans-serif; font-size: 0.9rem; line-height: 1.6; margin: 0 0 20px; } .ds-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #888888; border: 1px solid rgba(255, 255, 255, 0.15); padding: 3px 8px; }"
+      "description": "Index entry as a ribbon segment: slanted cuts shared with its neighbours, whole face is the link, plate lights lime on hover and focus.",
+      "html": "<div class=\"ds-ribbon\"><a class=\"ds-cut\" href=\"#\"><span class=\"ds-face\"><span class=\"ds-date\">[2026-10-31]</span><span class=\"ds-title\">BTQ One-Shot Quantum Sigs, Gemini 4 Carbon, &amp; CISA KEV</span><span class=\"ds-tag\">#QUANTUM</span></span></a><a class=\"ds-cut ds-cut--end\" href=\"#\"><span class=\"ds-face\"><span class=\"ds-date\">[2026-10-28]</span><span class=\"ds-title\">Apple M6 MacBook Pro, NIST Post-Quantum Guide</span><span class=\"ds-tag\">#HARDWARE</span></span></a></div>",
+      "css": ".ds-ribbon { --slant: 36px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 10px; max-width: 620px; } .ds-cut { --l: 0px; --r: var(--slant); display: flex; margin-right: calc(-1 * var(--slant)); padding: 1px; background: rgba(255, 255, 255, 0.15); text-decoration: none; clip-path: polygon(var(--l) 0, 100% 0, calc(100% - var(--r)) 100%, 0 100%); transition: background-color 520ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-cut--end { --l: var(--slant); --r: 0px; margin-right: 0; } .ds-face { flex: 1; display: flex; flex-direction: column; gap: 8px; padding: 22px calc(18px + var(--r)) 22px calc(18px + var(--l)); background: #1E1E1E; clip-path: polygon(var(--l) 0, 100% 0, calc(100% - var(--r)) 100%, 0 100%); } .ds-date { font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: #888888; } .ds-title { font-family: 'JetBrains Mono', monospace; font-size: 1.2rem; font-weight: 700; line-height: 1.3; color: #E0E0E0; transition: color 520ms cubic-bezier(0.22, 1, 0.36, 1); } .ds-tag { align-self: flex-start; font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #888888; border: 1px solid rgba(255, 255, 255, 0.15); padding: 3px 8px; } .ds-cut:hover, .ds-cut:focus-visible { background: #39FF14; outline: none; transition-duration: 70ms; } .ds-cut:hover .ds-title, .ds-cut:focus-visible .ds-title { color: #39FF14; transition-duration: 70ms; }"
     },
     {
       "name": "Page Title",
@@ -109,34 +112,38 @@
   ],
   "narrative": {
     "northStar": "The Night-Shift Console",
-    "overview": "An operator's terminal left running overnight. While you slept, the agent filed its report, and the console shows it as soft readout text on graphite panels over a dark drafting board. The single phosphor-lime accent marks where something is live or where your hand is. The mood is technical, nocturnal, and precise, with a deliberate retro-hardware wink: SNAKE_CASE labels, `//` separators, `.EXE`/`.SYS` node names, and a pipeline schematic tilted into isometric space.\n\nDensity is moderate. Structure speaks in monospace uppercase and prose speaks in a quiet sans. Panels are square and sit on a 24px dot grid, separated by hairline borders and dashed rules like silkscreen on a circuit board. Nothing is rounded beyond a hairline on inline code. Depth comes from tone, not lift: a panel is lighter than the board it sits on, and it wakes up with a lime border and glow only when touched.\n\nThe playfulness lives in labels and the schematic, never in effects. This system rejects hacker-movie cliché: no Matrix rain, no scanlines, no glitch distortion, and no wall-to-wall green-on-black.",
+    "overview": "An operator's terminal left running overnight. While you slept, the agent filed its report, and the console shows it as soft readout text on graphite panels over a dark drafting board. The single phosphor-lime accent marks where something is live or where your hand is. The mood is technical, nocturnal, and precise, with a deliberate retro-hardware wink: SNAKE_CASE labels, `//` separators, `.EXE`/`.SYS` node names, and a pipeline schematic tilted into isometric space.\n\nDensity is moderate. Structure speaks in monospace uppercase and prose speaks in a quiet sans. Panels sit on the console's screen, an oscilloscope graticule fixed behind the page, separated by hairline borders and dashed rules like silkscreen on a circuit board. Corners are square; the one deliberate break is the index, where post cards are cut on a shared slant so each row reads as one ribbon. Depth comes from tone, not lift: a panel is lighter than the board it sits on, and it wakes up with a lime border and glow only when touched.\n\nThe playfulness lives in labels and the schematic, never in effects. This system rejects hacker-movie cliché: no Matrix rain, no scanlines, no glitch distortion, and no wall-to-wall green-on-black.",
     "keyCharacteristics": [
       "One accent, Phosphor Lime, used as a signal for links, hover, focus, and live status.",
       "Monospace uppercase for structure (headings, labels, nav, meta) and Inter for reading.",
-      "Square corners, 1px hairline borders, dashed dividers.",
-      "Tonal panels on a dotted console-black board.",
+      "Square corners, 1px hairline borders, dashed dividers; index cards are the one slanted shape, cut as a ribbon.",
+      "Tonal panels on an oscilloscope-screen background: dot matrix, graticule, centre axes, vignette.",
       "Retro-hardware copy voice in labels (`RETURN_TO_INDEX`, `SYS_PIPELINE // DATA_FLOW_DIAGRAM`)."
     ],
     "rules": [
-      { "name": "The One Phosphor Rule", "body": "Phosphor Lime is the only hue in the system. No second accent, no gradients, and no lime fills behind body text.", "section": "colors" },
+      { "name": "The One Phosphor Rule", "body": "Phosphor Lime is the only hue in the system. No second accent, no colour gradients, and no lime fills behind body text. The only gradients are the screen's own: the neutral vignette and the 1px graticule lines.", "section": "colors" },
+      { "name": "The Screen Rule", "body": "The background is an oscilloscope screen fixed to the viewport, centred on it: 24px dot matrix, a major division every five dots, centre axes with a tick per dot, and a vignette. Content scrolls across it; nothing on it moves or glows.", "section": "colors" },
       { "name": "The Signal, Not Paint Rule", "body": "Lime marks something live or interactive. Inactive structure stays in grays.", "section": "colors" },
       { "name": "The Silkscreen Rule", "body": "Every structural string (headings, nav, labels, meta, tags) is monospace. Inter appears only in running prose.", "section": "typography" },
       { "name": "The Machine Label Rule", "body": "Interface labels use the console's dialect: uppercase SNAKE_CASE and `//` separators. Prose stays plain English.", "section": "typography" },
       { "name": "The Wake-on-Touch Rule", "body": "Panels are quiet at rest. The lime border and halo appear only in response to interaction or live status.", "section": "elevation" },
-      { "name": "The Inset Module Rule", "body": "Instrument-like modules inside a panel (the run readout, the compact outline, the digest links) drop back to Console Black with a 0.15 hairline and no shadow. They read as recessed into the panel, never raised above it.", "section": "elevation" }
+      { "name": "The Inset Module Rule", "body": "Instrument-like modules inside a panel (the run readout, the compact outline, the digest links) drop back to Console Black with a 0.15 hairline and no shadow. They read as recessed into the panel, never raised above it.", "section": "elevation" },
+      { "name": "The Phosphor Persistence Rule", "body": "Light behaves like a CRT trace: hover, focus, and active states ignite in 70ms and decay over 520ms (`cubic-bezier(0.22, 1, 0.36, 1)`), never a symmetric fade. The outline marker decays over 900ms, leaving a short trail as the reader scrolls, and a heading reached from the outline flares lime and fades over 1.6s. These are color and glow changes, so they remain under reduced motion; spatial movement (card lift, arrow nudge, schematic flow) does not.", "section": "elevation" },
+      { "name": "The Carried Title Rule", "body": "Navigation between the index and a digest, or between digests, is one View Transition: the page cross-fades (140ms out, 260ms in) while the chosen title travels into place as the article heading over 420ms (`cubic-bezier(0.16, 1, 0.3, 1)`). Only that pair is named, set at navigation time from `data-vt-title`. Reduced motion skips the transition entirely. Nonessential loops (the schematic flow and prompt) pause while offscreen.", "section": "elevation" },
+      { "name": "The Ribbon Cut Rule", "body": "Index cards are the one slanted shape. Each row is a single band cut at a shared angle (`--slant`: 36px of horizontal run per card, 18px vertical on one column), so a card's cut runs parallel to its neighbour's with a constant 10px gap. The outer ends of a row stay straight so the band sits on the page grid. Nothing else is slanted.", "section": "shapes" }
     ],
     "dos": [
       "**Do** keep Phosphor Lime (#39FF14) as the single accent and reserve it for links, interaction, and live status.",
       "**Do** set structure in JetBrains Mono and prose in Inter at 1.7 leading, capped at 68ch.",
       "**Do** derive provenance from real data (frontmatter or counts from the post) and say plainly on every post that an AI agent wrote it.",
-      "**Do** keep corners square; the only radius is the 3px on inline code.",
+      "**Do** keep corners square; the only radius is the 3px on inline code, and the only slant is the index ribbon cut.",
       "**Do** separate regions with 1px dashed Silkscreen Gray rules and edge panels with translucent white hairlines.",
       "**Do** keep panels quiet at rest and let them wake with a lime border and halo on hover and focus.",
       "**Do** write interface labels in the console dialect (`SNAKE_CASE`, `//`, `[YYYY-MM-DD]`)."
     ],
     "donts": [
       "**Don't** use hacker-movie cliché: no Matrix rain, scanlines, glitch effects, or green-on-black overload.",
-      "**Don't** introduce a second accent hue, gradients, or rounded corners.",
+      "**Don't** introduce a second accent hue, colour gradients, rounded corners, or slants outside the index ribbon.",
       "**Don't** apply the phosphor glow to elements at rest that aren't the logo or a live status.",
       "**Don't** set long-form prose in monospace."
     ]

@@ -5,6 +5,9 @@ colors:
   console-black: "#111111"
   panel-graphite: "#1E1E1E"
   grid-dot: "#2A2A2A"
+  graticule: "#1C1C1C"
+  graticule-axis: "#2C2C2C"
+  screen-vignette: "rgba(0, 0, 0, 0.6)"
   readout-white: "#E0E0E0"
   readout-dim: "#B0B0B0"
   silkscreen-gray: "#888888"
@@ -97,15 +100,15 @@ components:
 
 An operator's terminal left running overnight. While you slept, the agent filed its report, and the console shows it as soft readout text on graphite panels over a dark drafting board. The single phosphor-lime accent marks where something is live or where your hand is. The mood is technical, nocturnal, and precise, with a deliberate retro-hardware wink: SNAKE_CASE labels, `//` separators, `.EXE`/`.SYS` node names, and a pipeline schematic tilted into isometric space.
 
-Density is moderate. Structure speaks in monospace uppercase and prose speaks in a quiet sans. Panels are square and sit on a 24px dot grid, separated by hairline borders and dashed rules like silkscreen on a circuit board. Nothing is rounded beyond a hairline on inline code. Depth comes from tone, not lift: a panel is lighter than the board it sits on, and it wakes up with a lime border and glow only when touched.
+Density is moderate. Structure speaks in monospace uppercase and prose speaks in a quiet sans. Panels sit on the console's screen, an oscilloscope graticule fixed behind the page, separated by hairline borders and dashed rules like silkscreen on a circuit board. Corners are square; the one deliberate break is the index, where post cards are cut on a shared slant so each row reads as one ribbon. Depth comes from tone, not lift: a panel is lighter than the board it sits on, and it wakes up with a lime border and glow only when touched.
 
 The playfulness lives in labels and the schematic, never in effects. This system rejects hacker-movie cliché: no Matrix rain, no scanlines, no glitch distortion, and no wall-to-wall green-on-black.
 
 **Key Characteristics:**
 - One accent, Phosphor Lime, used as a signal for links, hover, focus, and live status.
 - Monospace uppercase for structure (headings, labels, nav, meta) and Inter for reading.
-- Square corners, 1px hairline borders, dashed dividers.
-- Tonal panels on a dotted console-black board.
+- Square corners, 1px hairline borders, dashed dividers; index cards are the one slanted shape, cut as a ribbon.
+- Tonal panels on an oscilloscope-screen background: dot matrix, graticule, centre axes, vignette.
 - Retro-hardware copy voice in labels (`RETURN_TO_INDEX`, `SYS_PIPELINE // DATA_FLOW_DIAGRAM`).
 
 ## Colors
@@ -118,7 +121,9 @@ A near-monochrome graphite palette with a single phosphor accent.
 
 ### Neutral
 - **Console Black** (#111111): the page board behind everything.
-- **Grid Dot** (#2A2A2A): the 1px dots of the 24px blueprint grid painted on the board.
+- **Grid Dot** (#2A2A2A): the 1px dots of the 24px matrix on the screen.
+- **Graticule** (#1C1C1C) and **Graticule Axis** (#2C2C2C): the screen's major divisions every 120px and its brighter centre axes with a tick per dot.
+- **Screen Vignette** (rgba(0, 0, 0, 0.6)): darkens the screen's edges like curved CRT glass.
 - **Panel Graphite** (#1E1E1E): surfaces for post cards, the article panel, the schematic panel, code blocks, and the back link.
 - **Readout White** (#E0E0E0): primary text, headings, and nav at rest.
 - **Readout Dim** (#B0B0B0): secondary prose, including card summaries, the article standfirst, the end-of-digest note, and error detail.
@@ -129,7 +134,9 @@ Hairline borders use translucent white (`rgba(255, 255, 255, 0.1)` on panels, `0
 Browser surfaces carry the palette: text selection is Console Black on Phosphor Lime, and keyboard focus is a 2px Phosphor Lime outline with a 3px offset.
 
 ### Named Rules
-**The One Phosphor Rule.** Phosphor Lime is the only hue in the system. No second accent, no gradients, and no lime fills behind body text.
+**The One Phosphor Rule.** Phosphor Lime is the only hue in the system. No second accent, no colour gradients, and no lime fills behind body text. The only gradients are the screen's own: the neutral vignette and the 1px graticule lines.
+
+**The Screen Rule.** The background is an oscilloscope screen fixed to the viewport, centred on it: 24px dot matrix, a major division every five dots, centre axes with a tick per dot, and a vignette. Content scrolls across it; nothing on it moves or glows.
 
 **The Signal, Not Paint Rule.** Lime marks something live or interactive. Inactive structure stays in grays.
 
@@ -157,7 +164,7 @@ Browser surfaces carry the palette: text selection is Console Black on Phosphor 
 
 A single centered column, max 1000px wide, with 40px/20px outer padding (20px/15px at ≤640px). The shell is a three-row grid (header, main, footer) at a minimum of 100vh with a 30px gap. The header and footer are separated from content by 1px dashed Silkscreen Gray rules.
 
-The index renders post cards in an auto-fit grid (`minmax(300px, 1fr)`, 24px gap), which collapses to one column with a 16px gap at ≤640px. It shows 12 posts per page (fills one, two, or three columns evenly): page 1 at `/` with the schematic and `LATEST_SYSTEM_POSTS`, older pages at `/page/N` titled `ARCHIVED_SYSTEM_POSTS` with a mono `[newest] → [oldest]` date span under the title and no schematic. The article page is one full-width panel with 40px padding (20px on mobile). The isometric schematic sits above the index list in a fixed-height viewport (260px, then 180px at ≤640px, then 140px at ≤480px).
+The index lays post cards out as slanted ribbons: three columns above 899px, two from 641px to 899px, and one at ≤640px, with a 10px cut between neighbours and 28px between rows. It shows 12 posts per page (fills one, two, or three columns evenly): page 1 at `/` with the schematic and `LATEST_SYSTEM_POSTS`, older pages at `/page/N` titled `ARCHIVED_SYSTEM_POSTS` with a mono `[newest] → [oldest]` date span under the title and no schematic. The article page is one full-width panel with 40px padding (20px on mobile). The isometric schematic sits above the index list in a fixed-height viewport (260px, then 180px at ≤640px, then 140px at ≤480px).
 
 Spacing follows an informal 8/12/16/24/40 rhythm. Breakpoints are 640px and 480px.
 
@@ -166,9 +173,9 @@ Spacing follows an informal 8/12/16/24/40 rhythm. Breakpoints are 640px and 480p
 Depth is tonal. Panel Graphite surfaces sit on Console Black, edged with translucent hairlines. Soft, dark ambient shadows (`0 4px 20px rgba(0,0,0,0.3–0.4)`) only settle the panels onto the board; they never imply stacking. The lime glow is a state signal, not elevation: it appears on hover and focus, on the live status readout, and on the logo mark.
 
 ### Shadow Vocabulary
-- **Panel settle** (`box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3)`; the schematic uses `0.4`): resting shadow under index cards, the about card, and the schematic. The article panel is flat so the reading surface carries no chrome.
-- **Phosphor halo, small** (`box-shadow: 0 0 8px–10px rgba(57, 255, 20, 0.3)`): hover on nav links, tags, and the back link.
-- **Phosphor halo, card** (`box-shadow: 0 0 15px rgba(57, 255, 20, 0.3)`): hover on post cards, together with `translateY(-3px)`.
+- **Panel settle** (`box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3)`; the schematic uses `0.4`): resting shadow under the about card and the schematic. Index cards and the article panel are flat.
+- **Phosphor halo, small** (`box-shadow: 0 0 8px–10px rgba(57, 255, 20, 0.3)`): hover on nav links, pagination, and the back link.
+- **Phosphor halo, card** (`filter: drop-shadow(0 0 10px rgba(57, 255, 20, 0.3))`): hover and focus on index cards; a filter so the glow follows the slanted cut.
 - **Text glow** (`text-shadow: 0 0 4px–8px rgba(57, 255, 20, 0.3)`): lime text in an active or live state.
 
 ### Named Rules
@@ -182,7 +189,9 @@ Depth is tonal. Panel Graphite surfaces sit on Console Black, edged with translu
 
 ## Shapes
 
-Square by default. Panels, cards, buttons, tags, and nav links have 0 radius. The only exception is inline code, with a 3px hairline radius, plus 2px corners on the SVG schematic nodes. Edges are 1px solid hairlines, and section dividers are 1px dashed. Iconography is drawn in 1.2–1.5px strokes with round caps, in the vocabulary of chip pins and wiring (see the logo mark).
+Square by default. Panels, buttons, tags, and nav links have 0 radius. The only radius is inline code, with a 3px hairline radius, plus 2px corners on the SVG schematic nodes. Edges are 1px solid hairlines, and section dividers are 1px dashed. Iconography is drawn in 1.2–1.5px strokes with round caps, in the vocabulary of chip pins and wiring (see the logo mark).
+
+**The Ribbon Cut Rule.** Index cards are the one slanted shape. Each row is a single band cut at a shared angle (`--slant`: 36px of horizontal run per card, 18px vertical on one column), so a card's cut runs parallel to its neighbour's with a constant 10px gap. The outer ends of a row stay straight so the band sits on the page grid. Nothing else is slanted.
 
 ## Components
 
@@ -194,14 +203,19 @@ Square by default. Panels, cards, buttons, tags, and nav links have 0 radius. Th
 
 ### Chips (tags)
 - **Style:** mono 0.7rem uppercase with a `#` prefix, Silkscreen Gray text, 1px `rgba(255,255,255,0.15)` border, transparent background, 3px 8px padding, square.
-- **State:** on hover, the text and border turn lime with a small halo. Tags are not links today.
+- **State:** static. Tags are not links, so they have no hover state.
 
 ### Cards / Containers
-- **Corner Style:** square (0).
+- **Corner Style:** square (0), except index cards, which follow the Ribbon Cut Rule.
 - **Background:** Panel Graphite.
-- **Shadow Strategy:** panel settle at rest; phosphor card halo and a 3px lift on hover (see Elevation & Depth).
+- **Shadow Strategy:** panel settle at rest on the about card and schematic; index cards are flat at rest (see Elevation & Depth).
 - **Border:** 1px `rgba(255,255,255,0.1)`; lime on hover.
-- **Internal Padding:** 24px on post cards (16px mobile), 40px on the article panel (20px mobile), 30px on the about card.
+- **Internal Padding:** 22px by 18px plus the cut on index cards (16px sides on one column), 40px on the article panel (20px mobile), 30px on the about card.
+
+### Index card (ribbon segment)
+- **Build:** an outer plate in the border colour and a Panel Graphite face 1px inside it share one `clip-path` polygon, so the 1px border follows the slanted cuts. The card's box overhangs into the cut gap, but only the clipped plate takes the pointer.
+- **Target:** the whole face is the link (the title link's `::after` covers it), and the plate lighting up is the focus indicator.
+- **Hover / focus:** the plate turns Phosphor Lime, the title turns lime, and a `drop-shadow(0 0 10px)` halo follows the cut shape. It ignites and decays per the Phosphor Persistence Rule; there is no lift.
 
 ### Back link (button-like)
 - **Shape:** square, 1px `rgba(255,255,255,0.15)` border, Panel Graphite fill, 8px 16px padding.
@@ -248,13 +262,13 @@ With reduced motion, the flow lines and prompt hold still and state changes cut 
 - **Do** keep Phosphor Lime (#39FF14) as the single accent and reserve it for links, interaction, and live status.
 - **Do** set structure in JetBrains Mono and prose in Inter at 1.7 leading, capped at 68ch.
 - **Do** derive provenance from real data (frontmatter or counts from the post) and say plainly on every post that an AI agent wrote it.
-- **Do** keep corners square; the only radius is the 3px on inline code.
+- **Do** keep corners square; the only radius is the 3px on inline code, and the only slant is the index ribbon cut.
 - **Do** separate regions with 1px dashed Silkscreen Gray rules and edge panels with translucent white hairlines.
 - **Do** keep panels quiet at rest and let them wake with a lime border and halo on hover and focus.
 - **Do** write interface labels in the console dialect (`SNAKE_CASE`, `//`, `[YYYY-MM-DD]`).
 
 ### Don't:
 - **Don't** use hacker-movie cliché: no Matrix rain, scanlines, glitch effects, or green-on-black overload.
-- **Don't** introduce a second accent hue, gradients, or rounded corners.
+- **Don't** introduce a second accent hue, colour gradients, rounded corners, or slants outside the index ribbon.
 - **Don't** apply the phosphor glow to elements at rest that aren't the logo or a live status.
 - **Don't** set long-form prose in monospace.

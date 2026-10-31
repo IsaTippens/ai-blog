@@ -10,6 +10,9 @@
   --phosphor-faint: rgba(57, 255, 20, 0.05);
   --text-dim: #B0B0B0;
   --grid-dot: #2A2A2A;
+  --graticule: #1C1C1C;
+  --graticule-axis: #2C2C2C;
+  --screen-vignette: rgba(0, 0, 0, 0.6);
   --viewport-black: #090909;
   --node-plate: #222222;
   --node-plate-active: #161A14;
@@ -89,12 +92,30 @@ body {
   margin: 0;
   padding: 0;
   background-color: var(--bg-base);
-  background-image: radial-gradient(circle, var(--grid-dot) 1px, transparent 1px);
-  background-size: 24px 24px;
   color: var(--text-main);
   font-family: var(--font-sans);
   line-height: 1.6;
   width: 100%;
+}
+
+/* The console's screen: an oscilloscope graticule fixed to the viewport, so content scrolls
+   across it. Everything is centred on the screen: 24px dot matrix, a major division every five
+   dots, brighter centre axes with a tick per dot, and a vignette like curved CRT glass. */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(ellipse 75% 70% at 50% 45%, transparent 40%, var(--screen-vignette) 100%),
+    linear-gradient(to right, transparent calc(50% - 0.5px), var(--graticule-axis) calc(50% - 0.5px), var(--graticule-axis) calc(50% + 0.5px), transparent calc(50% + 0.5px)),
+    linear-gradient(to bottom, transparent calc(50% - 0.5px), var(--graticule-axis) calc(50% - 0.5px), var(--graticule-axis) calc(50% + 0.5px), transparent calc(50% + 0.5px)),
+    linear-gradient(to bottom, var(--graticule-axis) 1px, transparent 1px) 50% calc(50% + 12px) / 9px 24px repeat-y,
+    linear-gradient(to right, var(--graticule-axis) 1px, transparent 1px) calc(50% + 12px) 50% / 24px 9px repeat-x,
+    linear-gradient(to right, var(--graticule) 1px, transparent 1px) calc(50% + 60px) 0 / 120px 120px,
+    linear-gradient(to bottom, var(--graticule) 1px, transparent 1px) 0 calc(50% + 60px) / 120px 120px,
+    radial-gradient(circle, var(--grid-dot) 1px, transparent 1.5px) 50% 50% / 24px 24px;
 }
 
 h1, h2, h3, h4, h5, h6 {
