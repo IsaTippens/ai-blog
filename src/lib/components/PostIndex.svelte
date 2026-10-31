@@ -39,7 +39,7 @@
       <article class="post-card">
         <header class="post-header">
           <span class="post-date">[{post.date}]</span>
-          <h2 class="post-title">
+          <h2 class="post-title" data-vt-title={post.slug}>
             <a href="/blog/{post.slug || post.title.toLowerCase().replace(/ /g, '-')}">{post.title}</a>
           </h2>
         </header>
@@ -99,13 +99,15 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+    transition: border-color var(--decay) var(--ease-decay), box-shadow var(--decay) var(--ease-decay),
+      transform 0.25s var(--ease);
   }
 
   .post-card:hover {
     border-color: var(--glow-lime);
     box-shadow: 0 0 15px var(--glow-lime-dim);
     transform: translateY(-3px);
+    transition-duration: var(--ignite), var(--ignite), 0.25s;
   }
 
   .post-header {
@@ -129,11 +131,12 @@
   .post-title a {
     text-decoration: none;
     color: var(--text-main);
-    transition: color 0.2s ease;
+    transition: color var(--decay) var(--ease-decay);
   }
 
   .post-card:hover .post-title a {
     color: var(--glow-lime);
+    transition-duration: var(--ignite);
   }
 
   .post-summary {
@@ -157,7 +160,8 @@
     border: 1px solid var(--hairline-strong);
     background-color: transparent;
     padding: 3px 8px;
-    transition: color 0.2s var(--ease), border-color 0.2s var(--ease), box-shadow 0.2s var(--ease);
+    transition: color var(--decay) var(--ease-decay), border-color var(--decay) var(--ease-decay),
+      box-shadow var(--decay) var(--ease-decay), text-shadow var(--decay) var(--ease-decay);
   }
 
   .tag:hover {
@@ -165,12 +169,12 @@
     border-color: var(--glow-lime);
     box-shadow: 0 0 8px var(--glow-lime-dim);
     text-shadow: 0 0 4px var(--glow-lime-dim);
+    transition-duration: var(--ignite);
   }
 
+  /* Reduced motion keeps the glow (it is state) but drops the lift. */
   @media (prefers-reduced-motion: reduce) {
-    .post-card,
     .post-card:hover {
-      transition: none;
       transform: none;
     }
   }

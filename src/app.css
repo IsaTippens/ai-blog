@@ -18,6 +18,11 @@
   --hairline-strong: rgba(255, 255, 255, 0.15);
   --shadow-settle: 0 4px 20px rgba(0, 0, 0, 0.3);
   --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  /* Phosphor persistence: states ignite almost instantly and decay slowly, like a CRT trace. */
+  --ignite: 70ms;
+  --decay: 520ms;
+  --ease-decay: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-arrive: cubic-bezier(0.16, 1, 0.3, 1);
   --font-sans: 'Inter', sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
   color-scheme: dark;
@@ -39,6 +44,35 @@ html {
   html {
     scroll-behavior: auto;
   }
+}
+
+/* Navigation: the page cross-fades quickly; the digest title travels between card and heading. */
+::view-transition-old(root) {
+  animation: 140ms var(--ease) both vt-fade-out;
+}
+
+::view-transition-new(root) {
+  animation: 260ms var(--ease-arrive) 60ms both vt-fade-in;
+}
+
+::view-transition-group(digest-title) {
+  animation-duration: 420ms;
+  animation-timing-function: var(--ease-arrive);
+}
+
+::view-transition-old(digest-title),
+::view-transition-new(digest-title) {
+  height: 100%;
+  animation-duration: 420ms;
+  animation-timing-function: var(--ease-arrive);
+}
+
+@keyframes vt-fade-out {
+  to { opacity: 0; }
+}
+
+@keyframes vt-fade-in {
+  from { opacity: 0; }
 }
 
 ::selection {

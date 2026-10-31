@@ -1,5 +1,38 @@
 <script>
   import '../app.css';
+  import { onNavigate } from '$app/navigation';
+
+  // The digest title is the one object that survives navigation: the card or older/newer link
+  // the reader chose becomes the article heading (and back). Only that pair gets a transition
+  // name, so the browser captures one element instead of every card on the index.
+  const TITLE = 'digest-title';
+
+  function tagTitle(slug) {
+    if (!slug) return null;
+    const el = document.querySelector(`[data-vt-title="${CSS.escape(slug)}"]`);
+    el?.style.setProperty('view-transition-name', TITLE);
+    return el;
+  }
+
+  onNavigate((navigation) => {
+    if (!document.startViewTransition) return;
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (navigation.from?.url.pathname === navigation.to?.url.pathname) return;
+
+    // Going to a digest, the pair is that digest; leaving one for the index, it is the one we left.
+    const key = navigation.to?.params?.slug ?? navigation.from?.params?.slug;
+    const outgoing = tagTitle(key);
+
+    return new Promise((resolve) => {
+      const transition = document.startViewTransition(async () => {
+        outgoing?.style.removeProperty('view-transition-name');
+        resolve();
+        await navigation.complete;
+        const incoming = tagTitle(key);
+        transition.finished.finally(() => incoming?.style.removeProperty('view-transition-name'));
+      });
+    });
+  });
 </script>
 
 <a href="#main" class="skip-link">SKIP_TO_CONTENT</a>
@@ -102,7 +135,8 @@
     margin-left: 20px;
     border: 1px solid transparent;
     padding: 6px 12px;
-    transition: all 0.25s ease;
+    transition: color var(--decay) var(--ease-decay), border-color var(--decay) var(--ease-decay),
+      box-shadow var(--decay) var(--ease-decay), text-shadow var(--decay) var(--ease-decay);
   }
 
   .nav a:hover {
@@ -110,6 +144,7 @@
     text-shadow: 0 0 8px var(--glow-lime-dim);
     border-color: var(--glow-lime);
     box-shadow: 0 0 10px var(--glow-lime-dim);
+    transition-duration: var(--ignite);
   }
 
   .main-content {

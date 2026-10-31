@@ -81,7 +81,7 @@
 
 <article class="digest">
   <header class="digest-head">
-    <h1 class="digest-title">{post.title}</h1>
+    <h1 class="digest-title" data-vt-title={post.slug}>{post.title}</h1>
     {#if post.summary}
       <p class="dek">{post.summary}</p>
     {/if}
@@ -163,7 +163,7 @@
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M4 8H13M4 8L8 4M4 8L8 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
               OLDER_DIGEST <time datetime={older.date}>[{older.date}]</time>
             </span>
-            <span class="day-title">{older.title}</span>
+            <span class="day-title" data-vt-title={older.slug}>{older.title}</span>
           </a>
         {/if}
         {#if newer}
@@ -172,7 +172,7 @@
               NEWER_DIGEST <time datetime={newer.date}>[{newer.date}]</time>
               <svg width="14" height="14" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M12 8H3M12 8L8 4M12 8L8 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </span>
-            <span class="day-title">{newer.title}</span>
+            <span class="day-title" data-vt-title={newer.slug}>{newer.title}</span>
           </a>
         {/if}
       </nav>
@@ -221,7 +221,8 @@
     color: var(--text-main);
     background-color: var(--bg-surface);
     border: 1px solid var(--hairline-strong);
-    transition: color 0.25s var(--ease), border-color 0.25s var(--ease), box-shadow 0.25s var(--ease);
+    transition: color var(--decay) var(--ease-decay), border-color var(--decay) var(--ease-decay),
+      box-shadow var(--decay) var(--ease-decay);
   }
 
   .back-link svg {
@@ -232,10 +233,17 @@
     color: var(--glow-lime);
     border-color: var(--glow-lime);
     box-shadow: 0 0 10px var(--glow-lime-dim);
+    transition-duration: var(--ignite);
   }
 
   .back-link:hover svg {
     transform: translateX(-3px);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .back-link:hover svg {
+      transform: none;
+    }
   }
 
   /* ── Article panel ───────────────────────────── */
@@ -431,22 +439,27 @@
   }
 
   .toc-sections a {
-    transition: color 0.2s var(--ease);
+    transition: color var(--decay) var(--ease-decay);
   }
 
   .toc-sections a:hover {
     color: var(--glow-lime);
+    transition-duration: var(--ignite);
   }
 
   .toc-section.is-active > a {
     color: var(--glow-lime);
+    transition-duration: var(--ignite);
   }
 
   .toc-stories li.is-active a {
     color: var(--text-main);
+    transition-duration: var(--ignite);
   }
 
-  .toc-stories li.is-active::before {
+  /* The marker lights the instant a story becomes current and fades as the reader moves on,
+     leaving a short phosphor trail down the outline. */
+  .toc-stories li::before {
     content: '';
     position: absolute;
     left: -1px;
@@ -455,6 +468,13 @@
     width: 1px;
     background-color: var(--glow-lime);
     box-shadow: 0 0 6px var(--glow-lime-dim);
+    opacity: 0;
+    transition: opacity 900ms var(--ease-decay);
+  }
+
+  .toc-stories li.is-active::before {
+    opacity: 1;
+    transition-duration: var(--ignite);
   }
 
   .toc-compact {
@@ -535,6 +555,24 @@
   .post-body :global(h3) {
     scroll-margin-top: 24px;
     text-wrap: balance;
+  }
+
+  /* Arriving at a story or section from the outline: the heading flares and decays. */
+  .post-body :global(:is(h2, h3):target) {
+    animation: phosphor-afterglow 1.6s var(--ease-decay);
+  }
+
+  @keyframes -global-phosphor-afterglow {
+    0%,
+    30% {
+      color: var(--glow-lime);
+      text-shadow: 0 0 10px var(--glow-lime-dim);
+    }
+
+    100% {
+      color: var(--text-main);
+      text-shadow: 0 0 0 transparent;
+    }
   }
 
   .post-body :global(h2) {
@@ -662,6 +700,7 @@
   .post-body :global(a:hover) {
     color: var(--glow-lime);
     text-decoration-color: currentColor;
+    transition-duration: var(--ignite);
   }
 
   .post-body :global(.src-domain) {
@@ -717,7 +756,7 @@
     padding: 16px;
     border: 1px solid var(--hairline-strong);
     background-color: var(--bg-base);
-    transition: border-color 0.25s var(--ease), box-shadow 0.25s var(--ease);
+    transition: border-color var(--decay) var(--ease-decay), box-shadow var(--decay) var(--ease-decay);
   }
 
   .day-link--newer {
@@ -732,6 +771,7 @@
   .day-link:hover {
     border-color: var(--glow-lime);
     box-shadow: 0 0 10px var(--glow-lime-dim);
+    transition-duration: var(--ignite);
   }
 
   .day-dir {
@@ -742,6 +782,7 @@
     font-size: 0.72rem;
     font-weight: 700;
     color: var(--text-meta);
+    transition: color var(--decay) var(--ease-decay);
   }
 
   .day-dir time {
@@ -750,6 +791,7 @@
 
   .day-link:hover .day-dir {
     color: var(--glow-lime);
+    transition-duration: var(--ignite);
   }
 
   .day-title {
@@ -771,10 +813,12 @@
     font-size: 0.78rem;
     font-weight: 700;
     color: var(--text-meta);
+    transition: color var(--decay) var(--ease-decay);
   }
 
   .to-top:hover {
     color: var(--glow-lime);
+    transition-duration: var(--ignite);
   }
 
   @media (max-width: 640px) {

@@ -176,6 +176,10 @@ Depth is tonal. Panel Graphite surfaces sit on Console Black, edged with translu
 
 **The Inset Module Rule.** Instrument-like modules inside a panel (the run readout, the compact outline, the digest links) drop back to Console Black with a 0.15 hairline and no shadow. They read as recessed into the panel, never raised above it.
 
+**The Phosphor Persistence Rule.** Light behaves like a CRT trace: hover, focus, and active states ignite in 70ms and decay over 520ms (`cubic-bezier(0.22, 1, 0.36, 1)`), never a symmetric fade. The outline marker decays over 900ms, leaving a short trail as the reader scrolls, and a heading reached from the outline flares lime and fades over 1.6s. These are color and glow changes, so they remain under reduced motion; spatial movement (card lift, arrow nudge, schematic flow) does not.
+
+**The Carried Title Rule.** Navigation between the index and a digest, or between digests, is one View Transition: the page cross-fades (140ms out, 260ms in) while the chosen title travels into place as the article heading over 420ms (`cubic-bezier(0.16, 1, 0.3, 1)`). Only that pair is named, set at navigation time from `data-vt-title`. Reduced motion skips the transition entirely. Nonessential loops (the schematic flow and prompt) pause while offscreen.
+
 ## Shapes
 
 Square by default. Panels, cards, buttons, tags, and nav links have 0 radius. The only exception is inline code, with a 3px hairline radius, plus 2px corners on the SVG schematic nodes. Edges are 1px solid hairlines, and section dividers are 1px dashed. Iconography is drawn in 1.2–1.5px strokes with round caps, in the vocabulary of chip pins and wiring (see the logo mark).

@@ -1,4 +1,17 @@
 <script>
+  import { onMount } from 'svelte';
+
+  // The flow loop is decoration; it runs only while the panel is on screen.
+  let panel;
+  let parked = false;
+  onMount(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+      parked = !entry.isIntersecting;
+    });
+    observer.observe(panel);
+    return () => observer.disconnect();
+  });
+
   let activeNode = null;
   function selectNode(node) {
     activeNode = node;
@@ -18,7 +31,7 @@
   }
 </script>
 
-<div class="schematic-panel">
+<div class="schematic-panel" class:is-parked={parked} bind:this={panel}>
   <div class="panel-header">
     <div class="panel-title">SYS_PIPELINE // DATA_FLOW_DIAGRAM</div>
     <div class="panel-status">STATUS: MONITOR_ACTIVE</div>
@@ -171,6 +184,11 @@
     opacity: 0.8;
   }
 
+  .is-parked .flow-active,
+  .is-parked .pulse {
+    animation-play-state: paused;
+  }
+
   @keyframes flow-dash {
     to {
       stroke-dashoffset: -300;
@@ -187,34 +205,39 @@
     fill: var(--bg-base);
     stroke: var(--text-meta);
     stroke-width: 1.5;
-    transition: stroke 0.25s var(--ease), fill 0.25s var(--ease), filter 0.25s var(--ease);
+    transition: stroke var(--decay) var(--ease-decay), fill var(--decay) var(--ease-decay),
+      filter var(--decay) var(--ease-decay);
   }
 
   .node-header {
     fill: var(--node-plate);
     stroke: var(--text-meta);
     stroke-width: 1.5;
-    transition: stroke 0.25s var(--ease), fill 0.25s var(--ease);
+    transition: stroke var(--decay) var(--ease-decay), fill var(--decay) var(--ease-decay);
   }
 
   .node.is-active .node-rect {
     stroke: var(--glow-lime);
     fill: var(--node-plate-active);
     filter: drop-shadow(0 0 6px var(--glow-lime-dim));
+    transition-duration: var(--ignite);
   }
 
   .node.is-active .node-header {
     fill: var(--glow-lime);
     stroke: var(--glow-lime);
+    transition-duration: var(--ignite);
   }
 
   .node.is-active .node-title {
     fill: var(--bg-base);
     font-weight: bold;
+    transition-duration: var(--ignite);
   }
 
   .node.is-active .node-body {
     fill: var(--text-main);
+    transition-duration: var(--ignite);
   }
 
   .node-title {
@@ -222,14 +245,14 @@
     font-size: 10px;
     font-family: var(--font-mono);
     font-weight: bold;
-    transition: fill 0.25s;
+    transition: fill var(--decay) var(--ease-decay);
   }
 
   .node-body {
     fill: var(--text-meta);
     font-size: 10px;
     font-family: var(--font-mono);
-    transition: fill 0.25s;
+    transition: fill var(--decay) var(--ease-decay);
   }
 
   .panel-footer {

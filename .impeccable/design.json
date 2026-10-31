@@ -27,9 +27,14 @@
       { "name": "phosphor-text-glow", "value": "0 0 6px rgba(57, 255, 20, 0.3)", "purpose": "Text-shadow on lime text in an active or live state." }
     ],
     "motion": [
-      { "name": "ease-standard", "value": "0.25s cubic-bezier(0.4, 0, 0.2, 1)", "purpose": "Default for hover and state transitions." },
-      { "name": "flow-dash", "value": "15s linear infinite", "purpose": "Schematic flow lines crawling along the pipeline." },
-      { "name": "pulse-glow", "value": "1.5s infinite", "purpose": "Pulsing > prompt in the schematic console line." }
+      { "name": "ease-standard", "value": "0.25s cubic-bezier(0.4, 0, 0.2, 1)", "purpose": "Spatial state changes such as card lift and arrow nudges." },
+      { "name": "ignite", "value": "70ms", "purpose": "Phosphor on: hover, focus and active states light almost instantly." },
+      { "name": "decay", "value": "520ms cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Phosphor off: glows and lime color fade slowly after the state ends." },
+      { "name": "outline-trail", "value": "900ms cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Outline marker fade, leaving a trail behind the current story." },
+      { "name": "afterglow", "value": "1.6s cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Heading reached from the outline flares lime and decays." },
+      { "name": "carried-title", "value": "420ms cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "View Transition moving the chosen title into the article heading; page cross-fade 140ms out, 260ms in." },
+      { "name": "flow-dash", "value": "15s linear infinite", "purpose": "Schematic flow lines crawling along the pipeline; paused offscreen and under reduced motion." },
+      { "name": "pulse-glow", "value": "1.5s infinite", "purpose": "Pulsing > prompt in the schematic console line; paused offscreen and under reduced motion." }
     ],
     "breakpoints": [
       { "name": "sm", "value": "640px" },

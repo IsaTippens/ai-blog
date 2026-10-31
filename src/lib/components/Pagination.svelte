@@ -101,7 +101,8 @@
     color: var(--text-main);
     background-color: var(--bg-surface);
     border: 1px solid var(--hairline-strong);
-    transition: color 0.25s var(--ease), border-color 0.25s var(--ease), box-shadow 0.25s var(--ease);
+    transition: color var(--decay) var(--ease-decay), border-color var(--decay) var(--ease-decay),
+      box-shadow var(--decay) var(--ease-decay);
   }
 
   .pager-step svg {
@@ -112,6 +113,7 @@
     color: var(--glow-lime);
     border-color: var(--glow-lime);
     box-shadow: 0 0 10px var(--glow-lime-dim);
+    transition-duration: var(--ignite);
   }
 
   a.pager-step--newer:hover svg {
@@ -156,13 +158,15 @@
   .pager-num {
     color: var(--text-dim);
     border: 1px solid transparent;
-    transition: color 0.25s var(--ease), border-color 0.25s var(--ease), box-shadow 0.25s var(--ease);
+    transition: color var(--decay) var(--ease-decay), border-color var(--decay) var(--ease-decay),
+      box-shadow var(--decay) var(--ease-decay);
   }
 
   .pager-num:hover {
     color: var(--glow-lime);
     border-color: var(--glow-lime);
     box-shadow: 0 0 8px var(--glow-lime-dim);
+    transition-duration: var(--ignite);
   }
 
   .pager-num[aria-current='page'] {
@@ -186,9 +190,7 @@
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .pager-step,
-    .pager-step svg,
-    .pager-num {
+    .pager-step svg {
       transition: none;
     }
 
