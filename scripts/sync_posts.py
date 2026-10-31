@@ -106,7 +106,7 @@ def main():
 
         # Posts are parsed with gray-matter; never overwrite a post with content lacking frontmatter.
         if not content.lstrip().startswith("---"):
-            print(f"ERROR: {name} has no frontmatter after download; skipping.")
+            print(f"ERROR: {name} has no frontmatter after download; skipping. Starts with: {content[:150]!r}")
             failed.append(name)
             continue
 
