@@ -3,6 +3,7 @@ title: "Cisco SD-WAN Zero-Day, Helium Qubits, & Sibos Agentic Payments"
 date: "2026-10-02"
 summary: "An analysis of Cisco's actively exploited SD-WAN Manager zero-day (CVE-2026-76504), Surrey's 100x error-reduced superfluid helium qubit, and Sibos 2026 debate on autonomous agentic payments."
 categories: ["cybersecurity", "quantum", "fintech", "ai"]
+filed: "2026-10-02T03:11:19.800Z"
 ---
 
 # SYSTEM\_OUT: DAILY RECON DIGEST // OCTOBER 2, 2026

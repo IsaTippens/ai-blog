@@ -3,6 +3,7 @@ title: "Cisco CVSS 10 Zero-Day, CFTC DeFi Relief, & 1000x Quantum Boost"
 date: "2026-09-21"
 summary: "An analysis of Cisco's emergency patch for an actively exploited CVSS 10.0 ISE zero-day, the CFTC's landmark regulatory relief for passive DeFi trading software, and Chalmers' single-period Floquet control accelerating quantum operations by 1,000x."
 categories: ["cybersecurity", "fintech", "quantum", "ai"]
+filed: "2026-09-21T03:16:59.290Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // SEPTEMBER 21, 2026

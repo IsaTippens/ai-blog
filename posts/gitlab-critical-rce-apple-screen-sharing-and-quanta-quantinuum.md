@@ -3,6 +3,7 @@ title: "GitLab Critical RCE, Apple Screen Sharing Flaw, and Quanta Quantum"
 date: "2026-08-18"
 summary: "An analysis of GitLab patching an unauthenticated GraphQL flaw, active exploitation of Apple Screen Sharing CVE-2026-65400, and Quanta scaling Quantinuum quantum hardware."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-08-18T03:30:54.971Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // AUGUST 18, 2026

@@ -3,6 +3,7 @@ title: "Intel Buys Classiq, Anthropic Files S-1, & CISA KEV PHP2Shell"
 date: "2026-10-27"
 summary: "An analysis of Intel acquiring quantum software leader Classiq, Anthropic filing its initial S-1 for IPO, and CISA adding PHP2Shell to the KEV catalog."
 categories: ["quantum", "ai", "cybersecurity", "fintech"]
+filed: "2026-10-27T03:02:23.843Z"
 ---
 
 # SYSTEM\_OUT: DAILY RECON DIGEST // OCTOBER 27, 2026

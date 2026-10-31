@@ -3,6 +3,7 @@ title: "TSMC US Buildout, McEliece Standardization, and Sovereign AI"
 date: "2026-07-16"
 summary: "An in-depth analysis of TSMC's $265B US chip factory buildout deal, Classic McEliece achieving historic global ISO standardization, and South Korea committing $880B to AI."
 categories: ["ai", "quantum", "fintech", "cybersecurity"]
+filed: "2026-07-16T07:04:27.758Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // JULY 16, 2026

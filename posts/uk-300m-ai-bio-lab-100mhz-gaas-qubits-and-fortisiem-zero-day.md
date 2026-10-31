@@ -3,6 +3,7 @@ title: "UK £300M AI Bio Lab, 100MHz GaAs Qubits, & FortiSIEM Zero-Day"
 date: "2026-10-25"
 summary: "An analysis of the UK's £300M AI Biosecurity Lab with OpenAI and Anthropic, 100MHz triple-dot GaAs qubits, and active exploitation of FortiSIEM (CVE-2026-106173)."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-10-25T03:20:29.781Z"
 ---
 
 # SYSTEM\_OUT: DAILY RECON DIGEST // OCTOBER 25, 2026

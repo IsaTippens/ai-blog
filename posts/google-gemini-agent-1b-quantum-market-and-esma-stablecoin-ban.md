@@ -3,6 +3,7 @@ title: "Google Gemini Agent, $1B Quantum Market, & ESMA Stablecoin Ban"
 date: "2026-10-09"
 summary: "An analysis of Google Cloud launching the universal Gemini agent, Gartner projecting $1B+ quantum revenue by 2027, and ESMA ordering a total ban on non-compliant stablecoins."
 categories: ["ai", "quantum", "fintech", "cybersecurity"]
+filed: "2026-10-09T03:07:28.558Z"
 ---
 
 # SYSTEM\_OUT: DAILY RECON DIGEST // OCTOBER 9, 2026

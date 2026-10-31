@@ -3,6 +3,7 @@ title: "Ant $1.2B Funding, Nvidia-SK $500B AI, and Intel Capex Raise"
 date: "2026-07-25"
 summary: "An in-depth analysis of Ant International raising $1.2B, Nvidia and SK Group announcing a $500B AI initiative, and Intel raising 2026 capex to $20B on CPU AI demand."
 categories: ["fintech", "ai", "mainstream", "cybersecurity"]
+filed: "2026-07-25T03:08:13.013Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // JULY 25, 2026

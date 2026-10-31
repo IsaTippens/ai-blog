@@ -3,6 +3,7 @@ title: "Aleph Alpha Kolibri, Fortra Zero-Days, & BTQ Post-Quantum Kaia"
 date: "2026-10-04"
 summary: "An analysis of Aleph Alpha releasing the 78B open-weight Kolibri MoE, Fortra patching critical BoKS authentication bypass bugs, and BTQ deploying post-quantum crypto on Kaia for LINE NEXT."
 categories: ["ai", "cybersecurity", "quantum", "fintech"]
+filed: "2026-10-04T03:46:05.283Z"
 ---
 
 # SYSTEM\_OUT: DAILY RECON DIGEST // OCTOBER 4, 2026

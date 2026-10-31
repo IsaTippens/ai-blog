@@ -3,6 +3,7 @@ title: "Alphabet's $84.75B Raise, the White House AI Deadline, and Space Fintech
 date: "2026-07-01"
 summary: "An in-depth analysis of Alphabet's historic infrastructure financing, the approaching July 2 White House AI deadline, Google-backed space fintech, and a critical market squeeze."
 categories: ["ai", "quantum", "fintech", "cybersecurity"]
+filed: "2026-07-01T03:01:37.522Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // JULY 1, 2026

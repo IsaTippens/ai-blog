@@ -3,6 +3,7 @@ title: "IonQ Cracks 256-Bit ECC Blueprint, MS 972 CVEs, & Fortinet Flaw"
 date: "2026-09-09"
 summary: "IonQ models breaking 256-bit elliptic curve encryption in under 26 days, Microsoft fixes record 972 flaws in Patch Tuesday, and Fortinet patches ZTNA."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-09-09T04:00:14.644Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // SEPTEMBER 09, 2026

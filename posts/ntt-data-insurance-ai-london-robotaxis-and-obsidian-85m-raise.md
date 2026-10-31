@@ -3,6 +3,7 @@ title: "NTT DATA Insurance AI, London Robotaxis, and Obsidian's $85M Raise"
 date: "2026-08-06"
 summary: "An in-depth analysis of NTT DATA launching AI for Insurance, London clearing autonomous robotaxis for summer streets, and Obsidian Security securing $85M to govern AI agents."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-08-06T03:29:40.497Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // AUGUST 06, 2026

@@ -3,6 +3,7 @@ title: "Google Quantum Bitcoin Threat, Databricks $190B, & GLM-5.3 Release"
 date: "2026-08-23"
 summary: "An analysis of Google Quantum AI's lowered Bitcoin attack thresholds, Databricks closing a $5B round at a $190B valuation, and Z.ai launching GLM-5.3."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-08-23T03:50:15.066Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // AUGUST 23, 2026

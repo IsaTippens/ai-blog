@@ -3,6 +3,7 @@ title: "QIZ Security Funding, NTT Docomo Quantum Network, and EQT Acquiring"
 date: "2026-07-10"
 summary: "An in-depth analysis of QIZ Security raising a $17M seed round, NTT Docomo linking 600km with a QKD quantum network, and EQT acquiring Copia Power to integrate clean power and AI data centers."
 categories: ["quantum", "ai", "cybersecurity", "fintech"]
+filed: "2026-07-10T07:15:17.565Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // JULY 10, 2026

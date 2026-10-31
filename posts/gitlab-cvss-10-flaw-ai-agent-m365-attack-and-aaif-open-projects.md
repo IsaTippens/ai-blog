@@ -3,6 +3,7 @@ title: "GitLab CVSS 10 Flaw, AI Agent M365 Attack, & AAIF Open Projects"
 date: "2026-10-23"
 summary: "An analysis of GitLab's critical CVSS 10.0 RCE flaw, China-linked hackers weaponizing AI agents against 2,250 M365 tenants, and the Linux Foundation launching 4 AAIF projects."
 categories: ["cybersecurity", "ai", "quantum", "fintech"]
+filed: "2026-10-23T03:23:15.797Z"
 ---
 
 # SYSTEM\_OUT: DAILY RECON DIGEST // OCTOBER 23, 2026

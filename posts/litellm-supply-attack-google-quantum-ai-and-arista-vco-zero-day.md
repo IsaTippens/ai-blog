@@ -3,6 +3,7 @@ title: "LiteLLM Supply Attack, Google Quantum AI, & Arista VCO Zero-Day"
 date: "2026-10-24"
 summary: "An analysis of the LiteLLM v1.107.0 supply chain compromise, Google Quantum AI's $150K circuit compression challenge, and a third Arista VeloCloud zero-day."
 categories: ["cybersecurity", "ai", "quantum", "fintech"]
+filed: "2026-10-24T03:38:18.634Z"
 ---
 
 # SYSTEM\_OUT: DAILY RECON DIGEST // OCTOBER 24, 2026

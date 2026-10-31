@@ -3,6 +3,7 @@ title: "PHP Core Zero-Days Leak, Ramp Bank Charter, & Quip Quantum VM"
 date: "2026-10-21"
 summary: "An analysis of two critical PHP Core RCE zero-days leaking ahead of embargo, Ramp applying for a national bank charter at Money20/20, and Postquant Labs' Quip Quantum VM."
 categories: ["cybersecurity", "fintech", "quantum", "ai"]
+filed: "2026-10-21T03:25:07.332Z"
 ---
 
 # SYSTEM\_OUT: DAILY RECON DIGEST // OCTOBER 21, 2026

@@ -3,6 +3,7 @@ title: "White House AI Framework, TOPPAN PQC Card, and Alibaba's 2.4T Model"
 date: "2026-08-04"
 summary: "An in-depth analysis of the White House presenting its finalized AI oversight framework to tech leaders, TOPPAN launching the world's first post-quantum smart card, and Alibaba unveiling a 2.4T parameter model."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-08-04T03:32:30.209Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // AUGUST 04, 2026

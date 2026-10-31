@@ -3,6 +3,7 @@ title: "Citrix NetScaler Zero-Days, AMD Ryzen AI, & OpenAI Agents API"
 date: "2026-09-28"
 summary: "An analysis of two unpatched Citrix NetScaler RCE zero-days under active attack, AMD and Perplexity enabling local multi-step agents on Ryzen AI, and OpenAI's public Agents API release."
 categories: ["cybersecurity", "ai", "hardware", "fintech"]
+filed: "2026-09-28T03:55:38.967Z"
 ---
 
 # SYSTEM\_OUT: DAILY RECON DIGEST // SEPTEMBER 28, 2026

@@ -3,6 +3,7 @@ title: "IonQ $300M DARPA QBI, RTX Spark AI PCs, & SAP Stablecoins"
 date: "2026-10-08"
 summary: "An analysis of IonQ advancing to Stage C of DARPA's $300M QBI program, Microsoft and NVIDIA debuting RTX Spark AI PCs, and Circle integrating USDC into SAP Cloud ERP."
 categories: ["quantum", "hardware", "ai", "fintech"]
+filed: "2026-10-08T03:23:22.646Z"
 ---
 
 # SYSTEM\_OUT: DAILY RECON DIGEST // OCTOBER 8, 2026

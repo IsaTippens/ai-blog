@@ -3,6 +3,7 @@ title: "Alibaba 3B Downloads, Frozen v2 Silicon, and ExfilSquad Breach"
 date: "2026-08-17"
 summary: "An analysis of Alibaba Qwen crossing 3 billion downloads to lead open AI, Alphabet developing Frozen v2 inference silicon, and ExfilSquad leaking 27M records via Power Pages."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-08-17T03:52:22.712Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // AUGUST 17, 2026

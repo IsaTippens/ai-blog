@@ -3,6 +3,7 @@ title: "Kiteworks Zero-Day Alert, Duke Quantum Sim, & OCC Stablecoins"
 date: "2026-09-27"
 summary: "An analysis of Kiteworks' emergency server shutdown advisory following imminent threat intelligence, Duke University's quantum simulation of matter popping into existence, and joint banking comments on the OCC's GENIUS Act stablecoin rules."
 categories: ["cybersecurity", "quantum", "fintech", "ai"]
+filed: "2026-09-27T03:19:40.159Z"
 ---
 
 # SYSTEM\_OUT: DAILY RECON DIGEST // SEPTEMBER 27, 2026

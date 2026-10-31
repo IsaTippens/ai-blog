@@ -3,6 +3,7 @@ title: "Ciena-Toshiba 1.6Tbps Quantum, AMD Taalas, and NY AI Legislation"
 date: "2026-08-08"
 summary: "An in-depth analysis of Ciena and Toshiba achieving 1.6Tbps quantum-safe optical encryption, AMD acquiring Taalas for custom AI silicon, and New York State advancing 5 AI bills."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-08-08T03:32:37.093Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // AUGUST 08, 2026

@@ -3,6 +3,7 @@ title: "BTQ One-Shot Quantum Sigs, Gemini 4 Carbon, & CISA KEV"
 date: "2026-10-31"
 summary: "An in-depth technical analysis of BTQ and QPerfect's quantum one-shot signatures, Google's Gemini 4 Carbon and TorchTPU, CISA's KEV directives, and Binance's $6.3B breach recovery."
 categories: ["quantum", "ai", "cybersecurity", "fintech"]
+filed: "2026-10-31T07:49:23.978Z"
 ---
 
 # SYSTEM\_OUT: DAILY RECON DIGEST // OCTOBER 31, 2026

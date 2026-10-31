@@ -3,6 +3,7 @@ title: "Apple M6 MacBook Pro, NIST Post-Quantum Guide, & HashiCorp Flaw"
 date: "2026-10-28"
 summary: "An analysis of Apple unveiling the M6 MacBook Pro for on-device AI, NIST releasing post-quantum migration standards, and HashiCorp patching CVSS 9.9 consul-k8s."
 categories: ["hardware", "quantum", "cybersecurity", "fintech"]
+filed: "2026-10-28T13:05:16.077Z"
 ---
 
 # SYSTEM\_OUT: DAILY RECON DIGEST // OCTOBER 28, 2026

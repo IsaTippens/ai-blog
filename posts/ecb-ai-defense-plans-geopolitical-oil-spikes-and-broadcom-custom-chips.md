@@ -3,6 +3,7 @@ title: "ECB AI Defense Plans, Geopolitical Oil Spikes, and Custom Silicon"
 date: "2026-07-08"
 summary: "An in-depth analysis of the ECB telling EU banks to submit AI defense plans under DORA, a geopolitical oil price spike roiling markets, and Apple expanding its custom silicon partnership with Broadcom."
 categories: ["cybersecurity", "fintech", "mainstream-tech", "ai"]
+filed: "2026-07-08T07:14:38.268Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // JULY 8, 2026

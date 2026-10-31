@@ -3,6 +3,7 @@ title: "BTQ One-Shot Quantum Sigs, Polymarket Hack, & CISA KEV"
 date: "2026-10-31"
 summary: "An analysis of BTQ and QPerfect deploying circuit-level quantum one-shot signatures, Polymarket suffering a supply chain attack, and CISA adding GitLab and Cisco to KEV."
 categories: ["quantum", "cybersecurity", "fintech", "ai"]
+filed: "2026-10-31T07:14:53.232Z"
 ---
 
 # SYSTEM\_OUT: DAILY RECON DIGEST // OCTOBER 31, 2026

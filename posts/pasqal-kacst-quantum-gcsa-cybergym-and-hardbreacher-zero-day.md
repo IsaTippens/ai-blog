@@ -3,6 +3,7 @@ title: "Pasqal KACST Quantum, GCSA 91% CyberGym, & HardBreacher Zero-Day"
 date: "2026-09-01"
 summary: "An analysis of Pasqal's Saudi quantum cryptography pact with KACST, GCSA Agent scoring 91.3% on CyberGym, and the HardBreacher Kaspersky 0-day exploit."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-09-01T03:35:57.454Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // SEPTEMBER 01, 2026

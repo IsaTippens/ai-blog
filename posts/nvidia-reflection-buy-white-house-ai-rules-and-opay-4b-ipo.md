@@ -3,6 +3,7 @@ title: "Nvidia Reflection Buy, White House AI Rules, & OPay $4B IPO"
 date: "2026-10-12"
 summary: "An analysis of Nvidia's talks to acquire open-weight AI firm Reflection, the White House mandating AI incident reporting, and OPay filing for a $4B dual-listed IPO."
 categories: ["ai", "fintech", "cybersecurity", "quantum"]
+filed: "2026-10-12T03:08:57.496Z"
 ---
 
 # SYSTEM\_OUT: DAILY RECON DIGEST // OCTOBER 12, 2026

@@ -3,6 +3,7 @@ title: "Australia AI Grid Mandates, White House Group, and Swiss Deadlines"
 date: "2026-07-15"
 summary: "An in-depth analysis of Australia forcing AI data centers to underwrite their own power, the White House launching a joint AI cyber taskforce, and Swiss FINMA setting 2027 quantum targets."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-07-15T07:06:10.037Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // JULY 15, 2026

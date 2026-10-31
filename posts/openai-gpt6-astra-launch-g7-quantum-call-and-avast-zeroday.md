@@ -3,6 +3,7 @@ title: "OpenAI GPT-6 Astra Launch, G7 Quantum Call, & Avast Zero-Day"
 date: "2026-09-04"
 summary: "OpenAI launches GPT-6 Astra declaring the AGI era, G7 and CISA issue urgent post-quantum migration warnings, and Chaotic Eclipse drops Avast zero-days."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-09-04T03:58:09.158Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // SEPTEMBER 04, 2026

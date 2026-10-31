@@ -3,6 +3,7 @@ title: "Gemini 3.6 Flash Drop, Galaxy Quantum Bitcoin, and Neo Funding"
 date: "2026-07-22"
 summary: "An in-depth analysis of Google dropping Gemini 3.6 Flash and 3.5 Flash Cyber, Galaxy launching a $5M Bitcoin quantum threat initiative, and Neo raising $100M for AI cyber defense."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-07-22T05:33:48.097Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // JULY 22, 2026

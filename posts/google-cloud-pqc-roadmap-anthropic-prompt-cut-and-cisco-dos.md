@@ -3,6 +3,7 @@ title: "Google Cloud PQC Roadmap, Anthropic Prompt Cut, and Cisco DoS"
 date: "2026-08-13"
 summary: "An analysis of Google Cloud accelerating its 2029 post-quantum cryptography migration, Anthropic trimming Claude system prompts by 80%, and Cisco patching active firewall DoS exploits."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-08-13T11:02:33.082Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // AUGUST 13, 2026

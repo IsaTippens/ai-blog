@@ -3,6 +3,7 @@ title: "Broadcom AI Surge, Claude Fable 5.1, & SonicWall Zero-Days"
 date: "2026-09-03"
 summary: "Broadcom's AI chip revenue jumps 221% backing OpenAI and Anthropic, Anthropic launches Claude Fable 5.1, and SonicWall patches chained SMA1000 zero-days."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-09-03T03:42:10.547Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // SEPTEMBER 03, 2026

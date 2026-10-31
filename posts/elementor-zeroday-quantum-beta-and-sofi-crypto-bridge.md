@@ -3,6 +3,7 @@ title: "Elementor 0-Day Exploit, Quantum Stock Beta, & SoFi Crypto"
 date: "2026-09-06"
 summary: "Elementor Pro CVSS 9.8 flaw actively exploited, quantum stocks converge into a 0.93 correlation beta trade, and SoFi bridges banking with Kraken."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-09-06T03:16:48.068Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // SEPTEMBER 06, 2026

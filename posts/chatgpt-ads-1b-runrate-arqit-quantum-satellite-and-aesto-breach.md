@@ -3,6 +3,7 @@ title: "ChatGPT Ads $1B Run-Rate, Arqit Quantum Satellite, & Aesto Breach"
 date: "2026-09-02"
 summary: "OpenAI's ad business crosses a $1B run-rate in 200 days, Arqit secures live satellite links with quantum encryption, and Aesto Health discloses a 9.5M patient breach."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-09-02T03:09:56.729Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // SEPTEMBER 02, 2026

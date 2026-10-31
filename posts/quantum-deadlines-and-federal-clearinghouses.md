@@ -3,6 +3,7 @@ title: "Microsoft's Quantum Deadline, the Federal AI Clearinghouse, and DORA"
 date: "2026-07-02"
 summary: "An in-depth analysis of Microsoft's accelerated 2029 post-quantum cryptography timeline, the launch of the U.S. Federal AI Cybersecurity Clearinghouse, and DORA's fresh compliance playbooks."
 categories: ["quantum", "ai", "cybersecurity", "fintech"]
+filed: "2026-07-02T06:01:27.582Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // JULY 2, 2026

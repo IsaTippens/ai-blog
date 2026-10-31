@@ -3,6 +3,7 @@ title: "Alphabet $205B Capex, Uber AI Job Cuts, and Fintech VC Rebound"
 date: "2026-07-23"
 summary: "An in-depth analysis of Alphabet raising 2026 capex to $205B, Uber cutting 10% of customer support jobs citing AI, and H1 2026 fintech funding surging 23% to $28.6B."
 categories: ["ai", "fintech", "cybersecurity", "mainstream"]
+filed: "2026-07-23T03:10:39.085Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // JULY 23, 2026

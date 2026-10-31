@@ -3,6 +3,7 @@ title: "Lightmatter CPO Initiative, Databricks $7B Run-Rate, and SEALSQ"
 date: "2026-08-14"
 summary: "An analysis of Lightmatter launching the OCP Co-Packaged Optics initiative, Databricks surpassing $7B revenue run-rate, and SEALSQ partnering with Quobly for PQC chips."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-08-14T03:02:40.555Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // AUGUST 14, 2026

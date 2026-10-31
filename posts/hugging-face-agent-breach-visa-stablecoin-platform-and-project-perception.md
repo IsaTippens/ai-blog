@@ -3,6 +3,7 @@ title: "Hugging Face Agent Breach, Visa Stablecoins, and Project Perception"
 date: "2026-07-20"
 summary: "An in-depth analysis of Hugging Face being breached by an autonomous AI agent, Visa debuting its institutional Stablecoin Platform, and Microsoft preparing Project Perception."
 categories: ["cybersecurity", "fintech", "ai", "mainstream"]
+filed: "2026-07-20T09:05:32.157Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // JULY 20, 2026

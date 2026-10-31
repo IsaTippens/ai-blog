@@ -3,6 +3,7 @@ title: "Google $12B Marvell Deal, Citrix Auth Bypass, & Quantum-GUARD Act"
 date: "2026-08-20"
 summary: "An analysis of Google's $12.2B Marvell custom silicon pact, critical Citrix NetScaler authentication bypass CVE-2026-19490, and the US Senate Quantum-GUARD Act."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-08-20T03:24:11.827Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // AUGUST 20, 2026

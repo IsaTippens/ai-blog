@@ -3,6 +3,7 @@ title: "The Quantum Shift, the Multi-Trillion Dollar AI Factory, and Big Tech Pr
 date: "2026-06-29"
 summary: "An in-depth analysis of 12 defining technology developments from late June 2026: from federal post-quantum mandates and 360MW AI factories to consumer price shocks."
 categories: ["quantum", "ai", "tech-policy", "mainstream-tech"]
+filed: "2026-06-29T00:46:43.894Z"
 ---
 
 # SYSTEM_STATUS: WEEKLY INTEL RECAP // JUNE 29, 2026

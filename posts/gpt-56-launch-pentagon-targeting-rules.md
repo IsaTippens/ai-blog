@@ -3,6 +3,7 @@ title: "OpenAI Unveils GPT-5.6, the Pentagon Shifts AI Targeting Rules, and Hone
 date: "2026-06-29"
 summary: "An in-depth analysis of 10 defining technology developments from June 29, 2026: from OpenAI's next-gen model family to revised military combat rules."
 categories: ["ai", "tech-policy", "mainstream-tech", "robotics"]
+filed: "2026-06-29T07:00:46.283Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // JUNE 29, 2026

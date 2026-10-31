@@ -3,6 +3,7 @@ title: "Apple Sues OpenAI, SEALSQ Quantum Chips, and EX DeFi Launch"
 date: "2026-07-12"
 summary: "An in-depth analysis of Apple suing OpenAI over trade secret theft, SEALSQ and Quobly signing a $5M silicon quantum security deal, and EX DeFi launching trading tech in the US."
 categories: ["ai", "quantum", "fintech", "cybersecurity"]
+filed: "2026-07-12T07:05:16.956Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // JULY 12, 2026

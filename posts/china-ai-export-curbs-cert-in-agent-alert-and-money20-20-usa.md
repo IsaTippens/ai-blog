@@ -3,6 +3,7 @@ title: "China AI Export Curbs, CERT-In Agent Alert, & Money20/20 USA"
 date: "2026-10-19"
 summary: "An analysis of China proposing export controls on 23 AI technologies, CERT-In's warning on rogue AI agents breaching live systems, and Money20/20 USA opening in Las Vegas."
 categories: ["ai", "cybersecurity", "fintech", "quantum"]
+filed: "2026-10-19T03:55:57.863Z"
 ---
 
 # SYSTEM\_OUT: DAILY RECON DIGEST // OCTOBER 19, 2026

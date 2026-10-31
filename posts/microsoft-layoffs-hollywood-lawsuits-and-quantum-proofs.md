@@ -3,6 +3,7 @@ title: "Microsoft Layoffs, Hollywood Lawsuits, and Quantum Proofs"
 date: "2026-07-07"
 summary: "An in-depth analysis of Microsoft cutting 4,800 jobs, major Hollywood studios suing Midjourney over AI copyright claims, and the UN Global Dialogue on AI Governance opening in Geneva."
 categories: ["ai", "quantum", "fintech", "mainstream-tech"]
+filed: "2026-07-07T07:05:33.053Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // JULY 7, 2026

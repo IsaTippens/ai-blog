@@ -3,6 +3,7 @@ title: "Big Tech $1.1T Leases, Open AI Exemption, and Samsung V10 Memory"
 date: "2026-08-05"
 summary: "An in-depth analysis of Big Tech committing $1.09 trillion in data center lease liabilities, the White House exempting open-weight AI models from security vetting, and Samsung revealing 400+ layer V10 memory."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-08-05T03:24:31.733Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // AUGUST 05, 2026

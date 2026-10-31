@@ -3,6 +3,7 @@ title: "AI Agentic Payments, Industrial Consolidation, and Sovereign Capital Rou
 date: "2026-07-06"
 summary: "An in-depth analysis of CaixaBank and Visa completing the first real-world payment initiated autonomously by an AI agent, Schneider Electric acquiring Cognite for $3.1B, and Kling AI's massive $3B funding round."
 categories: ["fintech", "ai", "cybersecurity", "industrial-tech"]
+filed: "2026-07-06T09:48:53.623Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // JULY 6, 2026

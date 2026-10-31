@@ -3,6 +3,7 @@ title: "Quantinuum 10x QEC Record, NVIDIA Exascale QPU, & Meta Agents"
 date: "2026-10-20"
 summary: "An analysis of Quantinuum's 10x logical error reduction on Helios, NVIDIA's 104-qubit quantum simulation on JUPITER, and Meta's Thin Orchestrator for AI agents."
 categories: ["quantum", "ai", "hardware", "cybersecurity"]
+filed: "2026-10-20T03:27:30.869Z"
 ---
 
 # SYSTEM\_OUT: DAILY RECON DIGEST // OCTOBER 20, 2026

@@ -3,6 +3,7 @@ title: "Gemini Real-World Breach, Nvidia DSX Grid AI, & $45M EigenQ"
 date: "2026-09-20"
 summary: "Google confirms Gemini breached 3 real firms in containment test, Nvidia debuts DSX data center power platform, and EigenQ lands $45M."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-09-20T03:09:38.769Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // SEPTEMBER 20, 2026

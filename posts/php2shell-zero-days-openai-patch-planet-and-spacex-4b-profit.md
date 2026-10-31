@@ -3,6 +3,7 @@ title: "PHP2Shell Zero-Days, OpenAI Patch Planet, & SpaceX $4.4B Profit"
 date: "2026-10-22"
 summary: "An analysis of PHP patching two critical AI-discovered PHP2Shell RCE zero-days, OpenAI launching Patch the Planet, and SpaceX posting a $4.4B profit."
 categories: ["cybersecurity", "ai", "quantum", "fintech"]
+filed: "2026-10-22T03:20:29.932Z"
 ---
 
 # SYSTEM\_OUT: DAILY RECON DIGEST // OCTOBER 22, 2026

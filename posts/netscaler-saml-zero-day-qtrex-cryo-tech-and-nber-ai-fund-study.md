@@ -3,6 +3,7 @@ title: "NetScaler SAML Zero-Day, Qtrex Cryo Tech, & NBER AI Fund Study"
 date: "2026-10-05"
 summary: "An analysis of Citrix's emergency patch for a third NetScaler zero-day (CVE-2026-88779), Qtrex validating million-qubit cryogenic interconnects, and an NBER study on AI hedge fund returns."
 categories: ["cybersecurity", "quantum", "fintech", "ai"]
+filed: "2026-10-05T03:13:34.819Z"
 ---
 
 # SYSTEM\_OUT: DAILY RECON DIGEST // OCTOBER 5, 2026

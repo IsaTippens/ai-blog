@@ -3,6 +3,7 @@ title: "SAXON Q Room-Temp Qubits, Windows Shell 0-Day, & Eigenkit 1.0"
 date: "2026-10-15"
 summary: "An analysis of SAXON Q demonstrating room-temperature quantum computing, Microsoft patching an exploited Windows Shell MotW zero-day, and EigenOrbit releasing eigenkit 1.0."
 categories: ["quantum", "cybersecurity", "ai", "fintech"]
+filed: "2026-10-15T03:03:48.055Z"
 ---
 
 # SYSTEM\_OUT: DAILY RECON DIGEST // OCTOBER 15, 2026

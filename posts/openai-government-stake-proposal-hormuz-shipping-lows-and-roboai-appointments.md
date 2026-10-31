@@ -3,6 +3,7 @@ title: "OpenAI Government Stake, Hormuz Shipping Lows, and RoboAI Board"
 date: "2026-07-13"
 summary: "An in-depth analysis of OpenAI proposing a 5% US Government equity stake, Strait of Hormuz shipping traffic hitting five-week lows, and former INTERPOL President Al-Raisi joining Robo.ai."
 categories: ["ai", "fintech", "cybersecurity", "mainstream"]
+filed: "2026-07-14T07:11:27.712Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // JULY 13, 2026

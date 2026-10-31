@@ -3,6 +3,7 @@ title: "Revolut Breach Exposes Passports, Trump Rejects AI Slowdown, & MAS"
 date: "2026-09-14"
 summary: "Revolut suffers KYC data breach exposing customer passports, Trump dismisses AI pause calls, and MAS tests cross-bank anti-scam AI models."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-09-14T03:20:20.859Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // SEPTEMBER 14, 2026

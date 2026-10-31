@@ -3,6 +3,7 @@ title: "IonQ Real-Time QEC Decoder, GPT-6 Astra, & Check Point Zero-Day"
 date: "2026-09-23"
 summary: "An analysis of IonQ's CPU-powered real-time quantum error decoder, OpenAI's launch of GPT-6 Astra, and Check Point's emergency patch for an exploited management server zero-day."
 categories: ["quantum", "ai", "cybersecurity", "fintech"]
+filed: "2026-09-23T03:35:16.732Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // SEPTEMBER 23, 2026

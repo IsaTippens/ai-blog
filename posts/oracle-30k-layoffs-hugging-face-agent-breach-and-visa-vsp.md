@@ -3,6 +3,7 @@ title: "Oracle 30K Layoffs, Hugging Face Agent Breach, and Visa VSP"
 date: "2026-07-20"
 summary: "An in-depth analysis of Oracle cutting 30,000 jobs for Stargate data centers, Hugging Face breached by an autonomous AI agent, and Visa unveiling its Visa Stablecoin Platform."
 categories: ["ai", "cybersecurity", "fintech", "mainstream-tech"]
+filed: "2026-07-20T09:05:15.131Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // JULY 20, 2026

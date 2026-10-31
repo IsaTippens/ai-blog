@@ -3,6 +3,7 @@ title: "IBM Langflow RCE Alert, Bowie State AI Degree, and Mistral Dutch Banking
 date: "2026-08-07"
 summary: "An in-depth analysis of CISA's emergency alert on active IBM Langflow RCE exploitation, Bowie State launching a BS in AI, and Dutch banks partnering with Mistral AI."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-08-07T03:12:01.727Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // AUGUST 07, 2026

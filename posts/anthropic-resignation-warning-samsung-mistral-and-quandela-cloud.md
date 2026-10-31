@@ -3,6 +3,7 @@ title: "Anthropic Resignation Warning, Samsung-Mistral, & Quandela Cloud"
 date: "2026-09-10"
 summary: "Anthropic researcher warns of runaway AI risks, Samsung and Mistral partner on AI chips, and Quandela joins Canada's quantum computing sandbox."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-09-10T03:13:10.219Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // SEPTEMBER 10, 2026

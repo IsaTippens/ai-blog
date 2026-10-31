@@ -3,6 +3,7 @@ title: "SK Hynix $570B Rout, Multiverse $570M Raise, and CBE-Ghana AI Pact"
 date: "2026-07-28"
 summary: "An in-depth analysis of SK Hynix suffering a $570B market valuation rout, Multiverse Computing raising $570M for model compression, and Egypt-Ghana central bank AI cooperation."
 categories: ["ai", "fintech", "mainstream", "cybersecurity"]
+filed: "2026-07-28T03:00:40.631Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // JULY 28, 2026

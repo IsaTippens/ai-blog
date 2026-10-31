@@ -3,6 +3,7 @@ title: "Sovereign AI Readiness, Regional Tech Vetting, and Target Scale"
 date: "2026-07-05"
 summary: "An in-depth analysis of the ADB designating the Philippines for AI-readiness technical assistance, the Central Bank of Sudan's strict fintech vetting order, and the scale of modern military target systems."
 categories: ["ai", "fintech", "cybersecurity", "tech-policy"]
+filed: "2026-07-06T09:54:55.515Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // JULY 5, 2026

@@ -3,6 +3,7 @@ title: "FINMA AI Warning, Microsoft Default Passkeys, and Ethereum Quantum"
 date: "2026-08-16"
 summary: "An analysis of Swiss FINMA warning of a 33% cyber surge from AI, Microsoft retiring SMS/voice auth for Passkeys in Entra ID, and Ethereum preparing quantum hash upgrades."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-08-16T03:29:08.115Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // AUGUST 16, 2026

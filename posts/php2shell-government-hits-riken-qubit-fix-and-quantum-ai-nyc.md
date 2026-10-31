@@ -3,6 +3,7 @@ title: "PHP2Shell Government Hits, RIKEN Qubit Fix, & Quantum+AI NYC"
 date: "2026-10-26"
 summary: "An analysis of PHP2Shell attacks hitting government servers, RIKEN solving a hidden quantum decoherence obstacle, and the Quantum+AI 3.0 conference opening in NYC."
 categories: ["cybersecurity", "quantum", "ai", "fintech"]
+filed: "2026-10-26T03:11:04.991Z"
 ---
 
 # SYSTEM\_OUT: DAILY RECON DIGEST // OCTOBER 26, 2026

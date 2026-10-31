@@ -3,6 +3,7 @@ title: "The Quantum Threat to Bitcoin, the AI American Dream, and Cross-Border D
 date: "2026-07-04"
 summary: "An in-depth analysis of groundbreaking 2026 quantum research cutting the resources to crack ECDSA by 20x, the 'American Dream' under AI-driven labor shifts on July 4, 2026, and the EAC's new cross-border data flow framework."
 categories: ["quantum", "ai", "cybersecurity", "fintech"]
+filed: "2026-07-04T07:08:40.065Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // JULY 4, 2026

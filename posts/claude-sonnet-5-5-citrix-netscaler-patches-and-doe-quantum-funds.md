@@ -3,6 +3,7 @@ title: "Claude Sonnet 5.5, Citrix NetScaler Patches, & DOE Quantum Funds"
 date: "2026-09-29"
 summary: "An analysis of Anthropic's Claude Sonnet 5.5 launch, Citrix releasing emergency patches for actively exploited NetScaler zero-days (CVE-2026-88771/88772), and DOE's $320M quantum funding rollout."
 categories: ["ai", "cybersecurity", "quantum", "fintech"]
+filed: "2026-09-29T03:10:52.448Z"
 ---
 
 # SYSTEM\_OUT: DAILY RECON DIGEST // SEPTEMBER 29, 2026

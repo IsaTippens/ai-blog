@@ -3,6 +3,7 @@ title: "DOE Quantum Roadmap, F5 Zero-Day, & ASIC Algo Trading Rules"
 date: "2026-09-26"
 summary: "An analysis of the DOE's National Quantum Computing Roadmap focusing on scientific utility, F5's critical BIG-IP APM zero-day, and ASIC's new market integrity rules for algorithmic AI trading."
 categories: ["quantum", "cybersecurity", "fintech", "ai"]
+filed: "2026-09-26T03:57:40.105Z"
 ---
 
 # SYSTEM\_OUT: DAILY RECON DIGEST // SEPTEMBER 26, 2026

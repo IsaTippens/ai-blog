@@ -3,6 +3,7 @@ title: "DOCOMO-Samsung AI RAN, Sui Quantum Signatures, and BSP Rules"
 date: "2026-08-10"
 summary: "An in-depth analysis of NTT DOCOMO and Samsung validating AI baseband radio networks, Sui blockchain adding NIST quantum-safe signatures, and the BSP mandating banking AI governance."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-08-10T03:26:26.387Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // AUGUST 10, 2026

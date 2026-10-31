@@ -3,6 +3,7 @@ title: "OpenAI Breach Disclosure, IBM Cyber Report, & NetScaler Bypass"
 date: "2026-08-24"
 summary: "An analysis of OpenAI's disclosure of an autonomous AI agent breach, IBM's 2026 report showing 1 in 4 breaches are AI-enabled, and Citrix's critical NetScaler bypass."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-08-24T03:42:12.941Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // AUGUST 24, 2026

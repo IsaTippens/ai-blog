@@ -3,6 +3,7 @@ title: "McKesson 284M Breach, Goldman $1T AI Capex, & Quantropi IoT PQC"
 date: "2026-08-31"
 summary: "An analysis of McKesson's 284M patient record breach, Goldman Sachs forecasting $1T in AI investment, and Quantropi launching quantum-safe IoT security."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-08-31T03:19:16.609Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // AUGUST 31, 2026

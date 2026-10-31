@@ -3,6 +3,7 @@ title: "Apple M6 Core AI Drop, SambaNova SN50 RDU, & EuroHPC Quantum"
 date: "2026-08-26"
 summary: "An analysis of Apple unveiling M6 silicon and Core AI, SambaNova launching the SN50 RDU at Hot Chips, and EuroHPC allocating €119M for quantum infrastructure."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-08-26T03:36:38.776Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // AUGUST 26, 2026

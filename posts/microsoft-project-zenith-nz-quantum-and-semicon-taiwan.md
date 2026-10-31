@@ -3,6 +3,7 @@ title: "Microsoft Project Zenith, NZ Quantum Mandate, & Semicon 2026"
 date: "2026-09-05"
 summary: "Microsoft debuts Project Zenith for 30B+ local AI on Windows PCs, New Zealand GCISO mandates PQC migration by 2030, and Semicon Taiwan details 3D optics."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-09-05T03:47:17.724Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // SEPTEMBER 05, 2026

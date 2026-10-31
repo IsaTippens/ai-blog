@@ -3,6 +3,7 @@ title: "GPT-6.1 Sol at DevDay, Apple Zero-Day, & Infleqtion Riverlane QEC"
 date: "2026-09-30"
 summary: "An analysis of OpenAI launching GPT-6.1 Sol and the Decisions API at DevDay 2026, Apple patching an exploited zero-day (CVE-2026-86950), and Infleqtion partnering with Riverlane on QEC."
 categories: ["ai", "cybersecurity", "quantum", "fintech"]
+filed: "2026-09-30T03:48:22.857Z"
 ---
 
 # SYSTEM\_OUT: DAILY RECON DIGEST // SEPTEMBER 30, 2026

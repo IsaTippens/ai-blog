@@ -3,6 +3,7 @@ title: "Grok 4.5 Launch, Malaysian Quantum Sandbox, and SambaNova Partnering"
 date: "2026-07-09"
 summary: "An in-depth analysis of Grok 4.5 launching with aggressive price-slashing, Malaysia's new Quantum Cryptography Sandbox, and J.P. Morgan tapping SambaNova for enterprise AI inference."
 categories: ["ai", "quantum", "fintech", "cybersecurity"]
+filed: "2026-07-09T11:09:31.226Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // JULY 9, 2026

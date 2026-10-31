@@ -3,6 +3,7 @@ title: "Agentic Finance, the Three Narrative Violations, and California's AI Bil
 date: "2026-07-03"
 summary: "An in-depth analysis of MAS and BuildFin.ai's runtime safeguards framework (SAFR), the breaking of three widely-held AI market assumptions, California's new AB 412 transparency bill, and HCL's $1.14B IT infrastructure deal."
 categories: ["fintech", "ai", "cybersecurity", "mainstream"]
+filed: "2026-07-03T07:03:16.196Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // JULY 3, 2026

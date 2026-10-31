@@ -3,6 +3,7 @@ title: "Anthropic $100M Academy, FortiMail Zero-Day, & NEC Quantum AI"
 date: "2026-10-03"
 summary: "An analysis of Anthropic's $100M Claude Frontier Academy for enterprise engineers, Fortinet's exploited FortiMail zero-day (CVE-2026-104286), and NEC deploying ABCI-Q quantum computing for cancer immunotherapy."
 categories: ["ai", "cybersecurity", "quantum", "fintech"]
+filed: "2026-10-03T03:02:10.814Z"
 ---
 
 # SYSTEM\_OUT: DAILY RECON DIGEST // OCTOBER 3, 2026

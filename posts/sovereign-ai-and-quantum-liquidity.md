@@ -3,6 +3,7 @@ title: "Sovereign AI, Quantum Liquidity, and the $600 Billion Infrastructure Bet
 date: "2026-06-30"
 summary: "An in-depth analysis of Japan's multi-billion dollar AI fund, Pasqal's roadmap, index additions for QUBT, and the massive scale of modern deep tech."
 categories: ["quantum", "ai", "cybersecurity", "fintech"]
+filed: "2026-06-30T07:10:21.080Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // JUNE 30, 2026

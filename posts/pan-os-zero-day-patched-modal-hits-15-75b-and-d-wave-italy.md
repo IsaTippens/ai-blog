@@ -3,6 +3,7 @@ title: "PAN-OS Zero-Day Patched, Modal Hits $15.75B, & D-Wave Italy"
 date: "2026-10-16"
 summary: "An analysis of Palo Alto Networks patching an actively exploited PAN-OS RCE zero-day (CVE-2026-0322), Modal raising $750M at a $15.75B valuation, and D-Wave delivering Advantage2 to Italy."
 categories: ["cybersecurity", "ai", "quantum", "fintech"]
+filed: "2026-10-16T03:45:45.284Z"
 ---
 
 # SYSTEM\_OUT: DAILY RECON DIGEST // OCTOBER 16, 2026

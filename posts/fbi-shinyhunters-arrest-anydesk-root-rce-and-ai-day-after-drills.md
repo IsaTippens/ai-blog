@@ -3,6 +3,7 @@ title: "FBI ShinyHunters Arrest, AnyDesk Root RCE, & AI Day-After Drills"
 date: "2026-10-11"
 summary: "An analysis of the FBI arresting a ShinyHunters hacker after an agency cloud breach, the AnyPwn root RCE exploit for AnyDesk, and frontier AI labs running day-after crisis drills."
 categories: ["cybersecurity", "ai", "quantum", "fintech"]
+filed: "2026-10-11T03:15:59.390Z"
 ---
 
 # SYSTEM\_OUT: DAILY RECON DIGEST // OCTOBER 11, 2026

@@ -3,6 +3,7 @@ title: "EU CRA 24-Hour Law Takes Effect, DeepSeek V4.1, & Cloudflare PQC"
 date: "2026-09-11"
 summary: "EU Cyber Resilience Act 24-hour reporting goes live, DeepSeek launches multimodal V4.1 Flash, and Cloudflare deploys post-quantum DNSSEC on 1.1.1.1."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-09-11T03:02:33.342Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // SEPTEMBER 11, 2026

@@ -3,6 +3,7 @@ title: "Cisco Zero-Day to Root, CenterPoint 7M Leak, & Quantum B Patent"
 date: "2026-09-17"
 summary: "Cisco patches critical email gateway zero-day, CenterPoint breach hits 7M+ records, and Quantum B wins European patent for entanglement data sharing."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-09-17T03:13:16.546Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // SEPTEMBER 17, 2026

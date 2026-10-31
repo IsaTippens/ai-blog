@@ -3,6 +3,7 @@ title: "Treasury Quantum Task Force, Intel Hot Chips, & GlobalProtect Flaws"
 date: "2026-08-25"
 summary: "An analysis of the US Treasury's Quantum-Readiness Task Force, Intel's agentic AI silicon roadmap at Hot Chips, and five high-risk Palo Alto GlobalProtect flaws."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-08-25T03:45:08.294Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // AUGUST 25, 2026

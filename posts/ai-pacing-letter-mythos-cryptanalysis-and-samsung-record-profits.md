@@ -3,6 +3,7 @@ title: "AI Pacing Letter, Mythos Cryptanalysis, and Samsung Record Profits"
 date: "2026-07-30"
 summary: "An in-depth analysis of 1,100 AI researchers signing an AI pacing letter, Anthropic's Mythos probing post-quantum encryption, and Samsung reporting record profits from the AI memory boom."
 categories: ["ai", "quantum", "fintech", "mainstream"]
+filed: "2026-07-30T03:36:22.972Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // JULY 30, 2026

@@ -3,6 +3,7 @@ title: "Hugging Face Agent Breach, Visa Stablecoin, and Oracle's Stargate Pivot"
 date: "2026-07-20"
 summary: "An in-depth analysis of Hugging Face breached by an autonomous AI agent, Visa launching its institutional stablecoin platform VSP, and Oracle cutting 30k jobs for Stargate."
 categories: ["ai", "cybersecurity", "fintech", "mainstream"]
+filed: "2026-07-20T07:55:20.860Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // JULY 20, 2026

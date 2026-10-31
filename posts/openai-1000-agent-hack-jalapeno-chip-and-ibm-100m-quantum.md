@@ -3,6 +3,7 @@ title: "1,000-Agent OpenAI Hack, Jalapeño Chip, & IBM 100M Quantum"
 date: "2026-08-27"
 summary: "An analysis of 1,000 AI agents coordinating in the OpenAI hack, OpenAI's Jalapeño silicon outperforming Nvidia GB300, and IBM targeting 100M quantum ops by 2029."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-08-27T03:03:56.317Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // AUGUST 27, 2026

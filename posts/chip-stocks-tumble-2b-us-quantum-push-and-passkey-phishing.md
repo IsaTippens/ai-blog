@@ -3,6 +3,7 @@ title: "Chip Stocks Tumble, $2B US Quantum Push, & Passkey Phishing"
 date: "2026-09-15"
 summary: "Semiconductor stocks drop up to 7% after AI slowdown calls, US launches $2B quantum manufacturing base, and passkey phishing hits Microsoft cloud."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-09-15T03:20:00.921Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // SEPTEMBER 15, 2026

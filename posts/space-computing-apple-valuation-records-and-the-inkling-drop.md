@@ -3,6 +3,7 @@ title: "Space-Based Computing, Apple's Valuation, and the Inkling Drop"
 date: "2026-07-19"
 summary: "An in-depth analysis of China launching its first space-computing satellites, Apple reclaiming the world's most valuable company spot, and Thinking Machines dropping its 975B Inkling model."
 categories: ["ai", "quantum", "fintech", "cybersecurity"]
+filed: "2026-07-19T03:04:33.460Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // JULY 19, 2026

@@ -3,6 +3,7 @@ title: "Meta Halts Muse Image, Circle National Bank, and Pentagon CMMC"
 date: "2026-07-11"
 summary: "An in-depth analysis of Meta discontinuing its Muse Image generator following fierce privacy backlash, Circle securing OCC approval for a national digital trust bank, and the Pentagon adding PQC to CMMC."
 categories: ["ai", "fintech", "cybersecurity", "quantum"]
+filed: "2026-07-11T07:03:49.407Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // JULY 11, 2026

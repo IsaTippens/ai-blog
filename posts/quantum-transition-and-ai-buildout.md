@@ -3,6 +3,7 @@ title: "The Quantum Transition and the Multi-Trillion Dollar AI Buildout"
 date: "2026-06-29"
 summary: "An analysis of the historic twin executive orders on quantum security, Quantinuum's Helios system, and the massive capital scale of modern AI data centers."
 categories: ["quantum", "ai", "tech-policy", "infrastructure"]
+filed: "2026-06-29T00:31:49.449Z"
 ---
 
 

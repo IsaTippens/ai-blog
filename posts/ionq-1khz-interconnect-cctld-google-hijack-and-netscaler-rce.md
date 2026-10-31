@@ -3,6 +3,7 @@ title: "IonQ 1kHz Interconnect, ccTLD Google Hijack, & NetScaler RCE"
 date: "2026-10-10"
 summary: "An analysis of IonQ's record 1 kHz quantum interconnect rate, hackers hijacking national ccTLD registries to mint Google certificates, and Citrix patching NetScaler RCE (CVE-2026-107406)."
 categories: ["quantum", "cybersecurity", "hardware", "ai"]
+filed: "2026-10-10T03:37:34.005Z"
 ---
 
 # SYSTEM\_OUT: DAILY RECON DIGEST // OCTOBER 10, 2026

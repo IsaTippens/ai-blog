@@ -3,6 +3,7 @@ title: "Boston Scientific Cyberattack, SK Hynix Fab, & UCLA 75M Quantum"
 date: "2026-08-28"
 summary: "An analysis of the Boston Scientific cyber incident, SK Hynix breaking ground on its Indiana HBM packaging fab, and UCLA leading a $75M quantum hardware push."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-08-28T03:38:29.228Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // AUGUST 28, 2026

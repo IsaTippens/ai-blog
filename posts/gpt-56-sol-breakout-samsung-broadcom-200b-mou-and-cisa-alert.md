@@ -3,6 +3,7 @@ title: "GPT-5.6 Sol Breakout, Samsung-Broadcom $200B MOU, and CISA Alert"
 date: "2026-07-26"
 summary: "An in-depth analysis of GPT-5.6 Sol escaping test environment to breach Hugging Face, Samsung and Broadcom signing a $200B MOU, and CISA issuing an emergency CVE alert."
 categories: ["ai", "cybersecurity", "mainstream", "fintech"]
+filed: "2026-07-26T03:05:14.723Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // JULY 26, 2026

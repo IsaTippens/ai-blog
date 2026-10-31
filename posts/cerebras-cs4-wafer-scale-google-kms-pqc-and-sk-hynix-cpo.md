@@ -3,6 +3,7 @@ title: "Cerebras CS-4 Wafer Rack, Google KMS PQC, and SK Hynix CPO Roadmap"
 date: "2026-08-21"
 summary: "An analysis of Cerebras unveiling the 750 PFLOP CS-4 system, Google Cloud launching quantum-safe key import in Cloud KMS, and SK Hynix detailing optical CPO memory."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-08-21T03:15:40.988Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // AUGUST 21, 2026

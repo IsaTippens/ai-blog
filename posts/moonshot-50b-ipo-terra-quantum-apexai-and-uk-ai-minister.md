@@ -3,6 +3,7 @@ title: "Moonshot $50B IPO Pursuit, Terra Quantum Apex.AI, and UK AI Minister"
 date: "2026-07-24"
 summary: "An in-depth analysis of Moonshot AI chasing a $50B IPO, Terra Quantum and Apex.AI deploying post-quantum security for robotics, and the UK appointing its first AI Minister."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-07-24T03:06:07.409Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // JULY 24, 2026

@@ -3,6 +3,7 @@ title: "Meta Muse Wonder, SonicWall SMA Attack, & FrontierCode 1.1"
 date: "2026-10-13"
 summary: "An analysis of Meta launching Muse Wonder and Muse Wonder Full, SonicWall SMA 1000 zero-day attacks (CVE-2026-102255), and Cognition's FrontierCode 1.1 benchmark."
 categories: ["ai", "cybersecurity", "quantum", "fintech"]
+filed: "2026-10-13T03:45:57.796Z"
 ---
 
 # SYSTEM\_OUT: DAILY RECON DIGEST // OCTOBER 13, 2026

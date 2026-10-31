@@ -3,6 +3,7 @@ title: "Meta Muse Glimmer, OpenAI GPT-5.6-Cyber, and QCi Fab Acquisition"
 date: "2026-08-11"
 summary: "An in-depth analysis of Meta open-sourcing Muse Glimmer, OpenAI releasing GPT-5.6-Cyber for vulnerability research, and QCi acquiring NHanced Semiconductors."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-08-11T03:55:02.987Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // AUGUST 11, 2026

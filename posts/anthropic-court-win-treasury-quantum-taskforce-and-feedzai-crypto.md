@@ -3,6 +3,7 @@ title: "Anthropic Court Win, Treasury Quantum Task Force, & Feedzai Report"
 date: "2026-08-30"
 summary: "An analysis of Anthropic's federal court victory against Pentagon pre-screening, the U.S. Treasury's Quantum Task Force for banks, and Feedzai's digital asset report."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-08-30T03:07:51.115Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // AUGUST 30, 2026

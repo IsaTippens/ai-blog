@@ -3,6 +3,7 @@ title: "Vite Flaw Spills Cloud Keys, China Chip Plan, & PQC Framework 3.0"
 date: "2026-09-16"
 summary: "Mass scans exploit Vite dev servers to steal cloud keys, China unveils full-chain chip push for AI, and PQC Migration Framework 3.0 prioritizes crypto-agility."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-09-16T03:10:36.582Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // SEPTEMBER 16, 2026

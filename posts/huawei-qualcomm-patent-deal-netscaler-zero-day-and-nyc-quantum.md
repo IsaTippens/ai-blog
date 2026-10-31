@@ -3,6 +3,7 @@ title: "Huawei-Qualcomm Patent Deal, NetScaler Zero-Day, & NYC Quantum"
 date: "2026-10-06"
 summary: "An analysis of Huawei and Qualcomm's multi-year patent agreement, Citrix NetScaler zero-day attacks hitting recently patched gateways, and the 5th Annual NYC Quantum Summit."
 categories: ["hardware", "cybersecurity", "quantum", "fintech"]
+filed: "2026-10-06T04:00:18.899Z"
 ---
 
 # SYSTEM\_OUT: DAILY RECON DIGEST // OCTOBER 6, 2026

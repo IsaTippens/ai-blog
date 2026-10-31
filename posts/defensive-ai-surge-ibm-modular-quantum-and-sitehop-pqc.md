@@ -3,6 +3,7 @@ title: "Defensive AI Surge, IBM Modular Quantum, & Sitehop PQC Hardware"
 date: "2026-08-29"
 summary: "An analysis of tech leaders calling for a defensive AI surge, IBM linking modular cryogenic quantum systems, and Sitehop launching miniature PQC hardware."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-08-29T03:10:04.190Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // AUGUST 29, 2026

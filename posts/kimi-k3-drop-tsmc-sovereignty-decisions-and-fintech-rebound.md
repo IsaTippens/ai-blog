@@ -3,6 +3,7 @@ title: "Kimi K3 Drop, TSMC Sovereignty Decisions, and Fintech Rebound"
 date: "2026-07-18"
 summary: "An in-depth analysis of Kimi K3 launching as the largest open model, Taiwan's plan to protect advanced TSMC tech, and fintech funding surging to $1.9 billion."
 categories: ["ai", "quantum", "fintech", "mainstream"]
+filed: "2026-07-18T03:11:45.395Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // JULY 18, 2026

@@ -3,6 +3,7 @@ title: "Azure AI CVSS 10 Patched, QCi Quantum Security, & Qualibrate"
 date: "2026-09-19"
 summary: "Microsoft patches CVSS 10.0 Azure AI Foundry flaw, QCi debuts quantum security platform beyond QKD, and Qualibrate automates qubit tuning from cold start."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-09-19T03:02:54.341Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // SEPTEMBER 19, 2026

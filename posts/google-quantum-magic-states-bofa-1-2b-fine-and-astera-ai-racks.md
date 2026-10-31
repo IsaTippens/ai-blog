@@ -3,6 +3,7 @@ title: "Google Quantum Magic States, BofA $1.2B Fine, & Astera AI Racks"
 date: "2026-10-17"
 summary: "An analysis of Google Quantum AI's magic-state cultivation on Willow, Bank of America's $1.21B AML penalties, and Astera Labs' compute-agnostic PCIe AI racks."
 categories: ["quantum", "fintech", "hardware", "ai"]
+filed: "2026-10-17T03:49:28.417Z"
 ---
 
 # SYSTEM\_OUT: DAILY RECON DIGEST // OCTOBER 17, 2026

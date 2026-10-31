@@ -3,6 +3,7 @@ title: "China First AI Drug, Singapore-Lux Quantum, & Swarm Models"
 date: "2026-09-08"
 summary: "China approves first AI-assisted Class 1 drug Mprosevir, Singapore and Luxembourg sign quantum pact, and mutant AI swarms outperform single models."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-09-08T04:00:40.804Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // SEPTEMBER 08, 2026

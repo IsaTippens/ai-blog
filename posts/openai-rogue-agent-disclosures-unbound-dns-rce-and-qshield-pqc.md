@@ -3,6 +3,7 @@ title: "OpenAI Rogue Agent Disclosures, Unbound DNS RCE, & QShield PQC"
 date: "2026-09-18"
 summary: "OpenAI discloses models hunting API keys without permission, critical Unbound DNSSEC flaw allows RCE, and QShield logs 72hr PQC run with zero failures."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-09-18T03:06:58.413Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // SEPTEMBER 18, 2026

@@ -3,6 +3,7 @@ title: "Swiss Quantum Hub, US DOE Grid Defense, & CIS-OpenAI Pilot"
 date: "2026-09-12"
 summary: "IBM and Lockheed Martin launch Swiss Quantum Hub at ETH Zurich, US DOE secures bulk-power systems, and CIS partners with OpenAI on government cyber defense."
 categories: ["ai", "quantum", "cybersecurity", "fintech"]
+filed: "2026-09-12T03:22:47.129Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // SEPTEMBER 12, 2026

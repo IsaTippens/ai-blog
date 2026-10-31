@@ -3,6 +3,7 @@ title: "Nvidia $250B Backstop, Qualcomm Price Hike, and Kudankulam Leak"
 date: "2026-07-27"
 summary: "An in-depth analysis of Nvidia considering a $250B backstop for OpenAI, Qualcomm raising chip prices by double digits, and a ransomware leak targeting nuclear infrastructure."
 categories: ["ai", "mainstream", "cybersecurity", "fintech"]
+filed: "2026-07-27T03:07:55.717Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // JULY 27, 2026

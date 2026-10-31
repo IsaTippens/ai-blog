@@ -3,6 +3,7 @@ title: "Ivanti Chained Zero-Days, Bloq Maya AI, & DC Fintech Week"
 date: "2026-10-14"
 summary: "An analysis of threat actors chaining three Ivanti Connect Secure zero-days (CVE-2026-104935), Bloq Quantum launching Bloq Maya, and DC Fintech Week at the World Bank."
 categories: ["cybersecurity", "quantum", "fintech", "ai"]
+filed: "2026-10-14T03:32:46.092Z"
 ---
 
 # SYSTEM\_OUT: DAILY RECON DIGEST // OCTOBER 14, 2026

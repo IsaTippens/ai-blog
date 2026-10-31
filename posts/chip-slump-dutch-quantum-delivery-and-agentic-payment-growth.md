@@ -3,6 +3,7 @@ title: "Chip Slump, Dutch Quantum Delivery, and Agentic Payments"
 date: "2026-07-17"
 summary: "An in-depth analysis of global AI chip stocks slumping on capex anxieties, the first Dutch quantum computer delivered to Germany, and CaixaBank completing agentic payment pilots."
 categories: ["ai", "quantum", "fintech", "cybersecurity"]
+filed: "2026-07-17T03:00:59.826Z"
 ---
 
 # SYSTEM_OUT: DAILY RECON DIGEST // JULY 17, 2026
