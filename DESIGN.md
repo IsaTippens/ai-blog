@@ -37,6 +37,21 @@ typography:
     fontSize: "1.0625rem"
     fontWeight: 400
     lineHeight: 1.7
+  body-compact:
+    fontFamily: "Inter, sans-serif"
+    fontSize: "1rem"
+    fontWeight: 400
+    lineHeight: 1.7
+  lead:
+    fontFamily: "Inter, sans-serif"
+    fontSize: "1.25rem"
+    fontWeight: 400
+    lineHeight: 1.5
+  lead-compact:
+    fontFamily: "Inter, sans-serif"
+    fontSize: "1.125rem"
+    fontWeight: 400
+    lineHeight: 1.5
   label:
     fontFamily: "JetBrains Mono, monospace"
     fontSize: "0.8rem"
@@ -152,8 +167,9 @@ Browser surfaces carry the palette: text selection is Console Black on Phosphor 
 - **Display** (700, `clamp(1.5rem, 1.1rem + 1.4vw, 2.1rem)`, 1.15): the article's single `<h1>`, uppercase, balanced wrap, max 24em.
 - **Headline** (700, 1.5rem, 1.3): page titles (`LATEST_SYSTEM_POSTS`, `ABOUT SYSTEM_OUT`), always paired with a 3px Phosphor Lime left bar. Drops to 1.25rem at ≤640px.
 - **Title** (700, 1.2rem, 1.3): post-card titles on the index, mono in the case they were written in, balanced wrap. In-article section heads (`h2`) are mono uppercase at 1.15rem; story heads (`h3`) are mono 600 at 1.05rem in written case. Uppercase is for short labels and section heads; long headlines in all caps read slowly.
-- **Body** (400, 1.0625rem, 1.7): article prose, capped at 68ch. 1rem at ≤640px. The standfirst under the title is 1.125rem in Readout Dim; card summaries are 0.9rem.
-- **Label** (400–700, 0.7–0.9rem, mono): nav (0.9rem bold), dates and meta (0.8rem), readout rows and outline entries (0.72–0.78rem), tags (0.7rem, uppercase, `#` prefix), footer (0.75rem, 0.5px tracking).
+- **Lead** (400, 1.25rem, 1.5; 1.125rem at ≤640px): the about page's opening sentence, Readout White, balanced, max 46ch. The article standfirst uses the compact step (1.125rem) in Readout Dim.
+- **Body** (400, 1.0625rem, 1.7): article and about-page prose, capped at 62–68ch, `text-wrap: pretty`. 1rem at ≤640px. Card summaries are 0.9rem.
+- **Label** (400–700, 0.7–0.9rem, mono): nav (0.9rem bold), dates and meta (0.8rem), about-page section labels (`ORIGIN`, `WORKFLOW`, `ARCHITECTURE`: 0.8rem bold uppercase, 0.06em tracking, Readout Dim, in a 9.5rem column beside the prose, stacked above it at ≤640px), readout rows and outline entries (0.72–0.78rem), tags (0.7rem, uppercase, `#` prefix), footer (0.75rem, 0.5px tracking).
 
 ### Named Rules
 **The Silkscreen Rule.** Every structural string (headings, nav, labels, meta, tags) is monospace. Inter appears only in running prose.
@@ -164,7 +180,7 @@ Browser surfaces carry the palette: text selection is Console Black on Phosphor 
 
 A single centered column, max 1000px wide, with 40px/20px outer padding (20px/15px at ≤640px). The shell is a three-row grid (header, main, footer) at a minimum of 100vh with a 30px gap. The header and footer are separated from content by 1px dashed Silkscreen Gray rules.
 
-The index lays post cards out as slanted ribbons: three columns above 899px, two from 641px to 899px, and one at ≤640px, with a 10px cut between neighbours and 28px between rows. It shows 12 posts per page (fills one, two, or three columns evenly): page 1 at `/` with the schematic and `LATEST_SYSTEM_POSTS`, older pages at `/page/N` titled `ARCHIVED_SYSTEM_POSTS` with a mono `[newest] → [oldest]` date span under the title and no schematic. The article page is one full-width panel with 40px padding (20px on mobile). The isometric schematic sits above the index list in a fixed-height viewport (260px, then 180px at ≤640px, then 140px at ≤480px).
+The index lays post cards out as slanted ribbons: three columns above 899px, two from 641px to 899px, and one at ≤640px, with a 10px cut between neighbours and 28px between rows. It shows 12 posts per page (fills one, two, or three columns evenly): page 1 at `/` with the schematic and `LATEST_SYSTEM_POSTS`, older pages at `/page/N` titled `ARCHIVED_SYSTEM_POSTS` with a mono `[newest] → [oldest]` date span under the title and no schematic. The article page is one full-width panel with 40px padding (20px on mobile). The isometric schematic sits above the index list in a fixed-height viewport (260px, then 180px at ≤640px, then 140px at ≤480px). The about page follows its intro card with the full pipeline board (430px viewport, 360px below 960px; a flat vertical board at ≤640px).
 
 Spacing follows an informal 8/12/16/24/40 rhythm. Breakpoints are 640px and 480px.
 
@@ -253,8 +269,17 @@ The article's provenance plate, inset under the title. A bar reads `SYSTEM_OUT /
 A dashed rule, a `// END_OF_DIGEST` line that restates the AI authorship and source tally, then older/newer digest links as inset modules (direction, date, title), and a `BACK_TO_TOP` link.
 
 ### Pipeline Schematic (signature component)
-An isometric SVG diagram of the agent pipeline (`01_CRAWLER.EXE` → `02_PARSER.SYS` → `03_STATIC.GEN`) inside a framed panel with a mono header (`SYS_PIPELINE // DATA_FLOW_DIAGRAM`), a lime `STATUS` readout, and a footer console line. The viewport is near-black (#090909), tilted with `rotateX(55deg) rotateZ(-30deg)`, and overlaid with a faint lime grid. Flow lines are dashed lime and crawl at a 15s linear loop. Hovering a node fills its header strip lime and prints an `AGENT_RUNNING:` line with a pulsing `>` prompt.
+An isometric SVG diagram of the agent pipeline (`01_CRAWLER.EXE` → `02_PARSER.SYS` → `03_STATIC.GEN`) on the index, inside a framed panel with a mono header (`SYS_PIPELINE // DATA_FLOW_DIAGRAM`), a lime `STATUS` readout, and a footer console line. The viewport is near-black (#090909), tilted with `rotateX(55deg) rotateZ(-30deg)`, and overlaid with a faint lime grid. Flow lines are dashed lime and crawl at a 15s linear loop. Hovering a node fills its header strip lime and prints an `AGENT_RUNNING:` line with a pulsing `>` prompt.
 With reduced motion, the flow lines and prompt hold still and state changes cut instead of fading. Hovering is a shortcut only: tapping, focusing, or pressing Enter on a node shows the same readout.
+
+### Pipeline Board (signature component)
+The about page's explainer (`/about#pipeline`, where each post's `HOW_THIS_IS_MADE` link lands): the whole research pipeline as a live trace board under the header `SYS_PIPELINE // FULL_ARCHITECTURE`, replaying the newest run. Stage names are generic (they say what a step does, never which service runs it), and every figure on it is read from the newest post at build time.
+- **Route:** `00_CRON.TRIGGER` → `01_QUERY.PLAN` → fan-out to five domain lanes (`02_SEARCH // HW · AI · QC · SEC · FIN`) plus `02_VIDEO.INDEX` and `02_IMAGE.META` → `03_DEEP.READ` → `04_METRIC.EXTRACT` (one extractor row per domain) → `05_SYNTH.MD`, where the video and image side channels rejoin → `06_CLOUD.DROP` → `07_REPO.SYNC` → `08_EDGE.BUILD` → `09_THIS.PAGE`. Model and layouts live in `src/lib/pipeline.js`.
+- **Real data:** lanes the newest post didn't cover draw dashed and get no packet (`QUIET THIS RUN`); chips carry the run's filed time, domain count, video and image refs, sources and domains read, tables, stories and sections, read time, file name and date.
+- **Replay:** one 12s run. A lime packet leaves the trigger, splits at the planner, waits at the deep read, merges, and lands on this page. Each trace burns lime behind its packet and decays to 22% once it has passed; a chip lights while a packet is on it (Phosphor Persistence). The run log under the board names the current stage.
+- **Layouts:** above 640px, a 920×560 board tilted `rotateX(40deg) rotateZ(-14deg)` at 0.8 scale (0.66 below 960px) in a 430px viewport; at ≤640px, a flat vertical board with the fan-out as a row of seven small chips.
+- **Interaction:** the board is one tab stop; arrow keys, Home and End walk the stages in pipeline order. Hover, tap or focus pauses the replay and shows the stage's explanation in the readout; `09_THIS.PAGE` adds an `OPEN_LATEST_DIGEST` link.
+- **Reduced motion and budget:** the route is drawn at rest at 50%, with no packets and no lit stage. The replay pauses offscreen and while a stage is selected; it is one rAF loop moving at most 13 packets.
 
 ## Do's and Don'ts
 

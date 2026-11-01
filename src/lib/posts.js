@@ -4,6 +4,7 @@ import { parseFrontMatter } from '$lib/parser.js';
 const postFiles = import.meta.glob('../../posts/*.md', { eager: true, query: '?raw' });
 
 const WORDS_PER_MINUTE = 230;
+const VIDEO_HOSTS = /(^|\.)(youtube\.com|youtu\.be|vimeo\.com)$/;
 export const POSTS_PER_PAGE = 12;
 
 /** Every post's frontmatter, newest first. */
@@ -94,6 +95,7 @@ export function renderPost(content) {
   const usedIds = new Set();
   const sources = [];
   let tableCount = 0;
+  let imageCount = 0;
 
   marked.use({
     renderer: {
@@ -129,6 +131,7 @@ export function renderPost(content) {
         return `<div class="table-scroll" role="region" tabindex="0" aria-label="Table ${tableCount}, scrolls horizontally"><table>\n<thead>\n${header}</thead>\n${body ? `<tbody>${body}</tbody>` : ''}</table></div>\n`;
       },
       image(href, title, text) {
+        imageCount += 1;
         let src;
         try {
           src = encodeURI(href).replace(/%25/g, '%').replace(/"/g, '%22');
@@ -157,7 +160,30 @@ export function renderPost(content) {
     stats: {
       sources: sources.length,
       domains: new Set(sources).size,
+      videos: sources.filter((d) => VIDEO_HOSTS.test(d)).length,
+      images: imageCount,
+      tables: tableCount,
       readMinutes: Math.max(1, Math.round(words / WORDS_PER_MINUTE))
     }
+  };
+}
+
+/**
+ * Facts about the newest digest, for the pipeline schematic on the index.
+ * Every figure is read from the post itself; fields the post doesn't carry stay empty.
+ */
+export function latestRun() {
+  const newest = listPosts()[0];
+  if (!newest) return null;
+  const { data, content } = readPost(newest.slug);
+  const { outline, stats } = renderPost(content);
+  return {
+    slug: newest.slug,
+    date: newest.date,
+    filed: data.filed || '',
+    categories: newest.categories,
+    sections: outline.filter((s) => s.id).length,
+    stories: outline.reduce((n, s) => n + s.stories.length, 0),
+    ...stats
   };
 }

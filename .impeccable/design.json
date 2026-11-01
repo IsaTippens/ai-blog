@@ -36,8 +36,9 @@
       { "name": "outline-trail", "value": "900ms cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Outline marker fade, leaving a trail behind the current story." },
       { "name": "afterglow", "value": "1.6s cubic-bezier(0.22, 1, 0.36, 1)", "purpose": "Heading reached from the outline flares lime and decays." },
       { "name": "carried-title", "value": "420ms cubic-bezier(0.16, 1, 0.3, 1)", "purpose": "View Transition moving the chosen title into the article heading; page cross-fade 140ms out, 260ms in." },
-      { "name": "flow-dash", "value": "15s linear infinite", "purpose": "Schematic flow lines crawling along the pipeline; paused offscreen and under reduced motion." },
-      { "name": "pulse-glow", "value": "1.5s infinite", "purpose": "Pulsing > prompt in the schematic console line; paused offscreen and under reduced motion." }
+      { "name": "flow-dash", "value": "15s linear infinite", "purpose": "Index schematic flow lines crawling along the pipeline; paused offscreen and under reduced motion." },
+      { "name": "trace-replay", "value": "12s run, rAF-driven", "purpose": "About-page pipeline board: packets travel the traces, traces burn lime and decay over 1.4s; paused offscreen, while a stage is selected, and under reduced motion." },
+      { "name": "pulse-glow", "value": "1.5s infinite", "purpose": "Pulsing > prompt in the schematic and board footers; paused offscreen and under reduced motion." }
     ],
     "breakpoints": [
       { "name": "sm", "value": "640px" },
@@ -105,8 +106,8 @@
       "name": "Schematic Panel Frame",
       "kind": "custom",
       "refersTo": "schematic-panel",
-      "description": "Framed console panel with mono header, live status readout, and prompt footer.",
-      "html": "<div class=\"ds-panel\"><div class=\"ds-panel-head\"><span class=\"ds-panel-title\">SYS_PIPELINE // DATA_FLOW_DIAGRAM</span><span class=\"ds-panel-status\">STATUS: MONITOR_ACTIVE</span></div><div class=\"ds-panel-view\"></div><div class=\"ds-panel-foot\"><span class=\"ds-pulse\">&gt;</span> PIPELINE STATUS: ACTIVE // AWAITING NODE SELECTION_</div></div>",
+      "description": "Framed console panel shared by the index schematic and the about-page pipeline board: mono header, live readout, board viewport, and console footer.",
+      "html": "<div class=\"ds-panel\"><div class=\"ds-panel-head\"><span class=\"ds-panel-title\">SYS_PIPELINE // FULL_ARCHITECTURE</span><span class=\"ds-panel-status\">REPLAY // RUN 2026-10-31</span></div><div class=\"ds-panel-view\"></div><div class=\"ds-panel-foot\"><span class=\"ds-pulse\">&gt;</span> 03_DEEP.READ  deep-reading 55 sources across 18 domains</div></div>",
       "css": ".ds-panel { border: 1px solid #888888; background: #1E1E1E; padding: 15px; font-family: 'JetBrains Mono', monospace; font-size: 0.8rem; color: #888888; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4); } .ds-panel-head { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px dashed #888888; padding-bottom: 8px; margin-bottom: 15px; } .ds-panel-title { font-weight: 700; color: #E0E0E0; } .ds-panel-status { color: #39FF14; text-shadow: 0 0 6px rgba(57, 255, 20, 0.3); } .ds-panel-view { height: 120px; background: #090909; border: 1px solid rgba(255, 255, 255, 0.05); } .ds-panel-foot { margin-top: 15px; border-top: 1px dashed #888888; padding-top: 10px; } .ds-pulse { color: #39FF14; animation: ds-pulse 1.5s infinite; } @keyframes ds-pulse { 0%, 100% { opacity: 0.3; } 50% { opacity: 1; } }"
     }
   ],
