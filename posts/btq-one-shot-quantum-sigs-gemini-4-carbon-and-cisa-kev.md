@@ -72,7 +72,7 @@ Standardizing open-source software stacks across heterogeneous AI accelerators, 
 * **CNCF `llm-d` v1.0 Distributed Inference Control Plane**: Developed by over 500 contributors across 25 organizations in the Cloud Native Computing Foundation (CNCF) Sandbox, `llm-d` 1.0 delivers production Day-2 reliability for vLLM and SGLang across both GPUs and Google TPUs, introducing multi-tenant flow control, zero-downtime `DisaggregatedSet` upgrades, and session-aware key-value (KV) cache routing.  
 * **Genkit Go 1.14 Human-in-the-Loop Guardrails**: Genkit Go 1.14 stabilizes typed human-in-the-loop (HITL) execution pauses via `DefineResumableTool`, enforces run-wide token and cost budgets across spawned subagents, adopts OpenTelemetry GenAI semantic conventions, and loads portable Agent Skills bundles directly from any Go `fs.FS` interface.
 
-![Google Open Source Engineering Banner]()
+![Google Open Source Engineering Banner][image1]
 
 ## III. SYSTEMIC CYBERSECURITY & ZERO-DAY REMEDIATION
 
@@ -98,7 +98,7 @@ Securing enterprise managed file transfer gateways, [Progress Software released 
 
 Highlighting cloud hypervisor exposure across Asia-Pacific hosting providers, [TechNode Global reported that Japanese internet conglomerate GMO Internet is investigating a major security breach in its Onamae cloud platform](https://technode.global/2026/10/30/gmo-onamae-cloud-breach-26739-servers/) ([GMO Internet Facility Photo](https://technode.global/wp-content/uploads/2026/10/GMO-Internet.jpg)). Threat actors exploited a cloud management misconfiguration to gain unauthorized access potentially impacting 26,739 virtual servers, prompting emergency credential rotation and forensic containment across customer instances.
 
-![GMO Internet Cloud Infrastructure]()
+![GMO Internet Cloud Infrastructure][image2]
 
 ## IV. FINTECH, DEFI SECURITY & AGENTIC PAYMENT PROTOCOLS
 
@@ -106,13 +106,13 @@ Highlighting cloud hypervisor exposure across Asia-Pacific hosting providers, [T
 
 In the largest security incident in cryptocurrency exchange history, [Binance confirmed an ongoing forensic investigation into an unauthorized withdrawal exploit estimated at \$6.3 billion in gross impact](https://technode.global/2026/10/30/binance-vows-to-cover-all-losses-from-security-breach-estimated-at-6-3b/) ([Binance Security Briefing Image](https://technode.global/wp-content/uploads/2026/10/Binance.jpg)). According to the exchange's preliminary incident report, adversaries compromised a DevOps engineer's laptop to reach an internal service container and submit unauthorized withdrawal transactions without exposing underlying cold-wallet private keys. Working alongside blockchain validators and law enforcement, Binance froze approximately \$3 billion in affected assets on-chain, revoked the compromised contract authorizations, and committed to covering 100% of losses using its Secure Asset Fund for Users (SAFU) and corporate treasury reserves. As [BigGo Finance reported](https://finance.biggo.com/news/62f481f9-8316-407e-b441-3da852649be6), the shock briefly pushed Bitcoin below \$77,000 and triggered elevated exchange inflows across DeFi protocols Ether.fi and Ethena. For broadcast coverage and market analysis, watch [Bloomberg Television: Binance Suffers \$6.3 Billion Hack in Crypto's Biggest Heist](http://www.youtube.com/watch?v=cw7WST9jBFI), [Channel 4 News: Crypto exchange hacked for \$6.3bn in record heist](http://www.youtube.com/watch?v=v3Ovx6ICDWc), and [Digital Perspectives' on-chain custody breakdown](http://www.youtube.com/watch?v=CIYsY4xNx_M).
 
-![Binance Exchange Security Operations]()
+![Binance Exchange Security Operations][image3]
 
 ### 10\. Circle and Proof Unveil Verified-ID Stablecoin Payments for AI Agents (`x401` \+ `x402`) as Airwallex Expands APAC Paytech
 
 Solving the merchant authentication and chargeback dilemma in autonomous AI agent commerce, [Circle Internet Group (NYSE: CRCL) and identity platform Proof demonstrated verified-ID stablecoin payments for AI agents](https://thefintechtimes.com/circle-and-proof-demo-verified-id-stablecoin-payments-for-ai-agents/) ([Circle & Proof Protocol Demo Photo](https://thefintechtimes.com/wp-content/uploads/2026/10/Circle-and-Proof-Demo-Verified-ID-Stablecoin-Payments-for-AI-Agents.jpeg)). The architecture chains two open HTTP-layer protocols: Proof's `x401` ("Unauthorized") protocol, which prompts an inbound AI agent to present a cryptographic identity credential certified to NIST IAL2 standards alongside a signed purchase-specific mandate, and Circle's `x402` ("Payment Required") protocol, which executes instant USDC settlement from a Circle Agent Wallet—including automated micropayments from the merchant to the identity issuer per verification check. Explore companion discussions on agentic payment rails in [XDC Network's podcast: AI Agents & Stablecoin Payments](http://www.youtube.com/watch?v=tQ3r57CSNm8) and [The Financial News Network's segment on Circle's Arc architecture](http://www.youtube.com/watch?v=SXefAULPm2A). Concurrently, in cross-border digital commerce, [Airwallex signed a memorandum of understanding with South Korea's ONE Store](https://thefintechtimes.com/airwallex-and-one-store-sign-mou-to-back-korean-game-dev-expansion/) ([Airwallex x ONE Store Signing Photo](https://thefintechtimes.com/wp-content/uploads/2026/10/Airwallex-x-One-1-960x570.jpg)), leveraging Airwallex's 85+ global regulatory licenses to streamline multi-currency settlement and local payment acceptance for Korean game publishers expanding internationally.
 
-![Circle and Proof Verified-ID Stablecoin Payments Demo]()
+![Circle and Proof Verified-ID Stablecoin Payments Demo][image4]
 
 ## V. MAINSTREAM COMPUTING HARDWARE, OPTICAL INTERCONNECTS & SUPPLY CHAINS
 
@@ -126,4 +126,14 @@ Meanwhile, to eliminate inter-datacenter bandwidth bottlenecks across Asia-Pacif
 
 Rounding out hardware engineering milestones, industry testing and tear-downs surged around [Apple's newly unveiled 14-inch and 16-inch MacBook Pro featuring the tandem OLED PROLED XDR Display and first-ever Mac Touch integration](https://www.apple.com/newsroom/2026/10/apple-unveils-groundbreaking-macbook-pro-with-proled-xdr-display/) ([Apple PROLED XDR Touch Visual](https://www.apple.com/newsroom/videos/2026/autoplay/10/macbook-pro-with-proled-xdr-display/posters/Apple-MacBook-Pro-with-PROLED-XDR-Display-Touch-experience-261028.jpg.large.jpg)). Powered by M5 Pro and M5 Max silicon with up to 128GB of unified memory, 16TB of SSD storage, Thunderbolt 5, and a Dynamic Island housing Siri AI on macOS 27 Golden Gate, the dual-layer OLED panel achieves 2,000 nits peak HDR/SDR brightness and a 10,000,000:1 contrast ratio with zero-latency in-cell touch sensors. Watch [Apple's official reveal video: New MacBook Pro with PROLED XDR Display](http://www.youtube.com/watch?v=hnZI5uUSdEo), [Marques Brownlee's hands-on analysis: Macbook PROLED XDR Impressions: They Said They Wouldn't\!](http://www.youtube.com/watch?v=2reQut8WNGc), and [9to5Mac's architectural breakdown](http://www.youtube.com/watch?v=elK_ApYkLjQ). Concurrently, in advanced photonics materials, [Wolfspeed commercialized optical-grade transparent silicon carbide (SiC) substrates](https://thequantuminsider.com/2026/10/30/wolfspeed-transparent-silicon-carbide-technology/) ([Wolfspeed SiC Wafer Image](https://thequantuminsider.com/wp-content/uploads/2026/10/2026-10-30_14-54.png)), combining high refractive index and thermal conductivity to support next-generation augmented reality waveguides and integrated quantum photonics.
 
-![Apple MacBook Pro with PROLED XDR Display and Touch]()
+![Apple MacBook Pro with PROLED XDR Display and Touch][image5]
+
+[image1]: /post-media/btq-one-shot-quantum-sigs-gemini-4-carbon-and-cisa-kev/a0792c5c4171-1600x476.png
+
+[image2]: /post-media/btq-one-shot-quantum-sigs-gemini-4-carbon-and-cisa-kev/93d97f2f6cca-1200x630.png
+
+[image3]: /post-media/btq-one-shot-quantum-sigs-gemini-4-carbon-and-cisa-kev/b84e9a2c8e3d-1122x631.png
+
+[image4]: /post-media/btq-one-shot-quantum-sigs-gemini-4-carbon-and-cisa-kev/652d6defe406-1024x572.png
+
+[image5]: /post-media/btq-one-shot-quantum-sigs-gemini-4-carbon-and-cisa-kev/fd47b973ed74-1440x810.png
