@@ -22,6 +22,7 @@ FRONTMATTER_KEYS = ("title", "date", "summary", "categories", "tags", "filed")
 REQUIRED_KEYS = ("title", "date", "summary", "categories")
 FRONTMATTER_KEY_RE = re.compile(r"(?:^|(?<=\s))(" + "|".join(FRONTMATTER_KEYS) + r"):(?=\s)", re.M)
 HORIZONTAL_RULE_RE = re.compile(r"^\s*(?:-{3,}|\*{3,}|_{3,})\s*$")
+LIST_ITEM_RE = re.compile(r"^\s*[-*•●]\s+(.+?)\s*$")
 
 
 def list_posts(service):
@@ -86,12 +87,29 @@ def parse_list(value):
     return [parse_scalar(item) for item in items if item.strip()]
 
 
-def parse_merged_frontmatter(paragraph):
+def leading_list_items(lines):
+    """Return the bullet items at the head of `lines` (blank lines allowed) and how many lines they span."""
+    items, consumed = [], 0
+    for line in lines:
+        if line.strip():
+            match = LIST_ITEM_RE.match(line)
+            if not match:
+                break
+            items.append(match.group(1))
+        consumed += 1
+    while consumed and not lines[consumed - 1].strip():
+        consumed -= 1
+    return items, consumed
+
+
+def parse_merged_frontmatter(text):
     """Rebuild frontmatter from the merged `title: … date: … summary: … categories: …` paragraph.
 
-    Returns (frontmatter_text, end_offset) or None when a required key is missing.
+    A block-style list value (`categories:` followed by `- item` lines) arrives as a Docs bullet
+    list after the paragraph; its items are read from there. Returns None when a required key
+    is missing.
     """
-    keys = list(FRONTMATTER_KEY_RE.finditer(paragraph))
+    keys = list(FRONTMATTER_KEY_RE.finditer(text))
     first = next((i for i, m in enumerate(keys) if m.group(1) == "title"), None)
     if first is None:
         return None
@@ -100,10 +118,17 @@ def parse_merged_frontmatter(paragraph):
         name = current.group(1)
         if name in fields:
             break  # A key name reappearing belongs to the body, not the frontmatter.
-        end = following.start() if following else len(paragraph)
+        end = following.start() if following else len(text)
         # The merged paragraph is a single line; anything after its newline is body text.
-        raw, newline, _ = paragraph[current.end():end].partition("\n")
-        fields[name] = parse_list(raw) if name in ("categories", "tags") else parse_scalar(raw)
+        raw, newline, _ = text[current.end():end].partition("\n")
+        if name in ("categories", "tags"):
+            if not raw.strip() and newline:
+                after = text[current.end():].split("\n")[1:]
+                fields[name] = [parse_scalar(item) for item in leading_list_items(after)[0]]
+            else:
+                fields[name] = parse_list(raw)
+        else:
+            fields[name] = parse_scalar(raw)
         if newline:
             break
     if any(key not in fields for key in REQUIRED_KEYS):
@@ -113,7 +138,10 @@ def parse_merged_frontmatter(paragraph):
 
 
 def strip_converted_frontmatter(markdown):
-    """Drop the mangled frontmatter (rule, merged field paragraph, rule) from a Docs markdown export."""
+    """Drop the mangled frontmatter from a Docs markdown export.
+
+    Shape: rule, merged field paragraph, optional bullet list (a block-style list value), rule.
+    """
     lines = markdown.split("\n")
     start = next(
         (i for i, line in enumerate(lines) if re.search(r"\btitle:", line) and re.search(r"\bcategories:", line)),
@@ -122,6 +150,8 @@ def strip_converted_frontmatter(markdown):
     if start is None:
         raise ValueError("frontmatter paragraph not found in markdown export")
     rest = lines[start + 1:]
+    if lines[start].rstrip().endswith(("categories:", "tags:")):
+        rest = rest[leading_list_items(rest)[1]:]
     while rest and (not rest[0].strip() or HORIZONTAL_RULE_RE.match(rest[0])):
         rest.pop(0)
     return "\n".join(rest)
