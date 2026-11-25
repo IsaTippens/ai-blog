@@ -16,10 +16,11 @@ GOOGLE_DOC_MIME = "application/vnd.google-apps.document"
 
 # When Drive converts an uploaded .md into a Google Doc, the frontmatter's `---` fences become
 # horizontal rules and its lines are merged into one paragraph. The plain-text export still
-# holds the quoted values verbatim, so the fields can be recovered from that paragraph.
-MERGED_FRONTMATTER_RE = re.compile(
-    r'title:\s*(".*?")\s+date:\s*(".*?")\s+summary:\s*(".*?")\s+categories:\s*(\[.*?\])', re.S
-)
+# holds the values verbatim, so the fields can be recovered by splitting on the known keys.
+# Values may be in any YAML scalar style: "double", 'single' or plain (the agent has used all).
+FRONTMATTER_KEYS = ("title", "date", "summary", "categories", "tags", "filed")
+REQUIRED_KEYS = ("title", "date", "summary", "categories")
+FRONTMATTER_KEY_RE = re.compile(r"(?:^|(?<=\s))(" + "|".join(FRONTMATTER_KEYS) + r"):(?=\s)", re.M)
 HORIZONTAL_RULE_RE = re.compile(r"^\s*(?:-{3,}|\*{3,}|_{3,})\s*$")
 
 
@@ -65,10 +66,59 @@ def export_doc(service, file_id, mime_type):
     return download(service, service.files().export_media(fileId=file_id, mimeType=mime_type))
 
 
+def parse_scalar(value):
+    """Decode one YAML scalar written on a single line: double-quoted, single-quoted or plain."""
+    value = value.strip()
+    if len(value) >= 2 and value[0] == value[-1] == '"':
+        return json.loads(value)
+    if len(value) >= 2 and value[0] == value[-1] == "'":
+        return value[1:-1].replace("''", "'")
+    return value
+
+
+def parse_list(value):
+    """Decode a flow list (`[a, "b"]`) or a block list flattened onto one line (`- a - b`)."""
+    value = value.strip()
+    if value.startswith("[") and value.endswith("]"):
+        items = re.findall(r'"(?:[^"\\]|\\.)*"|\'(?:[^\']|\'\')*\'|[^,\s][^,]*', value[1:-1])
+    else:
+        items = re.split(r"(?:^|\s)-\s+", value)
+    return [parse_scalar(item) for item in items if item.strip()]
+
+
+def parse_merged_frontmatter(paragraph):
+    """Rebuild frontmatter from the merged `title: … date: … summary: … categories: …` paragraph.
+
+    Returns (frontmatter_text, end_offset) or None when a required key is missing.
+    """
+    keys = list(FRONTMATTER_KEY_RE.finditer(paragraph))
+    first = next((i for i, m in enumerate(keys) if m.group(1) == "title"), None)
+    if first is None:
+        return None
+    fields = {}
+    for current, following in zip(keys[first:], keys[first + 1:] + [None]):
+        name = current.group(1)
+        if name in fields:
+            break  # A key name reappearing belongs to the body, not the frontmatter.
+        end = following.start() if following else len(paragraph)
+        # The merged paragraph is a single line; anything after its newline is body text.
+        raw, newline, _ = paragraph[current.end():end].partition("\n")
+        fields[name] = parse_list(raw) if name in ("categories", "tags") else parse_scalar(raw)
+        if newline:
+            break
+    if any(key not in fields for key in REQUIRED_KEYS):
+        return None
+    lines = [f"{name}: {json.dumps(value, ensure_ascii=False)}" for name, value in fields.items()]
+    return "---\n" + "\n".join(lines) + "\n---"
+
+
 def strip_converted_frontmatter(markdown):
     """Drop the mangled frontmatter (rule, merged field paragraph, rule) from a Docs markdown export."""
     lines = markdown.split("\n")
-    start = next((i for i, line in enumerate(lines) if "title" in line and "categories" in line), None)
+    start = next(
+        (i for i, line in enumerate(lines) if re.search(r"\btitle:", line) and re.search(r"\bcategories:", line)),
+        None,
+    )
     if start is None:
         raise ValueError("frontmatter paragraph not found in markdown export")
     rest = lines[start + 1:]
@@ -93,15 +143,12 @@ def fetch_content(service, file_info):
     if plain.lstrip().startswith("---"):
         return plain
 
-    match = MERGED_FRONTMATTER_RE.search(plain)
-    if not match:
+    frontmatter = parse_merged_frontmatter(plain)
+    if frontmatter is None:
         return plain  # Rejected by the frontmatter check in main().
 
-    title, date, summary, categories = match.groups()
     body = strip_converted_frontmatter(export_doc(service, file_info["id"], "text/markdown"))
-    return (
-        f"---\ntitle: {title}\ndate: {date}\nsummary: {summary}\ncategories: {categories}\n---\n\n{body}"
-    )
+    return f"{frontmatter}\n\n{body}"
 
 
 def stamp_filed(content, created_time):
@@ -158,7 +205,7 @@ def main():
 
         # Posts are parsed with gray-matter; never overwrite a post with content lacking frontmatter.
         if not content.lstrip().startswith("---"):
-            print(f"ERROR: {name} has no frontmatter after download; skipping. Starts with: {content[:150]!r}")
+            print(f"ERROR: {name} has no frontmatter after download; skipping. Starts with: {content[:600]!r}")
             failed.append(name)
             continue
 
