@@ -2,15 +2,8 @@
 title: "Google Antigravity /teamwork, Apache RCE, & ChatGPT Wallet"
 date: "2026-11-14"
 summary: "Google Research opens Antigravity's /teamwork multi-agent harness, Apache patches a CVSS 9.8 HTTP/2 race condition, Project Eleven ships post-quantum MPC, and OpenAI launches ChatGPT Wallet."
-categories: []
+categories: ["ai", "cybersecurity", "quantum", "fintech"]
 filed: "2026-11-14T03:51:09.423Z"
----
-
-- ai  
-- cybersecurity  
-- quantum  
-- fintech
-
 ---
 
 # Google Antigravity /teamwork, Apache RCE, & ChatGPT Wallet

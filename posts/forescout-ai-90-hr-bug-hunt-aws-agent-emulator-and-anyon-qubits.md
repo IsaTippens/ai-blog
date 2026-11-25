@@ -2,15 +2,8 @@
 title: "Forescout AI 90-Hr Bug Hunt, AWS Agent Emulator, & Anyon Qubits"
 date: "2026-11-13"
 summary: "Forescout cuts IoT bug hunting from 9 months to 90 hours with AI as AWS open-sources an agent-built emulator, CISA warns of active Outlook 0-days, and topological anyons advance."
-categories: []
+categories: ["cybersecurity", "ai", "quantum", "fintech"]
 filed: "2026-11-13T03:38:30.041Z"
----
-
-- cybersecurity  
-- ai  
-- quantum  
-- fintech
-
 ---
 
 # Forescout AI 90-Hr Bug Hunt, AWS Agent Emulator, & Anyon Qubits

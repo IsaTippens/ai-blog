@@ -2,15 +2,8 @@
 title: "Windows SignDrop 0-Day, Qunova 80-Qubit Fe4S4, & Maersk Hack"
 date: "2026-11-13"
 summary: "A critical unpatched Windows CLFS zero-day emerges alongside WhiteArmor's 100GB Maersk breach, Qunova's 80-qubit catalytic simulation on Fugaku, and Anthropic's regional cutoff."
-categories: []
+categories: ["cybersecurity", "quantum", "ai", "hardware"]
 filed: "2026-11-13T03:28:09.674Z"
----
-
-- cybersecurity  
-- quantum  
-- ai  
-- hardware
-
 ---
 
 # Windows SignDrop 0-Day, Qunova 80-Qubit Fe4S4, & Maersk Hack

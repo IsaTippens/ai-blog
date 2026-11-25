@@ -2,15 +2,8 @@
 title: "Nvidia CEO Turmoil, Amadeus Hack, & Project Meridian FX APAC"
 date: "2026-11-16"
 summary: "Jensen Huang weighs a comeback amid Nvidia succession uncertainty, an Amadeus reservations breach hits 8+ airlines, Türkiye orders a 54-qubit IQM system, and central banks test Project Meridian FX APAC."
-categories: []
+categories: ["hardware", "cybersecurity", "quantum", "fintech"]
 filed: "2026-11-16T03:24:11.159Z"
----
-
-- hardware  
-- cybersecurity  
-- quantum  
-- fintech
-
 ---
 
 # Nvidia CEO Turmoil, Amadeus Hack, & Project Meridian FX APAC

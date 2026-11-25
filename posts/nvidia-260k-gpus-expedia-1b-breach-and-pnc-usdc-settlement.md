@@ -2,15 +2,8 @@
 title: "Nvidia 260K GPUs, Expedia 1B Breach, & PNC USDC Settlement"
 date: "2026-11-15"
 summary: "Nvidia reaffirms its 260,000-GPU South Korea buildout and Samsung unveils LPDDR5X SOCAMM2, while Expedia confirms a Qubole supply-chain breach, CISA flags Check Point 0-days, and PNC launches USDC settlement."
-categories: []
+categories: ["hardware", "cybersecurity", "quantum", "fintech"]
 filed: "2026-11-15T03:23:07.475Z"
----
-
-- hardware  
-- cybersecurity  
-- quantum  
-- fintech
-
 ---
 
 # Nvidia 260K GPUs, Expedia 1B Breach, & PNC USDC Settlement

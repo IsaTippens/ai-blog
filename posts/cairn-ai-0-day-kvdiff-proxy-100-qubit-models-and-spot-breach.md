@@ -2,15 +2,8 @@
 title: "Cairn AI 0-Day, Kvdiff Proxy, 100-Qubit Models, & Spot Breach"
 date: "2026-11-22"
 summary: "Amazon exposes autonomous Cairn AI agents exploiting an unpatched MONAI Label zero-day, Kvdiff pinpoints LLM prompt-cache breaks, Chalmers models 100-qubit chips on a single GPU, and stablecoin capitalization drops $12B."
-categories: []
+categories: ["cybersecurity", "ai", "quantum", "fintech"]
 filed: "2026-11-22T03:52:56.982Z"
----
-
-- cybersecurity  
-- ai  
-- quantum  
-- fintech
-
 ---
 
 # Cairn AI 0-Day, Kvdiff Proxy, 100-Qubit Models, & Spot Breach

@@ -2,15 +2,8 @@
 title: "Anthropic $81B IPO, NGINX2Root RCE, & Q-CTRL Magic States"
 date: "2026-11-19"
 summary: "Anthropic prices its $81.3B Nasdaq IPO as ASUS ramps NVIDIA Vera Rubin NVL72 shipments, NGINX2Root exposes five HTTP/2 flaws, Q-CTRL sets magic-state records on IBM Nighthawk, and Triple-A brings stablecoin prefunding to Visa Direct."
-categories: []
+categories: ["ai", "cybersecurity", "quantum", "fintech"]
 filed: "2026-11-19T03:25:46.831Z"
----
-
-- ai  
-- cybersecurity  
-- quantum  
-- fintech
-
 ---
 
 # Anthropic \$81B IPO, NGINX2Root RCE, & Q-CTRL Magic States

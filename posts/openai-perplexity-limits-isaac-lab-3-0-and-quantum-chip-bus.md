@@ -2,15 +2,8 @@
 title: "OpenAI Perplexity Limits, Isaac Lab 3.0, & Quantum Chip Bus"
 date: "2026-11-23"
 summary: "OpenAI Chief Scientist Jakub Pachocki proposes cross-lab perplexity safety thresholds, Nvidia ships Isaac Lab 3.0 and Isaac OS at GTC Berlin, Stanford and Google Quantum AI cut QPU control lines to <=30 wires, and Microsoft discloses an Entra Connect Health breach."
-categories: []
+categories: ["ai", "hardware", "quantum", "cybersecurity"]
 filed: "2026-11-23T03:32:41.564Z"
----
-
-- ai  
-- hardware  
-- quantum  
-- cybersecurity
-
 ---
 
 # OpenAI Perplexity Limits, Isaac Lab 3.0, & Quantum Chip Bus

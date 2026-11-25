@@ -2,15 +2,8 @@
 title: "PHPAfterShell, Ruby2Shell, Quantum Contextuality, & IOSCO PQC"
 date: "2026-11-20"
 summary: "Critical RCE flaws PHPAfterShell and Ruby2Shell hit web runtimes while Google Quantum AI proves 105-qubit contextuality, memQ and Infleqtion partner on quantum networking, and IOSCO warns blockchains on post-quantum migration."
-categories: []
+categories: ["cybersecurity", "quantum", "ai", "fintech"]
 filed: "2026-11-20T03:24:50.783Z"
----
-
-- cybersecurity  
-- quantum  
-- ai  
-- fintech
-
 ---
 
 # PHPAfterShell, Ruby2Shell, Quantum Contextuality, & IOSCO PQC

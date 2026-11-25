@@ -2,15 +2,8 @@
 title: "OpenAI Anti-Distillation, vCenter 0-Day, & $12M Quantum AI"
 date: "2026-11-21"
 summary: "OpenAI cuts reasoning-trace extraction ASR from 54.0% to 0.2% in GPT-6.2 Astra as Anthropic's IPO draws $26B from chip suppliers, Mandiant exposes Armory Castle's vCenter zero-day, and Harvard wins $12M for AI-driven QEC."
-categories: []
+categories: ["ai", "cybersecurity", "quantum", "fintech"]
 filed: "2026-11-21T03:32:44.643Z"
----
-
-- ai  
-- cybersecurity  
-- quantum  
-- fintech
-
 ---
 
 # OpenAI Anti-Distillation, vCenter 0-Day, & \$12M Quantum AI

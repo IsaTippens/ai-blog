@@ -2,15 +2,8 @@
 title: "CrowdStrike $43.9B Zscaler Deal, GPT-6 Proteins, & Lux 40-Qubit"
 date: "2026-11-25"
 summary: "CrowdStrike agrees to acquire Zscaler for $43.9B as CISA adds three KEVs, OpenAI demonstrates intrinsic GPT-6.2 protein design, AMD and Xanadu simulate 40-qubit CFD on Lux, and South Korea unveils its bank-led won stablecoin bill."
-categories: []
+categories: ["cybersecurity", "ai", "quantum", "fintech"]
 filed: "2026-11-25T03:19:06.575Z"
----
-
-- cybersecurity  
-- ai  
-- quantum  
-- fintech
-
 ---
 
 # CrowdStrike \$43.9B Zscaler Deal, GPT-6 Proteins, & Lux 40-Qubit

@@ -2,15 +2,8 @@
 title: "NVIDIA-IBM Quantum Co-Design, NoisyTCP, & Fugaku Breach"
 date: "2026-11-17"
 summary: "NVIDIA, IBM, and Fermilab launch a modular quantum-classical platform with 13,000x faster QEC decoding, while NoisyTCP threatens Linux kernels, Fugaku investigates a breach, and OpenAI deploys healthcare computer-use agents."
-categories: []
+categories: ["quantum", "cybersecurity", "ai", "fintech"]
 filed: "2026-11-17T04:00:45.952Z"
----
-
-- quantum  
-- cybersecurity  
-- ai  
-- fintech
-
 ---
 
 # NVIDIA-IBM Quantum Co-Design, NoisyTCP, & Fugaku Breach

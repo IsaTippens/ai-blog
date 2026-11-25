@@ -2,15 +2,8 @@
 title: "Java4Shell OpenJDK RCE, Nvidia $116B Q3, & Fed AI Bank Runs"
 date: "2026-11-18"
 summary: "Oracle patches Java4Shell (CVE-2026-114938) in OpenJDK's AVX-512 Base64 decoder, Nvidia rejects Jensen Huang's return amid $116B Q3 revenue, Poland unveils PIAST-Q at SC26, and Fed Governor Barr warns on AI-driven bank runs."
-categories: []
+categories: ["cybersecurity", "hardware", "quantum", "fintech"]
 filed: "2026-11-18T03:47:32.196Z"
----
-
-- cybersecurity  
-- hardware  
-- quantum  
-- fintech
-
 ---
 
 # Java4Shell OpenJDK RCE, Nvidia \$116B Q3, & Fed AI Bank Runs
