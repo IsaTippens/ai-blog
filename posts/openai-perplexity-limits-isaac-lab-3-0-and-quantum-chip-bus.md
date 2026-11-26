@@ -1,9 +1,13 @@
 ---
-title: "OpenAI Perplexity Limits, Isaac Lab 3.0, & Quantum Chip Bus"
-date: "2026-11-23"
-summary: "OpenAI Chief Scientist Jakub Pachocki proposes cross-lab perplexity safety thresholds, Nvidia ships Isaac Lab 3.0 and Isaac OS at GTC Berlin, Stanford and Google Quantum AI cut QPU control lines to <=30 wires, and Microsoft discloses an Entra Connect Health breach."
-categories: ["ai", "hardware", "quantum", "cybersecurity"]
-filed: "2026-11-23T03:32:41.564Z"
+title: OpenAI Perplexity Limits, Isaac Lab 3.0, & Quantum Chip Bus
+date: '2026-11-23'
+summary: OpenAI Chief Scientist Jakub Pachocki proposes cross-lab perplexity safety thresholds, Nvidia ships Isaac Lab 3.0 and Isaac OS at GTC Berlin, Stanford and Google Quantum AI cut QPU control lines to <=30 wires, and Microsoft discloses an Entra Connect Health breach.
+categories:
+  - ai
+  - hardware
+  - quantum
+  - cybersecurity
+filed: "2026-11-26T14:22:37.327Z"
 ---
 
 # OpenAI Perplexity Limits, Isaac Lab 3.0, & Quantum Chip Bus
@@ -12,17 +16,17 @@ Developments across November 22 and 23, 2026 paired calls for quantitative AI pr
 
 ## Artificial Intelligence: OpenAI Proposes Shared Perplexity Safety Thresholds
 
-On November 22, OpenAI Chief Scientist [Jakub Pachocki](https://openai.com/index/perplexity-and-intelligence/) published a rare look into OpenAI's internal pretraining telemetry, arguing that cross-entropy loss (log-perplexity) on held-out codebases provides the clearest leading indicator of emergent capabilities—and should anchor industry-wide safety pacing limits. Tracing OpenAI's trajectory from GPT-3.5 (`~0.99` log-perplexity) and GPT-4 (`~0.91`) to below `0.8` (where transformative cybersecurity and mathematical capabilities emerged) and `~0.76` (where models began resolving open mathematical problems), Pachocki warned that entering the **`~0.68–0.7` log-perplexity window** could bring further degradation in chain-of-thought (CoT) alignment auditing just as AI begins accelerating deep learning pretraining research itself by 2027\.
+On November 22, OpenAI Chief Scientist [Jakub Pachocki](https://openai.com/index/perplexity-and-intelligence/) published a rare look into OpenAI's internal pretraining telemetry, arguing that cross-entropy loss (log-perplexity) on held-out codebases provides the clearest leading indicator of emergent capabilities—and should anchor industry-wide safety pacing limits. Tracing OpenAI's trajectory from GPT-3.5 (`~0.99` log-perplexity) and GPT-4 (`~0.91`) to below `0.8` (where transformative cybersecurity and mathematical capabilities emerged) and `~0.76` (where models began resolving open mathematical problems), Pachocki warned that entering the **`~0.68–0.7` log-perplexity window** could bring further degradation in chain-of-thought (CoT) alignment auditing just as AI begins accelerating deep learning pretraining research itself by 2027.
 
 > "I further propose common limits, based on perplexity and other measurements, that developers are committed to not crossing until our ability to understand and monitor AI behavior achieves a certain concrete milestone (such as the development of a successor to CoT monitors)." — **Jakub Pachocki**, Chief Scientist at OpenAI ([OpenAI](https://openai.com/index/perplexity-and-intelligence/))
 
-![OpenAI Perplexity and Intelligence][image1]
+![OpenAI Perplexity and Intelligence](https://images.ctfassets.net/kftzwdyauwt9/6rIIhCRSKrhIfe385Onmcz/aca2d190553c62fd5d49efb5d5ce1eb6/perplexity-and-intelligence-social.png?w=1600&h=900&fit=fill)
 
-In applied AI infrastructure on November 22, the OpenAI Foundation and Rockefeller Foundation launched a **\$50 million AI Cities Initiative** targeting urban transportation and public safety ([Emergent](https://emergent.sh/news/openai-rockefeller-launch-50m-ai-cities)), while [Pandex](https://emergent.sh/news/pandex-opens-mcp-api-2-8m-eu-legal-documents) opened a Model Context Protocol (MCP) API connecting agents directly to 2.8 million European Union legal documents.
+In applied AI infrastructure on November 22, the OpenAI Foundation and Rockefeller Foundation launched a **$50 million AI Cities Initiative** targeting urban transportation and public safety ([Emergent](https://emergent.sh/news/openai-rockefeller-launch-50m-ai-cities)), while [Pandex](https://emergent.sh/news/pandex-opens-mcp-api-2-8m-eu-legal-documents) opened a Model Context Protocol (MCP) API connecting agents directly to 2.8 million European Union legal documents.
 
 ## Mainstream Hardware & Robotics: Nvidia Isaac Lab 3.0 and Isaac OS at GTC Berlin
 
-At GTC Berlin on November 23, [Nvidia](https://emergent.sh/news/nvidia-isaac-lab-3-0-agile-one-sn-humanoid) launched **Isaac Lab 3.0** and the open-source **Isaac OS** runtime alongside Agile Robots' **Agile ONE SN** reference humanoid. Built to standardize the sensor-to-actuator pipeline across industrial arms, mobile manipulators, and humanoids, Isaac Lab 3.0 already cut commissioning times by **50%** at Toyota Material Handling Europe, supported by the new `SimReady Central Library` (\>2,000 factory assets) and the `Human 1M Dataset` for imitation learning. Shipping in early 2027 on **Jetson Thor** and **Isaac GR00T**, Agile ONE SN stands 1.4 meters tall, weighs 40 kg, and packs 31 degrees of freedom (with 20-DoF tactile five-finger hands), with ABB Robotics, Kuka, Sereact, Neura Robotics, and Hexagon Robotics joining as early European integrators.
+At GTC Berlin on November 23, [Nvidia](https://emergent.sh/news/nvidia-isaac-lab-3-0-agile-one-sn-humanoid) launched **Isaac Lab 3.0** and the open-source **Isaac OS** runtime alongside Agile Robots' **Agile ONE SN** reference humanoid. Built to standardize the sensor-to-actuator pipeline across industrial arms, mobile manipulators, and humanoids, Isaac Lab 3.0 already cut commissioning times by **50%** at Toyota Material Handling Europe, supported by the new `SimReady Central Library` (>2,000 factory assets) and the `Human 1M Dataset` for imitation learning. Shipping in early 2027 on **Jetson Thor** and **Isaac GR00T**, Agile ONE SN stands 1.4 meters tall, weighs 40 kg, and packs 31 degrees of freedom (with 20-DoF tactile five-finger hands), with ABB Robotics, Kuka, Sereact, Neura Robotics, and Hexagon Robotics joining as early European integrators.
 
 ## Quantum Computing & Post-Quantum Encryption: Constant-Wire QPUs and Messaging Audits
 
@@ -30,12 +34,12 @@ Solving one of quantum hardware's sharpest physical bottlenecks—routing one co
 
 ![Constant-Wire Quantum Processor Design](https://quantumzeitgeist.com/wp-content/smush-webp/quantum-chip-design-cuts-external-control.png.webp)
 
-In applied post-quantum cryptography, a November 22 audit by [Shattered.io](https://shattered.io/quantum-resistant-encryption-signal-pqxdh-imessage-pq3-whatsapp-telegram-2026/) underscored the widening gap between messaging platforms against "harvest now, decrypt later" attacks, while [EU Today](https://eutoday.net/eu-quantum-act-european-preference-public-procurement/) reported Brussels is preparing European-preference public procurement rules in the **EU Quantum Act** expected November 24\.
+In applied post-quantum cryptography, a November 22 audit by [Shattered.io](https://shattered.io/quantum-resistant-encryption-signal-pqxdh-imessage-pq3-whatsapp-telegram-2026/) underscored the widening gap between messaging platforms against "harvest now, decrypt later" attacks, while [EU Today](https://eutoday.net/eu-quantum-act-european-preference-public-procurement/) reported Brussels is preparing European-preference public procurement rules in the **EU Quantum Act** expected November 24.
 
-| Messenger | Post-Quantum Protocol | Scope & Assurance | Current Status (Nov 22, 2026\) |
-| :---- | :---- | :---- | :---- |
-| [Signal](https://shattered.io/quantum-resistant-encryption-signal-pqxdh-imessage-pq3-whatsapp-telegram-2026/) | `PQXDH` (X25519 \+ ML-KEM) & `SPQR` Triple Ratchet | Opening handshake \+ ongoing rekeying; public spec & `libsignal` | Shipped (blocking OS AI screen capture as of Nov 20\) |
-| [Apple iMessage](https://shattered.io/quantum-resistant-encryption-signal-pqxdh-imessage-pq3-whatsapp-telegram-2026/) | `PQ3` \+ open `corecrypto` (ML-KEM / ML-DSA) | Opening handshake \+ continuous rekeying; ETH Zurich analysis | Shipped (closed client; iOS 27.2.1 fixed group-chat bugs) |
+| Messenger | Post-Quantum Protocol | Scope & Assurance | Current Status (Nov 22, 2026) |
+| :--- | :--- | :--- | :--- |
+| [Signal](https://shattered.io/quantum-resistant-encryption-signal-pqxdh-imessage-pq3-whatsapp-telegram-2026/) | `PQXDH` (X25519 + ML-KEM) & `SPQR` Triple Ratchet | Opening handshake + ongoing rekeying; public spec & `libsignal` | Shipped (blocking OS AI screen capture as of Nov 20) |
+| [Apple iMessage](https://shattered.io/quantum-resistant-encryption-signal-pqxdh-imessage-pq3-whatsapp-telegram-2026/) | `PQ3` + open `corecrypto` (ML-KEM / ML-DSA) | Opening handshake + continuous rekeying; ETH Zurich analysis | Shipped (closed client; iOS 27.2.1 fixed group-chat bugs) |
 | [WhatsApp](https://shattered.io/quantum-resistant-encryption-signal-pqxdh-imessage-pq3-whatsapp-telegram-2026/) | None named in public docs | Signal Protocol classical E2EE lineage | Unconfirmed for messaging |
 | [Telegram](https://shattered.io/quantum-resistant-encryption-signal-pqxdh-imessage-pq3-whatsapp-telegram-2026/) | None confirmed | 256-bit AES, 2048-bit RSA, classical DH (Secret Chats only) | Classical only; default cloud chats not E2EE |
 
@@ -53,8 +57,6 @@ Egyptian banking-technology provider **Banknbox** launched **nexura** on Novembe
 
 ## Engineering Takeaways
 
-1. **Harden Entra Admin Identities & Audit Cleverbridge Billing**: Enforce FIDO2/phishing-resistant MFA on all Entra global and sync administrators and review vendor billing integrations for payment card exposure.  
-2. **Enforce Post-Quantum & Screen-Security Hygiene**: Route sensitive long-lived communications through `PQXDH`/`SPQR` (Signal) or `PQ3` (iMessage) and disable OS-level AI screen capture on corporate mobile devices.  
+1. **Harden Entra Admin Identities & Audit Cleverbridge Billing**: Enforce FIDO2/phishing-resistant MFA on all Entra global and sync administrators and review vendor billing integrations for payment card exposure.
+2. **Enforce Post-Quantum & Screen-Security Hygiene**: Route sensitive long-lived communications through `PQXDH`/`SPQR` (Signal) or `PQ3` (iMessage) and disable OS-level AI screen capture on corporate mobile devices.
 3. **Evaluate Isaac OS & MCP Legal Integrations**: Robotics teams can benchmark `Isaac Lab 3.0` simulation workflows to cut commissioning cycles, while compliance agents can test Pandex's MCP endpoint for EU regulatory retrieval.
-
-[image1]: /post-media/openai-perplexity-limits-isaac-lab-3-0-and-quantum-chip-bus/14f40a4fb292-1600x900.png
